@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Giri OS — Official Website | Independent Linux Operating System</title>
+    <meta name="title" content="Giri OS — Official Website | Independent Linux Operating System" />
+    <meta name="description" content="Official website of Giri OS — an independent Linux-based operating system powered by Debian 12, Giri Space shell, and Linux 6.1 LTS. Fast, minimal, zero telemetry." />
+    <meta name="keywords" content="Giri OS, Giri Operating System, Giri OS Linux, Giri OS official website, Giri Space, Debian Linux, lightweight OS, open-source operating system" />
+    <meta name="author" content="Giri OS Open Source Project" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#060913" />
+    <link rel="canonical" href="https://girios.org/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://girios.org/" />
+    <meta property="og:site_name" content="Giri OS" />
+    <meta property="og:title" content="Giri OS — Official Website | Independent Linux Operating System" />
+    <meta property="og:description" content="Official website of Giri OS — an independent Linux-based operating system powered by Debian 12, Giri Space shell, and Linux 6.1 LTS. Fast, minimal, zero telemetry." />
+    <meta property="og:image" content="https://girios.org/logo/giri-os-logo.svg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://girios.org/" />
+    <meta name="twitter:title" content="Giri OS — Official Website | Independent Linux Operating System" />
+    <meta name="twitter:description" content="Official website of Giri OS — an independent Linux-based operating system powered by Debian 12, Giri Space shell, and Linux 6.1 LTS. Fast, minimal, zero telemetry." />
+    <meta name="twitter:image" content="https://girios.org/logo/giri-os-logo.svg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Google Fonts: Inter & Space Grotesk & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script id="schema-structured-data" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://girios.org/#organization",
+            "name": "Giri OS Project",
+            "url": "https://girios.org",
+            "logo": "https://girios.org/logo/giri-os-logo.svg",
+            "sameAs": [
+              "https://github.com/abhinavgiri45/giri-os",
+              "https://github.com/abhinavgiri45/giri-os-website"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://girios.org/#website",
+            "url": "https://girios.org",
+            "name": "Giri OS Official Website",
+            "description": "Official website of Giri OS — an independent Linux-based operating system. ONE SYSTEM. INFINITE POSSIBILITIES.",
+            "publisher": { "@id": "https://girios.org/#organization" },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://girios.org/#software",
+            "name": "Giri OS",
+            "operatingSystem": "Linux",
+            "applicationCategory": "OperatingSystem",
+            "softwareVersion": "0.1 Genesis",
+            "description": "An independent Linux-based operating system built upon Debian 12 Bookworm, Linux 6.1 LTS, and the Giri Space desktop shell.",
+            "url": "https://girios.org",
+            "license": "https://opensource.org/licenses/MIT",
+            "publisher": { "@id": "https://girios.org/#organization" },
+            "offers": {
+              "@type": "Offer",
+              "price": "0.00",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://girios.org/#webpage",
+            "url": "https://girios.org/",
+            "name": "Giri OS — Official Website | Independent Linux Operating System",
+            "description": "Official website of Giri OS — an independent Linux-based operating system powered by Debian 12, Giri Space shell, and Linux 6.1 LTS.",
+            "isPartOf": { "@id": "https://girios.org/#website" },
+            "about": { "@id": "https://girios.org/#software" }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Theme Initialization Script to avoid FOUC -->
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('giri-theme');
+          const isDark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-giri-navy text-giri-text antialiased selection:bg-giri-blue/30 selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

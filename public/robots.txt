@@ -1,0 +1,36 @@
+# GIRI OS OFFICIAL WEBSITE — ROBOTS.TXT
+# https://girios.org/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /dist/
+Disallow: /node_modules/
+
+# Specific Search Engine Directives
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Rate limiting for general crawlers to preserve server efficiency
+User-agent: Baiduspider
+Crawl-delay: 1
+
+# XML Sitemaps
+Sitemap: https://girios.org/sitemap.xml

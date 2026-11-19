@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Giri Genesis
+Description=Official Plymouth boot splash for Giri OS Genesis featuring official G-symbol branding
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/giri-genesis
+ScriptFile=/usr/share/plymouth/themes/giri-genesis/giri-genesis.script

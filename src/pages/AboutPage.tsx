@@ -1,0 +1,123 @@
+import React from 'react';
+import { 
+  Compass, 
+  Terminal, 
+  Code, 
+  ExternalLink,
+  Layers
+} from 'lucide-react';
+
+interface AboutPageProps {
+  navigate: (path: string) => void;
+}
+
+export const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
+  return (
+    <div className="pt-28 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="max-w-3xl mb-12">
+          <span className="text-xs font-semibold tracking-widest text-cyan-400 uppercase">
+            Project Origins & Ethos
+          </span>
+          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-2">
+            About Giri OS
+          </h1>
+          <p className="mt-4 text-base text-giri-muted leading-relaxed">
+            Founded on the conviction that a modern operating system should be quiet, capable, and respectful of the person sitting in front of the display.
+          </p>
+        </div>
+
+        {/* The Why Section */}
+        <section className="glass-panel p-8 sm:p-12 rounded-3xl border border-giri-border mb-16">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center justify-center">
+              <Compass className="w-5 h-5" />
+            </div>
+            <h2 className="text-2xl font-bold text-white">Why Giri OS Exists</h2>
+          </div>
+
+          <div className="space-y-4 text-xs sm:text-sm text-giri-muted leading-relaxed">
+            <p>
+              Contemporary operating systems increasingly demand more hardware resources simply to idle. Background services consume memory, cloud sync utilities upload telemetry without explicit comprehension, and desktop layouts prioritize sponsored content over user utility.
+            </p>
+            <p>
+              <strong>Giri OS</strong> was conceived to reverse this trajectory. We wanted a desktop that boots instantly, draws less than 350MB of RAM at idle, looks modern and cohesive, and stays out of your way until called upon.
+            </p>
+            <p>
+              By decoupling ourselves from monolithic desktop environments and building upon <strong>Debian GNU/Linux</strong>, we combine decades of upstream UNIX stability with original, handcrafted user interface architecture.
+            </p>
+          </div>
+        </section>
+
+        {/* Development Principles */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-2">
+            <Layers className="w-5 h-5 text-cyan-400" />
+            <span>Core Development Principles</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="glass-card p-6 rounded-2xl border border-giri-border">
+              <div className="text-cyan-400 font-mono text-xs font-bold uppercase mb-2">Principle 01</div>
+              <h3 className="text-lg font-bold text-white mb-2">Simplicity Over Bloat</h3>
+              <p className="text-xs text-giri-muted leading-relaxed">
+                If a feature can be implemented with an efficient, modular shell script or standard POSIX utility, we reject heavy background frameworks.
+              </p>
+            </div>
+
+            <div className="glass-card p-6 rounded-2xl border border-giri-border">
+              <div className="text-blue-400 font-mono text-xs font-bold uppercase mb-2">Principle 02</div>
+              <h3 className="text-lg font-bold text-white mb-2">Honest Engineering</h3>
+              <p className="text-xs text-giri-muted leading-relaxed">
+                We state our exact status clearly. Unfinished components are marked as &ldquo;In Development&rdquo; or &ldquo;Design Preview&rdquo;. We do not inflate feature claims or publish unverified binaries.
+              </p>
+            </div>
+
+            <div className="glass-card p-6 rounded-2xl border border-giri-border">
+              <div className="text-violet-400 font-mono text-xs font-bold uppercase mb-2">Principle 03</div>
+              <h3 className="text-lg font-bold text-white mb-2">Independent Identity</h3>
+              <p className="text-xs text-giri-muted leading-relaxed">
+                Giri OS maintains its own distinct visual design language, vector emblem, color tokens, and desktop philosophy, free from derivative branding.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Open Source & Community */}
+        <section className="glass-panel p-8 sm:p-12 rounded-3xl border border-giri-border">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-400 border border-violet-500/20 flex items-center justify-center">
+              <Code className="w-5 h-5" />
+            </div>
+            <h2 className="text-2xl font-bold text-white" id="license">Open Source Licensing & Codebase</h2>
+          </div>
+
+          <p className="text-xs sm:text-sm text-giri-muted leading-relaxed mb-6">
+            Giri OS is released under the permissive <strong>MIT License</strong>. The operating system&apos;s build scripts, custom desktop shell scripts, Plymouth themes, and installer modifications are available openly for audit, study, and extension.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href="https://github.com/abhinavgiri45/giri-os"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="aureon-button text-xs py-2.5 px-5 inline-flex items-center gap-1.5"
+            >
+              <Terminal className="w-3.5 h-3.5" />
+              <span>Explore OS Repository</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+
+            <button
+              onClick={() => navigate('/developers')}
+              className="umbra-button text-xs py-2.5 px-5"
+            >
+              <span>Developer Guide</span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};

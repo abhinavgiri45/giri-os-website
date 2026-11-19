@@ -1,0 +1,74 @@
+# ====================================================================
+# GIRI OS 0.1 "GENESIS" — PLYMOUTH BOOT SPLASH ANIMATION SCRIPT
+# Official Identity: Gradient Geometric "G" Emblem
+# Founder: Abhinav Giri | Tagline: ONE SYSTEM. INFINITE POSSIBILITIES.
+# ====================================================================
+
+# Set Clean Background Color (Deep Space Navy #080C1A)
+Window.SetBackgroundTopColor(0.031, 0.047, 0.102);
+Window.SetBackgroundBottomColor(0.016, 0.024, 0.055);
+
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+
+# Load Logo Sprite (Official Giri OS "G" Emblem)
+logo_image = Image("logo.png");
+logo_sprite = Sprite(logo_image);
+logo_x = (screen_width - logo_image.GetWidth()) / 2;
+logo_y = (screen_height - logo_image.GetHeight()) / 2 - 30;
+logo_sprite.SetPosition(logo_x, logo_y, 10);
+logo_sprite.SetOpacity(1.0);
+
+# Load Progress Bar Sprites
+bar_bg_image = Image("progress_bg.png");
+bar_bg_sprite = Sprite(bar_bg_image);
+bar_bg_x = (screen_width - bar_bg_image.GetWidth()) / 2;
+bar_bg_y = screen_height / 2 + 100;
+bar_bg_sprite.SetPosition(bar_bg_x, bar_bg_y, 10);
+bar_bg_sprite.SetOpacity(0.9);
+
+bar_fg_image = Image("progress_fg.png");
+bar_fg_sprite = Sprite();
+bar_fg_sprite.SetPosition(bar_bg_x + 2, bar_bg_y + 2, 12);
+
+# Tagline Sprite
+tagline_image = Image.Text("ONE SYSTEM. INFINITE POSSIBILITIES.", 0.58, 0.68, 0.82, 1.0, "DejaVu Sans Bold 13");
+tagline_sprite = Sprite(tagline_image);
+tagline_sprite.SetPosition((screen_width - tagline_image.GetWidth()) / 2, bar_bg_y + 35, 10);
+
+current_progress = 0.0;
+fade_in = 0.0;
+
+# Animation Loop Callback (Subtle, smooth boot pulse)
+fun refresh_callback () {
+    if (fade_in < 1.0) {
+        fade_in += 0.04;
+        if (fade_in > 1.0) {
+            fade_in = 1.0;
+        }
+        logo_sprite.SetOpacity(fade_in);
+    }
+}
+
+Plymouth.SetRefreshFunction(refresh_callback);
+
+# Progress Callback
+fun progress_callback (duration, progress) {
+    if (progress > current_progress) {
+        current_progress = progress;
+        bar_fg_scaled = bar_fg_image.Scale(bar_fg_image.GetWidth() * progress, bar_fg_image.GetHeight());
+        bar_fg_sprite.SetImage(bar_fg_scaled);
+    }
+}
+
+Plymouth.SetBootProgressFunction(progress_callback);
+
+# Quit Callback
+fun quit_callback () {
+    logo_sprite.SetOpacity(0);
+    bar_bg_sprite.SetOpacity(0);
+    bar_fg_sprite.SetOpacity(0);
+    tagline_sprite.SetOpacity(0);
+}
+
+Plymouth.SetQuitFunction(quit_callback);

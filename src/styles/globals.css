@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Color Tokens - Default Dark (Midnight Navy) */
+  --bg-primary: #060913;
+  --bg-surface: #0B0F19;
+  --bg-surface-elevated: #111827;
+  --bg-surface-card: rgba(11, 15, 25, 0.75);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(0, 210, 255, 0.3);
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+
+  /* Giri Brand Palette */
+  --brand-blue: #2563EB;
+  --brand-blue-vivid: #0066FF;
+  --brand-cyan: #06B6D4;
+  --brand-cyan-vivid: #00D2FF;
+  --brand-violet: #8B5CF6;
+  --brand-violet-vivid: #7928CA;
+  --brand-magenta: #A855F7;
+  
+  --shadow-subtle: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 35px -5px rgba(0, 102, 255, 0.25);
+}
+
+.light {
+  --bg-primary: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F1F5F9;
+  --bg-surface-card: rgba(255, 255, 255, 0.85);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-glow: rgba(0, 102, 255, 0.2);
+  --text-primary: #0B0F19;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --shadow-subtle: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
+  --shadow-glow: 0 0 30px -5px rgba(37, 99, 235, 0.15);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface-elevated);
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1F2937;
+}
+
+/* Restrained Glassmorphism & Surface Tokens */
+.glass-panel {
+  background: var(--bg-surface-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+}
+
+.glass-card {
+  background: var(--bg-surface-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 210, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(0, 102, 255, 0.15);
+}
+
+/* ThreeUI Inspired Buttons */
+.umbra-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+  color: #F8FAFC;
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.umbra-button:hover {
+  background: linear-gradient(180deg, rgba(51, 65, 85, 0.9) 0%, rgba(30, 41, 59, 1) 100%);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.umbra-button:active {
+  transform: translateY(0);
+}
+
+.aureon-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #0066FF 0%, #2563EB 50%, #7928CA 100%);
+  border: 1px solid rgba(0, 210, 255, 0.4);
+  border-radius: 9999px;
+  box-shadow: 0 0 20px -3px rgba(0, 102, 255, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.aureon-button:hover {
+  background: linear-gradient(135deg, #00D2FF 0%, #0066FF 50%, #A855F7 100%);
+  border-color: rgba(0, 210, 255, 0.7);
+  box-shadow: 0 0 30px 0 rgba(0, 210, 255, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+.aureon-button:active {
+  transform: translateY(0);
+}
+
+/* Gradient Typography */
+.text-gradient {
+  background: linear-gradient(135deg, #00D2FF 0%, #0066FF 50%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-subtle {
+  background: linear-gradient(180deg, #FFFFFF 0%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light .text-gradient-subtle {
+  background: linear-gradient(180deg, #0F172A 0%, #475569 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ThreeUI Isometric Grid Pattern */
+.bg-isometric-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.light .bg-isometric-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Ambient Radial Glows */
+.ambient-glow-blue {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, transparent 70%);
+}
+
+.ambient-glow-cyan {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.12) 0%, transparent 70%);
+}
+
+.ambient-glow-violet {
+  background: radial-gradient(circle at 50% 50%, rgba(121, 40, 202, 0.12) 0%, transparent 70%);
+}
+
+/* Accessibility & Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}

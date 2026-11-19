@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <!-- GIRI OS — Official Symbol (Four-Pane Geometric Window Formation) -->
+  <!-- Flat Vector Design | Electric Blue & Violet Palette -->
+  <g id="giri-symbol">
+    <!-- Top-Left Pane: Electric Cyan-Blue -->
+    <rect x="30" y="30" width="89" height="89" rx="12" fill="#00D2FF" />
+
+    <!-- Top-Right Pane: Vivid Electric Blue -->
+    <rect x="137" y="30" width="89" height="89" rx="12" fill="#0066FF" />
+
+    <!-- Bottom-Left Pane: Electric Violet -->
+    <rect x="30" y="137" width="89" height="89" rx="12" fill="#7928CA" />
+
+    <!-- Bottom-Right Pane: Radiant Violet-Magenta -->
+    <rect x="137" y="137" width="89" height="89" rx="12" fill="#A855F7" />
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" width="100%" height="100%">
+  <!-- GIRI OS — Primary Official Vector Logo -->
+  <!-- Flat Vector Design | Symmetrical 2x2 Geometric Window Formation | Transparent Background -->
+  <defs>
+    <style>
+      .brand-text {
+        font-family: "Inter", "Space Grotesk", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        font-weight: 800;
+        font-size: 72px;
+        letter-spacing: 5px;
+      }
+      .tagline-text {
+        font-family: "Inter", "Space Grotesk", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        font-weight: 600;
+        font-size: 13.5px;
+        letter-spacing: 5.5px;
+      }
+    </style>
+  </defs>
+
+  <!-- Symbol: Symmetrical 2x2 Window Formation (140x140 Total, 12px Spacing) -->
+  <g id="giri-symbol" transform="translate(35, 30)">
+    <!-- Top-Left: Electric Cyan-Blue -->
+    <rect x="0" y="0" width="64" height="64" rx="10" fill="#00D2FF" />
+
+    <!-- Top-Right: Vivid Electric Blue -->
+    <rect x="76" y="0" width="64" height="64" rx="10" fill="#0066FF" />
+
+    <!-- Bottom-Left: Electric Violet -->
+    <rect x="0" y="76" width="64" height="64" rx="10" fill="#7928CA" />
+
+    <!-- Bottom-Right: Radiant Violet-Magenta -->
+    <rect x="76" y="76" width="64" height="64" rx="10" fill="#A855F7" />
+  </g>
+
+  <!-- Wordmark Section -->
+  <g transform="translate(225, 0)">
+    <!-- Main Title: GIRI OS -->
+    <text x="0" y="112" class="brand-text">
+      <tspan fill="#0066FF">GIRI</tspan>
+      <tspan dx="12" fill="#7928CA">OS</tspan>
+    </text>
+
+    <!-- Divider Bar -->
+    <rect x="2" y="132" width="460" height="2" rx="1" fill="#00D2FF" opacity="0.4" />
+
+    <!-- Tagline: ONE SYSTEM. INFINITE POSSIBILITIES. -->
+    <text x="3" y="156" class="tagline-text" fill="#64748B">ONE SYSTEM. INFINITE POSSIBILITIES.</text>
+  </g>
+</svg>
