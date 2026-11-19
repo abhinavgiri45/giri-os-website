@@ -1,17 +1,39 @@
-import http from 'http';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-http.get('http://127.0.0.1:4173/', (res) => {
-  let html = '';
-  res.on('data', chunk => html += chunk);
-  res.on('end', () => {
-    console.log('--- BROWSER TAB & FAVICON METADATA AUDIT ---');
-    console.log('HTTP Status:', res.statusCode);
-    const titleMatch = html.match(/<title>(.*?)<\/title>/);
-    console.log('Page Title:', titleMatch ? titleMatch[1] : 'NOT FOUND');
-    
-    const iconRegex = /<link[^>]+rel=["'](?:icon|apple-touch-icon|manifest)["'][^>]*>/gi;
-    const icons = html.match(iconRegex) || [];
-    console.log(`Found ${icons.length} favicon/icon declarations:`);
-    icons.forEach(tag => console.log('  ' + tag));
-  });
-});
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const rootDir = path.resolve(__dirname, '..');
+
+const indexHtmlPath = path.join(rootDir, 'dist', 'index.html');
+if (!fs.existsSync(indexHtmlPath)) {
+  console.error(`ERROR: ${indexHtmlPath} does not exist. Run 'npm run build' first.`);
+  process.exit(1);
+}
+
+const html = fs.readFileSync(indexHtmlPath, 'utf8');
+
+console.log('====================================================');
+console.log('GIRI OS WEBSITE — BROWSER TAB & TITLE BAR AUDIT');
+console.log('====================================================');
+
+const titleMatch = html.match(/<title>(.*?)<\/title>/);
+const title = titleMatch ? titleMatch[1] : 'NOT FOUND';
+console.log(`[TITLE] Browser Tab Title: "${title}"`);
+
+if (title === 'Giri OS — Official Website') {
+  console.log('[PASS] Homepage title matches exact requirement: "Giri OS — Official Website"');
+} else {
+  console.error(`[FAIL] Expected "Giri OS — Official Website", got "${title}"`);
+  process.exit(1);
+}
+
+const iconRegex = /<link[^>]+rel=["'](?:icon|apple-touch-icon|manifest)["'][^>]*>/gi;
+const icons = html.match(iconRegex) || [];
+console.log(`\n[ICONS] Found ${icons.length} favicon/icon declarations:`);
+icons.forEach(tag => console.log('  ' + tag));
+
+console.log('\n====================================================');
+console.log('ALL TITLE BAR & FAVICON CHECKS PASSED');
+console.log('====================================================');

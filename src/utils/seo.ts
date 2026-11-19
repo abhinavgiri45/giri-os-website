@@ -68,9 +68,9 @@ export const SOFTWARE_APPLICATION_SCHEMA = {
  */
 export const ROUTE_SEO: Record<string, PageSeoData> = {
   '/': {
-    title: 'Giri OS — One OS. Three Worlds.',
-    description: 'Discover Giri OS and its three application platforms: Giri Bridge, Giri Mobile and Giri Store. One unified desktop experience.',
-    keywords: 'Giri OS, One OS Three Worlds, Giri Bridge, Giri Mobile, Giri Store, Linux operating system, independent OS, lightweight desktop',
+    title: 'Giri OS — Official Website',
+    description: 'Official website of Giri OS — an independent Linux-based operating system. ONE SYSTEM. INFINITE POSSIBILITIES.',
+    keywords: 'Giri OS, Giri Operating System, Giri OS Linux, Giri OS official website, Giri Space, Debian Linux, lightweight OS, open-source operating system',
     canonical: `${SITE_ORIGIN}/`,
     ogType: 'website',
     ogImage: DEFAULT_OG_IMAGE,
@@ -84,8 +84,8 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
           '@type': 'WebPage',
           '@id': `${SITE_ORIGIN}/#webpage`,
           url: `${SITE_ORIGIN}/`,
-          name: 'Giri OS — One OS. Three Worlds.',
-          description: 'Discover Giri OS and its three application platforms: Giri Bridge, Giri Mobile and Giri Store. One unified desktop experience.',
+          name: 'Giri OS — Official Website',
+          description: 'Official website of Giri OS — an independent Linux-based operating system. ONE SYSTEM. INFINITE POSSIBILITIES.',
           isPartOf: { '@id': `${SITE_ORIGIN}/#website` },
           about: { '@id': `${SITE_ORIGIN}/#software` }
         }
