@@ -48,10 +48,10 @@ export const GalleryPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-semibold tracking-widest text-cyan-400 uppercase">
+          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase">
             Visual Media
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-2">
+          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-2">
             System & Design Gallery
           </h1>
           <p className="mt-4 text-base text-giri-muted leading-relaxed">
@@ -60,15 +60,15 @@ export const GalleryPage: React.FC = () => {
         </div>
 
         {/* Category Pills */}
-        <div className="flex flex-wrap items-center gap-2 mb-10 p-2 rounded-2xl bg-giri-surface border border-giri-border w-fit">
+        <div className="flex flex-wrap items-center gap-2 mb-10 p-2 rounded-2xl bg-giri-surface border border-giri-border w-fit shadow-sm">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-1.5 rounded-xl text-xs font-medium transition-colors ${
+              className={`px-4 py-1.5 rounded-xl text-xs font-semibold transition-colors ${
                 selectedCategory === cat
-                  ? 'bg-giri-blue/20 text-cyan-300 border border-cyan-500/40 shadow-sm'
-                  : 'text-giri-muted hover:text-white hover:bg-white/5'
+                  ? 'bg-giri-blue/15 text-giri-blue dark:text-cyan-300 border border-giri-blue/30 shadow-sm'
+                  : 'text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/5'
               }`}
             >
               {cat}
@@ -79,8 +79,8 @@ export const GalleryPage: React.FC = () => {
         {/* Gallery Grid or Empty State */}
         {filteredItems.length === 0 ? (
           <div className="glass-panel p-12 rounded-3xl border border-giri-border text-center max-w-md mx-auto">
-            <ImageIcon className="w-10 h-10 text-cyan-400 mx-auto mb-3 opacity-60" />
-            <h3 className="text-base font-bold text-white mb-2">No Visual Assets Found</h3>
+            <ImageIcon className="w-10 h-10 text-giri-blue dark:text-cyan-400 mx-auto mb-3 opacity-60" />
+            <h3 className="text-base font-bold text-giri-text mb-2">No Visual Assets Found</h3>
             <p className="text-xs text-giri-muted leading-relaxed mb-4">
               No media is cataloged under &ldquo;{selectedCategory}&rdquo;.
             </p>
@@ -99,7 +99,7 @@ export const GalleryPage: React.FC = () => {
                 className="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group cursor-pointer border border-giri-border"
                 onClick={() => setActiveItem(item)}
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-black/40 flex items-center justify-center">
+                <div className="relative aspect-[16/10] overflow-hidden bg-black/5 dark:bg-black/40 flex items-center justify-center">
                   <img
                     src={item.imageSrc}
                     alt={`Giri OS Wallpaper / Visual — ${item.title}`}
@@ -122,15 +122,15 @@ export const GalleryPage: React.FC = () => {
                 </div>
 
                 <div className="p-4">
-                  <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-sm font-bold text-giri-text group-hover:text-giri-blue dark:group-hover:text-cyan-300 transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-xs text-giri-muted mt-1 line-clamp-2 leading-relaxed">
                     {item.description}
                   </p>
-                  <div className="mt-3 pt-3 border-t border-giri-border/50 flex items-center justify-between text-[11px] text-giri-muted">
+                  <div className="mt-3 pt-3 border-t border-giri-border flex items-center justify-between text-[11px] text-giri-muted">
                     <span className="font-mono">{item.category}</span>
-                    <span className="text-cyan-400 font-medium">Click to inspect</span>
+                    <span className="text-giri-blue dark:text-cyan-400 font-semibold">Click to inspect</span>
                   </div>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export const GalleryPage: React.FC = () => {
           title={activeItem.title}
         >
           <div className="space-y-4">
-            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden bg-black/80 flex items-center justify-center border border-giri-border">
+            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden bg-black/5 dark:bg-black/80 flex items-center justify-center border border-giri-border">
               <img
                 src={activeItem.imageSrc}
                 alt={`Giri OS Lightbox View — ${activeItem.title}`}
@@ -161,7 +161,7 @@ export const GalleryPage: React.FC = () => {
               <button
                 onClick={(e) => { e.stopPropagation(); handlePrev(); }}
                 aria-label="Previous image"
-                className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 text-white hover:bg-cyan-500 hover:text-black transition-colors"
+                className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 text-white hover:bg-giri-blue hover:text-white transition-colors"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -169,7 +169,7 @@ export const GalleryPage: React.FC = () => {
               <button
                 onClick={(e) => { e.stopPropagation(); handleNext(); }}
                 aria-label="Next image"
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 text-white hover:bg-cyan-500 hover:text-black transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 text-white hover:bg-giri-blue hover:text-white transition-colors"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -201,7 +201,7 @@ export const GalleryPage: React.FC = () => {
             </div>
 
             {activeItem.label === 'Design Preview' && (
-              <div className="p-3 rounded-lg bg-violet-500/10 border border-violet-500/20 text-xs text-violet-300 flex items-center gap-2">
+              <div className="p-3 rounded-lg bg-giri-violet/10 border border-giri-violet/20 text-xs text-giri-violet flex items-center gap-2">
                 <Info className="w-4 h-4 shrink-0" />
                 <span>
                   This item is a design preview illustrating the planned UI layout. It will be replaced with verified live screenshots once desktop shell stabilization concludes.

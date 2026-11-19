@@ -68,9 +68,9 @@ export const SOFTWARE_APPLICATION_SCHEMA = {
  */
 export const ROUTE_SEO: Record<string, PageSeoData> = {
   '/': {
-    title: 'Giri OS — Official Website | Independent Linux Operating System',
-    description: 'Official website of Giri OS — an independent Linux-based operating system powered by Debian 12, Giri Space shell, and Linux 6.1 LTS. Fast, minimal, zero telemetry.',
-    keywords: 'Giri OS, Giri Operating System, Giri OS Linux, Giri OS official website, Giri Space, Debian Linux, lightweight OS, open-source operating system',
+    title: 'Giri OS — One OS. Three Worlds.',
+    description: 'Discover Giri OS and its three application platforms: Giri Bridge, Giri Mobile and Giri Store. One unified desktop experience.',
+    keywords: 'Giri OS, One OS Three Worlds, Giri Bridge, Giri Mobile, Giri Store, Linux operating system, independent OS, lightweight desktop',
     canonical: `${SITE_ORIGIN}/`,
     ogType: 'website',
     ogImage: DEFAULT_OG_IMAGE,
@@ -84,10 +84,112 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
           '@type': 'WebPage',
           '@id': `${SITE_ORIGIN}/#webpage`,
           url: `${SITE_ORIGIN}/`,
-          name: 'Giri OS — Official Website | Independent Linux Operating System',
-          description: 'Official website of Giri OS — an independent Linux-based operating system powered by Debian 12, Giri Space shell, and Linux 6.1 LTS.',
+          name: 'Giri OS — One OS. Three Worlds.',
+          description: 'Discover Giri OS and its three application platforms: Giri Bridge, Giri Mobile and Giri Store. One unified desktop experience.',
           isPartOf: { '@id': `${SITE_ORIGIN}/#website` },
           about: { '@id': `${SITE_ORIGIN}/#software` }
+        }
+      ]
+    }
+  },
+  '/products/giri-bridge': {
+    title: 'Giri Bridge — Application Compatibility Platform | Giri OS',
+    description: 'Giri Bridge is the application compatibility platform of Giri OS, bringing supported desktop applications into one integrated computing experience via Wine and DXVK.',
+    keywords: 'Giri Bridge, Giri OS, desktop application compatibility, Wine staging, DXVK, prefix isolation, EXE MSI on Linux',
+    canonical: `${SITE_ORIGIN}/products/giri-bridge`,
+    ogType: 'website',
+    ogImage: DEFAULT_OG_IMAGE,
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        ORGANIZATION_SCHEMA,
+        SOFTWARE_APPLICATION_SCHEMA,
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_ORIGIN}/` },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: `${SITE_ORIGIN}/#products` },
+            { '@type': 'ListItem', position: 3, name: 'Giri Bridge', item: `${SITE_ORIGIN}/products/giri-bridge` }
+          ]
+        },
+        {
+          '@type': 'Product',
+          name: 'Giri Bridge',
+          description: 'Giri Bridge is the application compatibility platform of Giri OS, designed to bring supported desktop applications into one integrated computing experience.',
+          category: 'SoftwareApplication',
+          offers: {
+            '@type': 'Offer',
+            price: '0.00',
+            priceCurrency: 'USD'
+          }
+        }
+      ]
+    }
+  },
+  '/products/giri-mobile': {
+    title: 'Giri Mobile — Integrated Mobile Application Runtime | Giri OS',
+    description: 'Giri Mobile brings supported mobile applications to the Giri OS desktop through an integrated application runtime with Giri Smart Input Mapping.',
+    keywords: 'Giri Mobile, Giri OS, mobile app runtime, APK on desktop, Waydroid container, Giri Smart Input Mapping, keymap daemon',
+    canonical: `${SITE_ORIGIN}/products/giri-mobile`,
+    ogType: 'website',
+    ogImage: DEFAULT_OG_IMAGE,
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        ORGANIZATION_SCHEMA,
+        SOFTWARE_APPLICATION_SCHEMA,
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_ORIGIN}/` },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: `${SITE_ORIGIN}/#products` },
+            { '@type': 'ListItem', position: 3, name: 'Giri Mobile', item: `${SITE_ORIGIN}/products/giri-mobile` }
+          ]
+        },
+        {
+          '@type': 'Product',
+          name: 'Giri Mobile',
+          description: 'Giri Mobile brings supported mobile applications to the Giri OS desktop through an integrated application runtime.',
+          category: 'SoftwareApplication',
+          offers: {
+            '@type': 'Offer',
+            price: '0.00',
+            priceCurrency: 'USD'
+          }
+        }
+      ]
+    }
+  },
+  '/products/giri-store': {
+    title: 'Giri Store — Unified Application Marketplace | Giri OS',
+    description: 'Giri Store is the unified application marketplace of Giri OS, designed to help users discover, install and manage applications through one interface.',
+    keywords: 'Giri Store, Giri OS, application marketplace, Debian APT, Flatpak, Flathub, package manager, zero telemetry',
+    canonical: `${SITE_ORIGIN}/products/giri-store`,
+    ogType: 'website',
+    ogImage: DEFAULT_OG_IMAGE,
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        ORGANIZATION_SCHEMA,
+        SOFTWARE_APPLICATION_SCHEMA,
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_ORIGIN}/` },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: `${SITE_ORIGIN}/#products` },
+            { '@type': 'ListItem', position: 3, name: 'Giri Store', item: `${SITE_ORIGIN}/products/giri-store` }
+          ]
+        },
+        {
+          '@type': 'Product',
+          name: 'Giri Store',
+          description: 'Giri Store is the unified application marketplace of Giri OS, designed to help users discover, install and manage applications through one interface.',
+          category: 'SoftwareApplication',
+          offers: {
+            '@type': 'Offer',
+            price: '0.00',
+            priceCurrency: 'USD'
+          }
         }
       ]
     }
@@ -117,6 +219,39 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
           name: 'Giri OS Features & Desktop Subsystems',
           description: 'Explore the modular architecture and desktop components of Giri OS: Giri Space shell, Giri Dock, Openbox window manager, live session, and zero telemetry.',
           isPartOf: { '@id': `${SITE_ORIGIN}/#website` }
+        }
+      ]
+    }
+  },
+  '/features/application-ecosystem': {
+    title: 'Giri OS — One OS. Three Worlds. | Application Ecosystem',
+    description: 'Discover the three original application products of Giri OS: Giri Bridge, Giri Mobile, and Giri Store, unified in one powerful desktop experience.',
+    keywords: 'Giri OS, One OS Three Worlds, Giri Bridge, Giri Mobile, Giri Store, application compatibility, mobile runtime, Linux marketplace',
+    canonical: `${SITE_ORIGIN}/features/application-ecosystem`,
+    ogType: 'website',
+    ogImage: DEFAULT_OG_IMAGE,
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        ORGANIZATION_SCHEMA,
+        SOFTWARE_APPLICATION_SCHEMA,
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_ORIGIN}/` },
+            { '@type': 'ListItem', position: 2, name: 'Features', item: `${SITE_ORIGIN}/features` },
+            { '@type': 'ListItem', position: 3, name: 'Application Ecosystem', item: `${SITE_ORIGIN}/features/application-ecosystem` }
+          ]
+        },
+        {
+          '@type': 'TechArticle',
+          '@id': `${SITE_ORIGIN}/features/application-ecosystem#article`,
+          url: `${SITE_ORIGIN}/features/application-ecosystem`,
+          name: 'ONE OS. THREE WORLDS — Giri OS Unified Application Ecosystem',
+          headline: 'Giri OS Three-Product Ecosystem Architecture',
+          description: 'Comprehensive technical documentation detailing how Giri OS brings together Giri Bridge, Giri Mobile, and Giri Store with prefix isolation, containerization, and smart input mapping.',
+          isPartOf: { '@id': `${SITE_ORIGIN}/#website` },
+          about: { '@id': `${SITE_ORIGIN}/#software` }
         }
       ]
     }

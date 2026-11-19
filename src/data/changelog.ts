@@ -18,9 +18,9 @@ export const GIRI_CHANGELOG: ChangelogRelease[] = [
     date: 'November 2026 (Active Development)',
     isLatest: true,
     status: 'In Stabilization',
-    summary: 'The inaugural milestone build of Giri OS, establishing the complete Debian 12 Bookworm live-build foundation, custom four-pane visual branding, Plymouth boot engine, GRUB2 theme, and initial Giri Space desktop shell.',
+    summary: 'The inaugural milestone build of Giri OS, establishing the complete Debian 12 Bookworm live-build foundation, official orbital geometric visual branding, Plymouth boot engine, GRUB2 theme, and initial Giri Space desktop shell.',
     newFeatures: [
-      'Giri Plymouth boot animation featuring pulsing four-pane geometric logo with zero-flicker kernel handoff',
+      'Giri Plymouth boot animation featuring pulsing orbital emblem with zero-flicker kernel handoff',
       'High-resolution Giri GRUB2 theme with HiDPI display auto-scaling and electric cyan selection frames',
       'Calamares graphical system installer with custom dark stylesheet and automated partitioning profiles',
       'Giri Space desktop shell foundation featuring top telemetry panel and Openbox composited window manager',

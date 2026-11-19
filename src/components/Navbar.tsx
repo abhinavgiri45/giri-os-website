@@ -62,7 +62,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
       role="banner"
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-giri-navy/85 backdrop-blur-xl border-b border-giri-border py-3 shadow-lg'
+          ? 'bg-giri-surface/90 backdrop-blur-xl border-b border-giri-border py-3 shadow-sm dark:shadow-xl'
           : 'bg-transparent py-5'
       }`}
     >
@@ -71,21 +71,21 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
           {/* Brand Logo & Wordmark */}
           <button
             onClick={() => handleNavClick('/')}
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-giri-cyan/50 rounded-lg p-1"
+            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-giri-blue/60 rounded-xl p-1"
             aria-label="Giri OS Home — Return to overview"
           >
             <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center p-0.5 group-hover:scale-105 transition-transform duration-200">
               <img
                 src="/logo/giri-os-icon.svg"
-                alt="Giri OS Official Emblem — Four-Pane Modern Window Formation"
+                alt="Giri OS Official Emblem — Orbital 'G' Geometric Formation"
                 width={32}
                 height={32}
                 decoding="async"
-                className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(0,210,255,0.5)]"
+                className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(0,102,255,0.4)]"
               />
             </div>
             <div className="flex flex-col text-left">
-              <span className="font-extrabold text-base tracking-wider text-giri-text group-hover:text-cyan-400 transition-colors">
+              <span className="font-extrabold text-base tracking-wider text-giri-text group-hover:text-giri-blue transition-colors">
                 GIRI <span className="text-giri-violet">OS</span>
               </span>
               <span className="text-[9px] uppercase tracking-widest text-giri-muted -mt-1 font-semibold hidden sm:inline-block">
@@ -98,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
           <nav
             role="navigation"
             aria-label="Main Navigation"
-            className="hidden lg:flex items-center gap-1 bg-giri-surface/50 border border-giri-border/60 px-3 py-1.5 rounded-full backdrop-blur-md"
+            className="hidden lg:flex items-center gap-1 bg-giri-surface/80 border border-giri-border px-3 py-1.5 rounded-full backdrop-blur-md shadow-sm"
           >
             {primaryNav.map((item) => {
               const isActive = currentPath === item.href;
@@ -107,10 +107,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
                   aria-current={isActive ? 'page' : undefined}
-                  className={`px-3 py-1 rounded-full text-xs font-medium transition-all duration-150 ${
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-150 ${
                     isActive
-                      ? 'bg-giri-blue/20 text-cyan-300 shadow-sm border border-cyan-500/30'
-                      : 'text-giri-muted hover:text-white hover:bg-white/5'
+                      ? 'bg-giri-blue/15 text-giri-blue dark:text-cyan-300 shadow-sm border border-giri-blue/30'
+                      : 'text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/5'
                   }`}
                 >
                   {item.label}
@@ -124,10 +124,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
                 onClick={() => setMoreDropdownOpen(!moreDropdownOpen)}
                 aria-expanded={moreDropdownOpen}
                 aria-haspopup="true"
-                className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium transition-all duration-150 ${
+                className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-150 ${
                   isSecondaryActive || moreDropdownOpen
-                    ? 'bg-giri-blue/20 text-cyan-300 border border-cyan-500/30'
-                    : 'text-giri-muted hover:text-white hover:bg-white/5'
+                    ? 'bg-giri-blue/15 text-giri-blue dark:text-cyan-300 border border-giri-blue/30'
+                    : 'text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/5'
                 }`}
               >
                 <span>More</span>
@@ -137,7 +137,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
               {moreDropdownOpen && (
                 <div
                   role="menu"
-                  className="absolute right-0 mt-2 w-48 rounded-2xl bg-giri-surface border border-giri-border/80 p-2 shadow-2xl backdrop-blur-2xl animate-fade-in z-50 flex flex-col gap-1"
+                  className="absolute right-0 mt-2 w-48 rounded-2xl bg-giri-surface border border-giri-border p-2 shadow-2xl backdrop-blur-2xl animate-fade-in z-50 flex flex-col gap-1"
                 >
                   {secondaryNav.map((item) => {
                     const isActive = currentPath === item.href;
@@ -149,8 +149,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
                         aria-current={isActive ? 'page' : undefined}
                         className={`text-left px-3 py-2 rounded-xl text-xs font-medium transition-colors ${
                           isActive
-                            ? 'bg-giri-blue/20 text-cyan-300 border border-cyan-500/30'
-                            : 'text-giri-muted hover:text-white hover:bg-white/5'
+                            ? 'bg-giri-blue/15 text-giri-blue dark:text-cyan-300 border border-giri-blue/30'
+                            : 'text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/5'
                         }`}
                       >
                         {item.label}
@@ -168,9 +168,9 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
             <button
               onClick={toggleTheme}
               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-              className="p-2 rounded-full text-giri-muted hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-giri-cyan/50"
+              className="p-2 rounded-full text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-giri-blue/50"
             >
-              {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-blue-500" />}
+              {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-giri-blue" />}
             </button>
 
             {/* GitHub Repo Link */}
@@ -179,7 +179,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Giri OS GitHub Repository (opens in new tab)"
-              className="p-2 rounded-full text-giri-muted hover:text-white hover:bg-white/10 transition-colors hidden sm:flex focus:outline-none focus:ring-2 focus:ring-giri-cyan/50"
+              className="p-2 rounded-full text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/10 transition-colors hidden sm:flex focus:outline-none focus:ring-2 focus:ring-giri-blue/50"
             >
               <GithubIcon className="w-4 h-4" />
             </a>
@@ -187,7 +187,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
             {/* Download CTA Button */}
             <button
               onClick={() => handleNavClick('/downloads')}
-              className="aureon-button text-xs py-2 px-3.5 hidden sm:inline-flex"
+              className="aureon-button text-xs py-2 px-4 hidden sm:inline-flex"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Download</span>
@@ -198,7 +198,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={mobileMenuOpen}
-              className="p-2 rounded-lg text-giri-muted hover:text-white hover:bg-white/10 lg:hidden focus:outline-none focus:ring-2 focus:ring-giri-cyan/50"
+              className="p-2 rounded-lg text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/10 lg:hidden focus:outline-none focus:ring-2 focus:ring-giri-blue/50"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -212,7 +212,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation Drawer"
-          className="lg:hidden bg-giri-surface/95 backdrop-blur-2xl border-b border-giri-border px-4 pt-3 pb-6 animate-fade-in shadow-2xl max-h-[85vh] overflow-y-auto"
+          className="lg:hidden bg-giri-surface/98 backdrop-blur-2xl border-b border-giri-border px-4 pt-3 pb-6 animate-fade-in shadow-2xl max-h-[85vh] overflow-y-auto"
         >
           <nav className="flex flex-col gap-1">
             {MAIN_NAV_ITEMS.map((item) => {
@@ -222,10 +222,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
                   aria-current={isActive ? 'page' : undefined}
-                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
+                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
                     isActive
-                      ? 'bg-giri-blue/20 text-cyan-300 border border-cyan-500/30'
-                      : 'text-giri-muted hover:text-white hover:bg-white/5'
+                      ? 'bg-giri-blue/15 text-giri-blue dark:text-cyan-300 border border-giri-blue/30'
+                      : 'text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/5'
                   }`}
                 >
                   <span>{item.label}</span>
@@ -235,12 +235,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
             })}
           </nav>
 
-          <div className="mt-4 pt-4 border-t border-giri-border/60 flex items-center justify-between gap-3">
+          <div className="mt-4 pt-4 border-t border-giri-border flex items-center justify-between gap-3">
             <a
               href="https://github.com/abhinavgiri45/giri-os"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs text-giri-muted hover:text-white px-3 py-2 rounded-lg hover:bg-white/5"
+              className="flex items-center gap-2 text-xs text-giri-muted hover:text-giri-text px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5"
             >
               <GithubIcon className="w-4 h-4" />
               <span>GitHub (abhinavgiri45/giri-os)</span>

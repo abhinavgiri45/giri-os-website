@@ -7,9 +7,10 @@ export function useTheme() {
     try {
       const saved = localStorage.getItem('giri-theme');
       if (saved === 'dark' || saved === 'light') return saved;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      // Default to light mode first
+      return 'light';
     } catch {
-      return 'dark';
+      return 'light';
     }
   });
 
@@ -23,7 +24,7 @@ export function useTheme() {
     } else {
       root.classList.remove('dark');
       root.classList.add('light');
-      if (metaThemeColor) metaThemeColor.setAttribute('content', '#F8FAFC');
+      if (metaThemeColor) metaThemeColor.setAttribute('content', '#FFFFFF');
     }
     try {
       localStorage.setItem('giri-theme', theme);

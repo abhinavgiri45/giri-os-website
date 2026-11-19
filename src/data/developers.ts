@@ -50,7 +50,7 @@ qemu-system-x86_64 \\
     details: `
 - \`boot/grub/\`: GRUB2 bootloader theme assets, fonts, and menu box coordinates.
 - \`boot/plymouth/\`: Giri Genesis Plymouth boot animation script and vector sprite frames.
-- \`branding/\`: Official four-pane vector SVGs, PNGs, and 12 curated desktop wallpapers.
+- \`branding/\`: Official orbital emblem vector SVGs, PNGs, and 12 curated desktop wallpapers.
 - \`build/live-build/\`: Debian live-build configuration, package lists, and post-installation chroot hooks.
 - \`desktop/giri-space/\`: Desktop shell scripts, panel widgets, and Openbox window manager configurations.
 - \`installer/calamares/\`: Calamares distribution configuration, QSS stylesheets, and branding metadata.

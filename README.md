@@ -1,6 +1,6 @@
 # Giri OS Official Website
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Framework: React + Vite](https://img.shields.io/badge/Framework-React%20%2B%20Vite-61dafb.svg)](https://vitejs.dev/)
 [![Styling: Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind%20CSS-38bdf8.svg)](https://tailwindcss.com/)
 [![3D Engine: Three.js](https://img.shields.io/badge/3D%20Engine-Three.js-black.svg)](https://threejs.org/)
@@ -28,7 +28,7 @@ The Giri OS website is engineered as a standalone, high-performance static web a
 | :--- | :--- | :--- |
 | **Runtime & Build** | React 18 + Vite 5 + TypeScript | Blazing fast HMR, strict type safety, zero-lag client navigation |
 | **3D & WebGL** | Three.js | Real-time interactive 3D hero emblem, kinetic tilt, dynamic lighting |
-| **Styling & Tokens** | Tailwind CSS + Custom CSS Variables | Midnight Navy palette (`#060913`, `#0B0F19`), glassmorphism, dark/light themes |
+| **Styling & Tokens** | Tailwind CSS + Custom CSS Variables | Light-first design, Midnight Navy dark mode (`#060913`), glassmorphism |
 | **Design Language** | ThreeUI Design Integration | Tactile Aureon crystal buttons, Umbra chrome borders, isometric motion grid |
 | **Icons** | Lucide React | High-contrast, clean open-source vector glyphs |
 | **SEO & Social** | Open Graph, Twitter Cards, JSON-LD, Sitemap | Complete semantic indexing, rich link previews, sitemap generation |
@@ -38,14 +38,13 @@ The Giri OS website is engineered as a standalone, high-performance static web a
 
 ## Design System & ThreeUI Alignment
 
-The visual aesthetic is inspired by [ThreeUI](https://threeui.com/) and tailored directly to Giri OS's official four-pane geometric window identity:
+The visual aesthetic is inspired by [ThreeUI](https://threeui.com/) and tailored directly to Giri OS's official orbital geometric identity:
 
-- **Midnight Navy (`#060913`):** Deep space backdrop providing maximum contrast.
-- **Deep Surface (`#0B0F19`):** Ground level glassmorphic cards and elevated navigation.
+- **Light First Foundation (`#FFFFFF`, `#F8FAFC`, `#F1F5F9`):** Bright, modern, spacious light mode default providing maximum clarity.
+- **Midnight Navy (`#060913`, `#0B0F19`):** Deep space backdrop option for immersive dark mode.
 - **Electric Blue (`#2563EB` / `#0066FF`):** Core brand energy and primary action illumination.
 - **Cyan (`#06B6D4` / `#00D2FF`):** Telemetry accents, terminal code highlights, and interactive hover glow.
-- **Electric Violet (`#8B5CF6` / `#7928CA`):** Secondary dimensional depth and badge accents.
-- **Radiant Magenta (`#A855F7`):** Fourth window pane specular reflections.
+- **Electric Violet (`#8B5CF6` / `#7928CA`):** Secondary dimensional depth and orbital emblem accents.
 
 For in-depth analysis of selected ThreeUI patterns and clean-room implementation details, consult [`THREEUI_COMPONENT_SELECTION.md`](./THREEUI_COMPONENT_SELECTION.md).
 
@@ -61,7 +60,9 @@ giri-os-website/
 │   ├── robots.txt              # Search engine crawling rules
 │   ├── sitemap.xml             # Search engine XML index
 │   ├── _redirects              # Cloudflare Pages SPA client-side routing
+│   ├── _headers                # HTTP security & caching headers
 │   ├── logo/                   # Official vector SVG brand emblems
+│   ├── icons/                  # Multi-resolution icons (16px to 512px)
 │   ├── wallpapers/             # Verified 4K desktop wallpapers
 │   └── images/                 # Plymouth and GRUB verified assets
 │
@@ -75,7 +76,7 @@ giri-os-website/
 │   │   ├── CodeBlock.tsx       # Syntax styled code blocks with copy-to-clipboard
 │   │   └── Modal.tsx           # Full-screen accessible gallery lightbox
 │   │
-│   ├── pages/                  # All 12 primary website pages
+│   ├── pages/                  # All 12 primary website pages + 404
 │   │   ├── HomePage.tsx        # Hero, vision, showcase, features, editions, CTA
 │   │   ├── FeaturesPage.tsx    # Filterable catalog of 13 Giri OS components
 │   │   ├── EditionsPage.tsx    # Standard, Developer & Cloud specifications
@@ -87,23 +88,29 @@ giri-os-website/
 │   │   ├── ChangelogPage.tsx   # Release notes for Genesis 0.1 & future builds
 │   │   ├── StatusPage.tsx      # Live telemetry, active branch & bug triage
 │   │   ├── SecurityPage.tsx    # Cryptographic provenance & privacy philosophy
-│   │   └── AboutPage.tsx       # Origins, mission, and open-source principles
+│   │   ├── AboutPage.tsx       # Origins, mission, and open-source principles
+│   │   └── NotFoundPage.tsx    # Accessible 404 fallback locus
 │   │
 │   ├── data/                   # Structured static data models & schemas
 │   ├── hooks/                  # Custom React hooks (useTheme, etc.)
 │   ├── styles/                 # Tailwind configuration and CSS variable tokens
-│   ├── App.tsx                 # Client-side router & layout frame
+│   ├── utils/                  # SEO and canonical graph utilities
+│   ├── App.tsx                 # Client-side router, layout & TV spatial nav
 │   └── main.tsx                # Application root entrypoint
 │
 ├── scripts/
-│   └── test-runner.js          # Automated audit & asset integrity test runner
+│   ├── test-runner.js          # Automated audit & asset integrity test runner
+│   ├── test-responsive.js      # Viewport matrix & accessibility test suite
+│   ├── test-seo.js             # Technical SEO and structured data verification
+│   └── prerender-seo.js        # Static prerender script for search engines
 │
 ├── THREEUI_COMPONENT_SELECTION.md # Design research & licensing manifesto
+├── THIRD_PARTY_NOTICES.md      # Attribution for third-party libraries & fonts
 ├── wrangler.toml               # Cloudflare Pages configuration
 ├── vite.config.ts              # Vite production bundler configuration
 ├── tailwind.config.js          # Tailwind CSS design token mappings
 ├── package.json                # Project dependencies and npm scripts
-├── LICENSE                     # MIT License
+├── LICENSE                     # GNU General Public License v3.0 or later
 └── README.md                   # Project documentation
 ```
 
@@ -135,7 +142,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 ```bash
 npm test
 ```
-Executes the automated asset, schema, and routing integrity audit.
+Executes the automated asset, schema, responsive, and routing integrity audit.
 
 ### Production Build
 ```bash
@@ -163,6 +170,8 @@ Cloudflare Pages automatically detects the `public/_redirects` file (`/* /index.
 
 ---
 
-## License
+## License & Attribution
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+- **Website Source Code:** Licensed under the [GNU General Public License v3.0 or later (GPL-3.0-or-later)](LICENSE).
+- **Brand Assets & Wallpapers:** Licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+- **Third-Party Dependencies & Fonts:** See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for full notices and upstream attributions.

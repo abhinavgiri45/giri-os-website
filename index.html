@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
     <meta name="keywords" content="Giri OS, Giri Operating System, Giri OS Linux, Giri OS official website, Giri Space, Debian Linux, lightweight OS, open-source operating system" />
     <meta name="author" content="Giri OS Open Source Project" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="theme-color" content="#060913" />
+    <meta name="theme-color" content="#FFFFFF" />
     <link rel="canonical" href="https://girios.org/" />
 
     <!-- Open Graph / Facebook -->
@@ -29,9 +29,11 @@
     <meta name="twitter:description" content="Official website of Giri OS — an independent Linux-based operating system powered by Debian 12, Giri Space shell, and Linux 6.1 LTS. Fast, minimal, zero telemetry." />
     <meta name="twitter:image" content="https://girios.org/logo/giri-os-logo.svg" />
 
-    <!-- Favicon -->
+    <!-- Favicon & Multi-resolution Device Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/giri-os-icon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/giri-os-icon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/giri-os-icon-128.png" />
 
     <!-- Google Fonts: Inter & Space Grotesk & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -72,7 +74,7 @@
             "softwareVersion": "0.1 Genesis",
             "description": "An independent Linux-based operating system built upon Debian 12 Bookworm, Linux 6.1 LTS, and the Giri Space desktop shell.",
             "url": "https://girios.org",
-            "license": "https://opensource.org/licenses/MIT",
+            "license": "https://www.gnu.org/licenses/gpl-3.0.html",
             "publisher": { "@id": "https://girios.org/#organization" },
             "offers": {
               "@type": "Offer",
@@ -93,22 +95,23 @@
       }
     </script>
 
-    <!-- Theme Initialization Script to avoid FOUC -->
+    <!-- Theme Initialization Script to avoid FOUC: Light Mode Default -->
     <script>
       (function() {
         try {
           const stored = localStorage.getItem('giri-theme');
-          const isDark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
-          if (isDark) {
+          if (stored === 'dark') {
             document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
           } else {
             document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
           }
         } catch (e) {}
       })();
     </script>
   </head>
-  <body class="bg-giri-navy text-giri-text antialiased selection:bg-giri-blue/30 selection:text-white min-h-screen">
+  <body class="bg-giri-navy text-giri-text antialiased selection:bg-giri-blue/20 selection:text-giri-blue min-h-screen">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

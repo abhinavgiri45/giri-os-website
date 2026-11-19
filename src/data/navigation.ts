@@ -7,6 +7,10 @@ export interface NavItem {
 export const MAIN_NAV_ITEMS: NavItem[] = [
   { label: 'Overview', href: '/' },
   { label: 'Features', href: '/features' },
+  { label: 'Ecosystem', href: '/features/application-ecosystem' },
+  { label: 'Giri Bridge', href: '/products/giri-bridge' },
+  { label: 'Giri Mobile', href: '/products/giri-mobile' },
+  { label: 'Giri Store', href: '/products/giri-store' },
   { label: 'Editions', href: '/editions' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Downloads', href: '/downloads' },
@@ -21,9 +25,13 @@ export const MAIN_NAV_ITEMS: NavItem[] = [
 
 export const FOOTER_SECTIONS = [
   {
-    title: 'Product',
+    title: 'Products',
     items: [
       { label: 'Overview', href: '/' },
+      { label: 'Giri Bridge', href: '/products/giri-bridge' },
+      { label: 'Giri Mobile', href: '/products/giri-mobile' },
+      { label: 'Giri Store', href: '/products/giri-store' },
+      { label: 'One OS. Three Worlds.', href: '/features/application-ecosystem' },
       { label: 'Features', href: '/features' },
       { label: 'Editions', href: '/editions' },
       { label: 'Gallery', href: '/gallery' },

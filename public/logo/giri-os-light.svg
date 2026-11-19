@@ -1,39 +1,105 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" width="100%" height="100%">
-  <!-- GIRI OS — Version For Dark Backgrounds -->
-  <!-- Crisp White Wordmark | Vibrant Electric Blue & Violet Window Panes -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="100%" height="100%">
+  <!-- GIRI OS — Official Vector Logo (Light Background Optimized) -->
   <defs>
-    <style>
-      .brand-text {
-        font-family: "Inter", "Space Grotesk", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-        font-weight: 800;
-        font-size: 72px;
-        letter-spacing: 5px;
-        fill: #FFFFFF;
-      }
-      .tagline-text {
-        font-family: "Inter", "Space Grotesk", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-        font-weight: 600;
-        font-size: 13.5px;
-        letter-spacing: 5.5px;
-        fill: #94A3B8;
-      }
-    </style>
+    <linearGradient id="electricBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A8FF" />
+      <stop offset="50%" stop-color="#0066FF" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+
+    <linearGradient id="cosmicViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7" />
+      <stop offset="50%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#5B21B6" />
+    </linearGradient>
+
+    <linearGradient id="orbitalGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#7C3AED" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6D28D9" stop-opacity="0.1" />
+    </linearGradient>
+
+    <filter id="softShadowLight" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#2563EB" flood-opacity="0.2"/>
+    </filter>
   </defs>
 
-  <!-- Symbol: Symmetrical 2x2 Window Formation -->
-  <g id="giri-symbol" transform="translate(35, 30)">
-    <rect x="0" y="0" width="64" height="64" rx="10" fill="#00D2FF" />
-    <rect x="76" y="0" width="64" height="64" rx="10" fill="#0066FF" />
-    <rect x="0" y="76" width="64" height="64" rx="10" fill="#7928CA" />
-    <rect x="76" y="76" width="64" height="64" rx="10" fill="#A855F7" />
+  <style>
+    .brand-title-light {
+      font-family: -apple-system, BlinkMacSystemFont, "Space Grotesk", "Inter", "Segoe UI", Roboto, sans-serif;
+      font-weight: 800;
+      font-size: 78px;
+      letter-spacing: 6px;
+      fill: #0F172A;
+    }
+    .brand-tagline-light {
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      letter-spacing: 8px;
+      fill: #475569;
+    }
+  </style>
+
+  <!-- LOGO EMBLEM GROUP -->
+  <g transform="translate(40, 20)">
+    <!-- Outer Orbital Ring Path -->
+    <g transform="rotate(-28 140 140)">
+      <ellipse cx="140" cy="140" rx="120" ry="42" fill="none" stroke="url(#orbitalGlow)" stroke-width="3.5" stroke-dasharray="240 18 40 12" filter="url(#softShadowLight)" />
+      <circle cx="260" cy="140" r="5.5" fill="#0284C7" />
+      <circle cx="260" cy="140" r="2.5" fill="#FFFFFF" />
+    </g>
+
+    <!-- Secondary Counter Orbital Accent -->
+    <g transform="rotate(45 140 140)">
+      <ellipse cx="140" cy="140" rx="98" ry="32" fill="none" stroke="#8B5CF6" stroke-width="1.8" stroke-dasharray="140 30" opacity="0.55" />
+      <circle cx="42" cy="140" r="3.5" fill="#7C3AED" />
+    </g>
+
+    <!-- Core Geometric 'G' Body -->
+    <path d="M 210,105 
+             C 192,68 152,48 112,54 
+             C 65,61 32,103 32,150 
+             C 32,201 70,238 124,238 
+             C 178,238 216,202 216,155 
+             L 216,142 
+             L 126,142 
+             L 126,168 
+             L 186,168 
+             C 183,188 158,210 124,210 
+             C 86,210 59,182 59,147 
+             C 59,112 84,83 121,79 
+             C 148,76 174,88 188,110 
+             Z" 
+          fill="url(#electricBlue)" 
+          filter="url(#softShadowLight)" />
+
+    <!-- Geometric Inner Violet Intersecting Core -->
+    <path d="M 126,142 L 186,142 L 186,168 L 126,168 Z" fill="url(#cosmicViolet)" opacity="0.95" />
+
+    <!-- Forefront Orbital Arc crossing in front of the 'G' -->
+    <g transform="rotate(-28 140 140)">
+      <path d="M 80,172 C 110,184 170,184 210,170" fill="none" stroke="#00A8FF" stroke-width="4.2" stroke-linecap="round" />
+    </g>
   </g>
 
-  <!-- Wordmark Section for Dark Backgrounds -->
-  <g transform="translate(225, 0)">
-    <text x="0" y="112" class="brand-text">
-      GIRI <tspan fill="#00D2FF">OS</tspan>
-    </text>
-    <rect x="2" y="132" width="460" height="2" rx="1" fill="#00D2FF" opacity="0.6" />
-    <text x="3" y="156" class="tagline-text">ONE SYSTEM. INFINITE POSSIBILITIES.</text>
+  <!-- TYPOGRAPHY SECTION -->
+  <g transform="translate(340, 95)">
+    <!-- Main Title: GIRI OS -->
+    <text x="0" y="65" class="brand-title-light">GIRI <tspan fill="#2563EB">OS</tspan></text>
+    
+    <!-- Accent Line -->
+    <rect x="2" y="90" width="220" height="3" rx="1.5" fill="url(#orbitalGlow)" />
+    <circle cx="228" cy="91.5" r="3" fill="#2563EB" />
+
+    <!-- Tagline -->
+    <text x="3" y="130" class="brand-tagline-light">ONE SYSTEM. INFINITE POSSIBILITIES.</text>
+
+    <!-- Sub-badge -->
+    <g transform="translate(4, 155)">
+      <rect width="185" height="24" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+      <circle cx="14" cy="12" r="4" fill="#2563EB" />
+      <text x="26" y="16.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" letter-spacing="1.5">DEBIAN EDITION 0.1</text>
+    </g>
   </g>
 </svg>

@@ -14,19 +14,19 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-gradient-to-b from-giri-blue/10 to-transparent blur-2xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-giri-border/60">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-giri-border">
           {/* Brand Info & Tagline Column */}
           <div className="lg:col-span-2 flex flex-col items-start gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl overflow-hidden p-0.5 bg-giri-surface2/60 border border-giri-border flex items-center justify-center">
+              <div className="w-9 h-9 rounded-xl overflow-hidden p-0.5 bg-giri-surface2 border border-giri-border flex items-center justify-center shadow-sm">
                 <img
                   src="/logo/giri-os-icon.svg"
-                  alt="Giri OS Official Emblem — Four-Pane Modern Window Formation"
+                  alt="Giri OS Official Emblem — Orbital 'G' Geometric Formation"
                   width={36}
                   height={36}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(0,210,255,0.4)]"
+                  className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(0,102,255,0.35)]"
                 />
               </div>
               <div className="flex flex-col">
@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
               </div>
             </div>
 
-            <p className="text-xs font-semibold tracking-widest text-cyan-400 uppercase mt-1">
+            <p className="text-xs font-bold tracking-widest text-giri-blue dark:text-cyan-400 uppercase mt-1">
               ONE SYSTEM. INFINITE POSSIBILITIES.
             </p>
 
@@ -52,7 +52,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
                 href="https://github.com/abhinavgiri45/giri-os"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-xs text-giri-muted hover:text-white px-3 py-1.5 rounded-full bg-giri-surface2/50 border border-giri-border hover:border-giri-cyan/40 transition-all"
+                className="flex items-center gap-1.5 text-xs text-giri-muted hover:text-giri-text px-3 py-1.5 rounded-full bg-giri-surface2 border border-giri-border hover:border-giri-blue/40 transition-all shadow-sm"
               >
                 <GithubIcon className="w-3.5 h-3.5" />
                 <span>OS Repo</span>
@@ -63,7 +63,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
                 href="https://github.com/abhinavgiri45/giri-os-website"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-xs text-giri-muted hover:text-white px-3 py-1.5 rounded-full bg-giri-surface2/50 border border-giri-border hover:border-giri-violet/40 transition-all"
+                className="flex items-center gap-1.5 text-xs text-giri-muted hover:text-giri-text px-3 py-1.5 rounded-full bg-giri-surface2 border border-giri-border hover:border-giri-violet/40 transition-all shadow-sm"
               >
                 <Terminal className="w-3.5 h-3.5" />
                 <span>Website Repo</span>
@@ -75,7 +75,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
           {/* Categorized Link Sections */}
           {FOOTER_SECTIONS.map((section) => (
             <div key={section.title} className="flex flex-col gap-3">
-              <h3 className="text-xs font-semibold tracking-wider uppercase text-giri-text/90">
+              <h3 className="text-xs font-bold tracking-wider uppercase text-giri-text/90">
                 {section.title}
               </h3>
               <ul className="flex flex-col gap-2">
@@ -86,7 +86,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-giri-muted hover:text-cyan-400 transition-colors inline-flex items-center gap-1"
+                        className="text-xs text-giri-muted hover:text-giri-blue dark:hover:text-cyan-400 transition-colors inline-flex items-center gap-1"
                       >
                         <span>{item.label}</span>
                         <ArrowUpRight className="w-2.5 h-2.5 opacity-60" />
@@ -94,7 +94,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
                     ) : (
                       <button
                         onClick={() => navigate(item.href)}
-                        className="text-xs text-giri-muted hover:text-cyan-400 transition-colors text-left"
+                        className="text-xs text-giri-muted hover:text-giri-blue dark:hover:text-cyan-400 transition-colors text-left"
                       >
                         {item.label}
                       </button>
@@ -108,22 +108,22 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
 
         {/* Bottom Metadata & Legal Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-giri-muted">
-          <div className="flex items-center gap-2">
-            <Shield className="w-3.5 h-3.5 text-cyan-400" />
-            <span>&copy; {new Date().getFullYear()} Giri OS Open Source Project. Released under the MIT License.</span>
+          <div className="flex items-center gap-2 text-center sm:text-left">
+            <Shield className="w-3.5 h-3.5 text-giri-blue dark:text-cyan-400 shrink-0" />
+            <span>&copy; {new Date().getFullYear()} Giri OS Open Source Project. Released under the GNU General Public License v3.0 or later (GPL-3.0-or-later).</span>
           </div>
-          <div className="flex items-center gap-4">
-            <button onClick={() => navigate('/security')} className="hover:text-white transition-colors">
+          <div className="flex items-center gap-4 flex-wrap justify-center">
+            <button onClick={() => navigate('/security')} className="hover:text-giri-text transition-colors">
               Security & Privacy
             </button>
-            <button onClick={() => navigate('/about')} className="hover:text-white transition-colors">
+            <button onClick={() => navigate('/about')} className="hover:text-giri-text transition-colors">
               About the Project
             </button>
             <a
               href="https://github.com/abhinavgiri45/giri-os/blob/main/LICENSE"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
+              className="hover:text-giri-text transition-colors"
             >
               OS License
             </a>

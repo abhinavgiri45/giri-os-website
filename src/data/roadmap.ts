@@ -34,13 +34,13 @@ export const GIRI_ROADMAP: MilestoneItem[] = [
     id: 'm2-branding',
     quarter: 'Milestone 2 — Q4 2026',
     title: 'Giri Branding, Plymouth & Grub Integration',
-    summary: 'Design and embed official Giri OS four-pane vector identity, Plymouth boot animation engine, custom high-resolution Grub theme, and system default wallpapers.',
+    summary: 'Design and embed official Giri OS orbital vector identity, Plymouth boot animation engine, custom high-resolution Grub theme, and system default wallpapers.',
     status: 'Completed',
     progressPercent: 100,
     verificationEvidence: 'Assets validated in `boot/plymouth/giri-genesis`, `boot/grub/themes/giri`, and `branding/wallpapers`.',
     deliverables: [
-      { name: 'Official four-pane vector logo and color token specifications', completed: true },
-      { name: 'Cinematic Plymouth boot splash with pulsing window logo', completed: true },
+      { name: 'Official orbital emblem vector logo and color token specifications', completed: true },
+      { name: 'Cinematic Plymouth boot splash with pulsing orbital emblem', completed: true },
       { name: 'HiDPI GRUB2 bootloader theme with custom selection boxes', completed: true },
       { name: '12 high-resolution official desktop wallpaper compositions', completed: true }
     ]

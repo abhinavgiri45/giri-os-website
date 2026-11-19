@@ -42,6 +42,115 @@ const ROUTE_SNAPSHOTS = [
     }
   },
   {
+    path: '/features/application-ecosystem',
+    title: 'Giri OS — One OS. Three Worlds. | Application Ecosystem',
+    description: 'Discover the three original application products of Giri OS: Giri Bridge, Giri Mobile, and Giri Store, unified in one powerful desktop experience.',
+    canonical: 'https://girios.org/features/application-ecosystem',
+    h1: 'ONE OS. THREE WORLDS — Giri OS Unified Application Ecosystem',
+    summary: 'Giri Bridge. Giri Mobile. Giri Store. Three powerful application platforms unified into one seamless desktop experience. Explore Wine compatibility, containerized mobile runtimes, smart input mapping, and universal package discovery.',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girios.org/' },
+            { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://girios.org/features' },
+            { '@type': 'ListItem', position: 3, name: 'Application Ecosystem', item: 'https://girios.org/features/application-ecosystem' }
+          ]
+        },
+        {
+          '@type': 'TechArticle',
+          name: 'ONE OS. THREE WORLDS — Giri OS Unified Application Ecosystem',
+          headline: 'Giri OS Three-Product Ecosystem Architecture',
+          description: 'Comprehensive technical documentation detailing how Giri OS brings together Giri Bridge, Giri Mobile, and Giri Store with prefix isolation, containerization, and smart input mapping.',
+          url: 'https://girios.org/features/application-ecosystem'
+        }
+      ]
+    }
+  },
+  {
+    path: '/products/giri-bridge',
+    title: 'Giri Bridge — Application Compatibility Platform | Giri OS',
+    description: 'Giri Bridge is the application compatibility platform of Giri OS, bringing supported desktop applications into one integrated computing experience via Wine and DXVK.',
+    canonical: 'https://girios.org/products/giri-bridge',
+    h1: 'Giri Bridge — Desktop Application Compatibility Platform',
+    summary: 'Bring supported desktop applications into your Giri OS experience with isolated Wine prefixes, Direct3D-to-Vulkan translation, and automatic desktop launcher generation.',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girios.org/' },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://girios.org/#products' },
+            { '@type': 'ListItem', position: 3, name: 'Giri Bridge', item: 'https://girios.org/products/giri-bridge' }
+          ]
+        },
+        {
+          '@type': 'Product',
+          name: 'Giri Bridge',
+          description: 'Giri Bridge is the application compatibility platform of Giri OS, designed to bring supported desktop applications into one integrated computing experience.',
+          url: 'https://girios.org/products/giri-bridge'
+        }
+      ]
+    }
+  },
+  {
+    path: '/products/giri-mobile',
+    title: 'Giri Mobile — Integrated Mobile Application Runtime | Giri OS',
+    description: 'Giri Mobile brings supported mobile applications to the Giri OS desktop through an integrated application runtime with Giri Smart Input Mapping.',
+    canonical: 'https://girios.org/products/giri-mobile',
+    h1: 'Giri Mobile — Integrated Mobile Application Runtime',
+    summary: 'Extend your desktop experience with supported mobile applications. Powered by containerized AOSP on the Linux host kernel, Giri Smart Input Mapping, and desktop window integration.',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girios.org/' },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://girios.org/#products' },
+            { '@type': 'ListItem', position: 3, name: 'Giri Mobile', item: 'https://girios.org/products/giri-mobile' }
+          ]
+        },
+        {
+          '@type': 'Product',
+          name: 'Giri Mobile',
+          description: 'Giri Mobile brings supported mobile applications to the Giri OS desktop through an integrated application runtime.',
+          url: 'https://girios.org/products/giri-mobile'
+        }
+      ]
+    }
+  },
+  {
+    path: '/products/giri-store',
+    title: 'Giri Store — Unified Application Marketplace | Giri OS',
+    description: 'Giri Store is the unified application marketplace of Giri OS, designed to help users discover, install and manage applications through one interface.',
+    canonical: 'https://girios.org/products/giri-store',
+    h1: 'Giri Store — Unified Application Marketplace',
+    summary: 'Discover, install, and manage applications through one unified marketplace bridging Debian APT repositories and Flathub universal Flatpaks with zero telemetry.',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girios.org/' },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://girios.org/#products' },
+            { '@type': 'ListItem', position: 3, name: 'Giri Store', item: 'https://girios.org/products/giri-store' }
+          ]
+        },
+        {
+          '@type': 'Product',
+          name: 'Giri Store',
+          description: 'Giri Store is the unified application marketplace of Giri OS, designed to help users discover, install and manage applications through one interface.',
+          url: 'https://girios.org/products/giri-store'
+        }
+      ]
+    }
+  },
+  {
     path: '/editions',
     title: 'Giri OS Editions & System Specifications | Standard, Dev & Cloud',
     description: 'Compare official Giri OS editions: Standard Desktop, Developer Workstation, and Cloud/Server. Check hardware specifications and resource requirements.',

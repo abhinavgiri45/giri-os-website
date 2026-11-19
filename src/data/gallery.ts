@@ -36,7 +36,7 @@ export const GIRI_GALLERY_ITEMS: GalleryItem[] = [
     imageSrc: '/wallpapers/electric-geometry.png',
     isRealScreenshot: true,
     label: 'Verified OS Asset',
-    description: 'Abstract polygonal structures echoing the Giri OS four-pane geometric ethos.'
+    description: 'Abstract polygonal structures echoing the Giri OS geometric ethos.'
   },
   {
     id: 'wall-giri-origin',
@@ -90,7 +90,7 @@ export const GIRI_GALLERY_ITEMS: GalleryItem[] = [
     imageSrc: '/images/plymouth/logo.png',
     isRealScreenshot: true,
     label: 'Verified OS Asset',
-    description: 'Active Plymouth boot splash logo featuring the illuminated four-pane emblem during kernel boot.'
+    description: 'Active Plymouth boot splash logo featuring the illuminated orbital emblem during kernel boot.'
   },
   {
     id: 'theme-grub',

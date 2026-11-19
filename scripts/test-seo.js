@@ -53,6 +53,10 @@ assert(sitemapContent.includes('http://www.google.com/schemas/sitemap-image/1.1'
 const canonicalRoutes = [
   'https://girios.org/',
   'https://girios.org/features',
+  'https://girios.org/features/application-ecosystem',
+  'https://girios.org/products/giri-bridge',
+  'https://girios.org/products/giri-mobile',
+  'https://girios.org/products/giri-store',
   'https://girios.org/editions',
   'https://girios.org/gallery',
   'https://girios.org/downloads',
@@ -113,6 +117,7 @@ const componentsToCheck = [
   'src/components/Footer.tsx',
   'src/components/DesktopShowcase.tsx',
   'src/components/ThreeHero.tsx',
+  'src/components/EcosystemHeroVisual.tsx',
   'src/pages/GalleryPage.tsx'
 ];
 
@@ -134,7 +139,22 @@ componentsToCheck.forEach((relPath) => {
 console.log('\n--- 6. Static Pre-rendered Edge HTML Validation ---');
 const distPath = path.join(ROOT_DIR, 'dist');
 if (fs.existsSync(distPath)) {
-  const routesToVerify = ['features', 'editions', 'downloads', 'docs', 'developers', 'roadmap', 'changelog', 'status', 'security', 'about'];
+  const routesToVerify = [
+    'features', 
+    'features/application-ecosystem', 
+    'products/giri-bridge',
+    'products/giri-mobile',
+    'products/giri-store',
+    'editions', 
+    'downloads', 
+    'docs', 
+    'developers', 
+    'roadmap', 
+    'changelog', 
+    'status', 
+    'security', 
+    'about'
+  ];
   routesToVerify.forEach((r) => {
     const routeHtmlPath = path.join(distPath, r, 'index.html');
     if (fs.existsSync(routeHtmlPath)) {

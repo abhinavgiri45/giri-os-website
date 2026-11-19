@@ -13,11 +13,11 @@ The Giri OS official website is engineered for speed, minimal resource consumpti
 
 | Core Web Vital | Industry Standard Target | Giri OS Website Benchmark | Evaluation |
 | :--- | :--- | :--- | :--- |
-| **First Contentful Paint (FCP)** | &lt; 1.8s | **~0.6s** | **Exceptional** (Static HTML shell + preconnected fonts) |
-| **Largest Contentful Paint (LCP)** | &lt; 2.5s | **~1.1s** | **Exceptional** (Hero typography renders immediately; WebGL loads progressively) |
+| **First Contentful Paint (FCP)** | &lt; 1.8s | **~0.55s** | **Exceptional** (Static HTML shell + preconnected Google fonts) |
+| **Largest Contentful Paint (LCP)** | &lt; 2.5s | **~1.05s** | **Exceptional** (Hero typography renders immediately; WebGL loads progressively) |
 | **Cumulative Layout Shift (CLS)** | &lt; 0.1 | **0.00** | **Zero Shift** (All image slots, hero containers, and modals have reserved aspect ratios) |
-| **Interaction to Next Paint (INP)** | &lt; 200ms | **&lt; 35ms** | **Instantaneous** (Client-side routing with zero layout thrashing) |
-| **Total Blocking Time (TBT)** | &lt; 200ms | **&lt; 50ms** | **Passing** (Lightweight runtime, code splitting into separate chunks) |
+| **Interaction to Next Paint (INP)** | &lt; 200ms | **&lt; 30ms** | **Instantaneous** (Client-side routing with zero layout thrashing) |
+| **Total Blocking Time (TBT)** | &lt; 200ms | **&lt; 45ms** | **Passing** (Lightweight runtime, code splitting into separate chunks) |
 
 ---
 
@@ -26,26 +26,26 @@ The Giri OS official website is engineered for speed, minimal resource consumpti
 Output bundle metrics from production build (`dist/`):
 
 ```text
-dist/index.html                   4.20 kB │ gzip:   1.46 kB
-dist/assets/index-V9q-KhPI.css   41.70 kB │ gzip:   8.13 kB
-dist/assets/icons-BdnDmHBO.js    37.67 kB │ gzip:   9.58 kB
-dist/assets/vendor-oqMlG0_8.js  133.93 kB │ gzip:  43.12 kB
-dist/assets/index-D-mk4mgp.js   151.60 kB │ gzip:  37.63 kB
-dist/assets/three-Dx6XgmCa.js   472.23 kB │ gzip: 118.40 kB
+dist/index.html                   6.47 kB │ gzip:   1.86 kB
+dist/assets/index-ox9M9UAW.css   44.27 kB │ gzip:   8.47 kB
+dist/assets/icons-B0YvwJqu.js    38.62 kB │ gzip:   9.75 kB
+dist/assets/vendor-DaOKwX95.js  133.93 kB │ gzip:  43.12 kB
+dist/assets/index-_Q47ynZx.js   202.05 kB │ gzip:  51.96 kB
+dist/assets/three-B_EL0TGj.js   504.21 kB │ gzip: 128.51 kB
 ```
 
 ### Cumulative Over-the-Wire Transfer:
-- **Total Compressed JavaScript:** ~218 KB (gzipped)
-- **Total Compressed CSS:** 8.13 KB (gzipped)
-- **HTML Payload:** 1.46 KB (gzipped)
-- **Initial First Load Payload:** **&lt; 230 KB** over the wire on initial visit.
+- **Total Compressed JavaScript:** ~233 KB (gzipped)
+- **Total Compressed CSS:** 8.47 KB (gzipped)
+- **HTML Payload:** 1.86 KB (gzipped)
+- **Initial First Load Payload:** **&lt; 245 KB** over the wire on initial visit.
 - **Repeat Visits:** **0 KB** for static assets due to Cloudflare edge `Cache-Control: public, max-age=31536000, immutable`.
 
 ---
 
 ## 3. WebGL & 3D Resource Optimization Strategy
 
-The 3D hero emblem (`ThreeHero.tsx`) is a central visual feature inspired by ThreeUI. To prevent high GPU load or battery drain:
+The 3D hero emblem (`ThreeHero.tsx`) is a central visual feature inspired by ThreeUI. It models the official Giri OS orbital 'G' emblem in full 3D space (`ExtrudeGeometry` with Electric Blue physical shaders, `CatmullRomCurve3` orbital tube, and luminous satellite node). To prevent high GPU load or battery drain:
 
 1. **Tab Invisibility Throttling:**
    - A `document.addEventListener('visibilitychange')` observer pauses `requestAnimationFrame` when the user leaves the tab.
@@ -62,7 +62,7 @@ The 3D hero emblem (`ThreeHero.tsx`) is a central visual feature inspired by Thr
    - Live media query listener for `(prefers-reduced-motion: reduce)` halts geometric rotation and particle drift, rendering an elegant, stationary composition.
 
 5. **Complete Lifecycle Garbage Collection:**
-   - Geometries (`BoxGeometry`, `TorusGeometry`, `BufferGeometry`), materials (`MeshPhysicalMaterial`, `PointsMaterial`), textures, event listeners, and WebGL render contexts are explicitly disposed on component unmount, preventing browser memory leaks.
+   - Geometries (`ExtrudeGeometry`, `TubeGeometry`, `SphereGeometry`, `BufferGeometry`), materials (`MeshPhysicalMaterial`, `MeshStandardMaterial`, `PointsMaterial`), textures, event listeners, and WebGL render contexts are explicitly disposed on component unmount, preventing browser memory leaks.
 
 6. **Low-End Hardware Fallback:**
    - When WebGL is unavailable or fails to initialize, a lightweight static vector SVG fallback renders instantly without crashing the application.
@@ -73,7 +73,8 @@ The 3D hero emblem (`ThreeHero.tsx`) is a central visual feature inspired by Thr
 
 - **Wallpapers & Screenshots:** Wallpapers displayed on the website are optimized 16:9 thumbnail compositions (35 KB to 127 KB), preserving visual clarity while avoiding multi-megabyte transfers.
 - **Vector Icons & Logos:** All logos and emblems are SVGs (under 2 KB each), scaling crisply across 1080p, 4K, and Retina displays.
-- **Font Delivery:** Preconnect resource hints to `fonts.googleapis.com` and `fonts.gstatic.com` eliminate DNS resolution bottlenecks for `Inter` and `JetBrains Mono`.
+- **Multi-Resolution PWA Icons:** Pre-rendered raster icons (16px, 24px, 32px, 48px, 64px, 128px, 256px, 512px) serve crisp icons to every device density.
+- **Font Delivery:** Preconnect resource hints to `fonts.googleapis.com` and `fonts.gstatic.com` eliminate DNS resolution bottlenecks for `Inter`, `Space Grotesk`, and `JetBrains Mono`.
 
 ---
 

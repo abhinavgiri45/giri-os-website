@@ -143,29 +143,29 @@ export const DocsPage: React.FC = () => {
 
             if (trimmed.startsWith('# ')) {
               return (
-                <h1 key={pIdx} className="text-2xl sm:text-3xl font-extrabold text-white pt-4 pb-2 border-b border-giri-border flex items-center gap-2">
-                  <Hash className="w-5 h-5 text-cyan-400 shrink-0" />
+                <h1 key={pIdx} className="text-2xl sm:text-3xl font-extrabold text-giri-text pt-4 pb-2 border-b border-giri-border flex items-center gap-2">
+                  <Hash className="w-5 h-5 text-giri-blue dark:text-cyan-400 shrink-0" />
                   <span>{trimmed.replace('# ', '')}</span>
                 </h1>
               );
             }
             if (trimmed.startsWith('### ')) {
               return (
-                <h2 key={pIdx} className="text-lg font-bold text-white pt-3 pb-1">
+                <h2 key={pIdx} className="text-lg font-bold text-giri-text pt-3 pb-1">
                   {trimmed.replace('### ', '')}
                 </h2>
               );
             }
             if (trimmed.startsWith('#### ')) {
               return (
-                <h3 key={pIdx} className="text-base font-semibold text-cyan-300 pt-2 pb-1">
+                <h3 key={pIdx} className="text-base font-semibold text-giri-blue dark:text-cyan-300 pt-2 pb-1">
                   {trimmed.replace('#### ', '')}
                 </h3>
               );
             }
             if (trimmed.startsWith('- ')) {
               return (
-                <ul key={pIdx} className="space-y-1.5 pl-4 list-disc list-inside text-slate-300 text-sm">
+                <ul key={pIdx} className="space-y-1.5 pl-4 list-disc list-inside text-giri-muted text-sm">
                   {trimmed.split('\n').map((li, lIdx) => (
                     <li key={lIdx}>{li.replace(/^- /, '')}</li>
                   ))}
@@ -187,9 +187,9 @@ export const DocsPage: React.FC = () => {
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-giri-muted mb-8">
           <span>Documentation</span>
           <ChevronRight className="w-3.5 h-3.5 text-giri-muted/60" />
-          <span className="text-cyan-400 font-medium">{currentArticle.category}</span>
+          <span className="text-giri-blue dark:text-cyan-400 font-medium">{currentArticle.category}</span>
           <ChevronRight className="w-3.5 h-3.5 text-giri-muted/60" />
-          <span className="text-white truncate max-w-xs sm:max-w-md">{currentArticle.title}</span>
+          <span className="text-giri-text truncate max-w-xs sm:max-w-md">{currentArticle.title}</span>
         </nav>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -204,13 +204,13 @@ export const DocsPage: React.FC = () => {
                   placeholder="Search 16 guides & articles..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-9 pr-8 py-2 rounded-xl bg-giri-surface2 text-xs text-white placeholder-giri-muted border border-giri-border focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                  className="w-full pl-9 pr-8 py-2 rounded-xl bg-giri-surface text-xs text-giri-text placeholder-giri-muted border border-giri-border focus:outline-none focus:ring-2 focus:ring-giri-blue/50"
                 />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery('')}
                     aria-label="Clear search"
-                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-giri-muted hover:text-white"
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-giri-muted hover:text-giri-text"
                   >
                     <XCircle className="w-4 h-4" />
                   </button>
@@ -230,11 +230,11 @@ export const DocsPage: React.FC = () => {
 
                     return (
                       <div key={cat} className="space-y-2">
-                        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-2 flex items-center gap-1.5">
-                          {cat === 'Getting Started' && <BookOpen className="w-3.5 h-3.5 text-cyan-400 shrink-0" />}
-                          {cat === 'Installation & Setup' && <Wrench className="w-3.5 h-3.5 text-blue-400 shrink-0" />}
-                          {cat === 'Using Giri OS' && <Layers className="w-3.5 h-3.5 text-violet-400 shrink-0" />}
-                          {cat === 'Engineering & Linux Architecture' && <Terminal className="w-3.5 h-3.5 text-emerald-400 shrink-0" />}
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-giri-muted px-2 flex items-center gap-1.5">
+                          {cat === 'Getting Started' && <BookOpen className="w-3.5 h-3.5 text-giri-blue dark:text-cyan-400 shrink-0" />}
+                          {cat === 'Installation & Setup' && <Wrench className="w-3.5 h-3.5 text-giri-blue shrink-0" />}
+                          {cat === 'Using Giri OS' && <Layers className="w-3.5 h-3.5 text-giri-violet shrink-0" />}
+                          {cat === 'Engineering & Linux Architecture' && <Terminal className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />}
                           <span>{cat}</span>
                         </div>
 
@@ -247,8 +247,8 @@ export const DocsPage: React.FC = () => {
                                 onClick={() => selectArticle(article.id, article.slug)}
                                 className={`w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition-colors ${
                                   isSelected
-                                    ? 'bg-giri-blue/20 text-cyan-300 border border-cyan-500/30'
-                                    : 'text-giri-muted hover:text-white hover:bg-white/5'
+                                    ? 'bg-giri-blue/15 text-giri-blue dark:text-cyan-300 border border-giri-blue/30 shadow-sm'
+                                    : 'text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/5'
                                 }`}
                               >
                                 {article.title}
@@ -269,44 +269,44 @@ export const DocsPage: React.FC = () => {
             <article className="glass-panel p-8 sm:p-12 rounded-3xl border border-giri-border">
               {/* Category & Metadata Pill Bar */}
               <div className="flex flex-wrap items-center gap-3 mb-6">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-giri-blue/10 text-giri-blue dark:text-cyan-400 border border-giri-blue/25">
                   <BookOpen className="w-3.5 h-3.5" />
                   <span>{currentArticle.category}</span>
                 </div>
 
                 {currentArticle.readingTime && (
                   <div className="inline-flex items-center gap-1 text-xs text-giri-muted">
-                    <Clock className="w-3.5 h-3.5 text-slate-400" />
+                    <Clock className="w-3.5 h-3.5" />
                     <span>{currentArticle.readingTime}</span>
                   </div>
                 )}
 
                 {currentArticle.author && (
                   <div className="inline-flex items-center gap-1 text-xs text-giri-muted hidden sm:inline-flex">
-                    <UserCheck className="w-3.5 h-3.5 text-slate-400" />
+                    <UserCheck className="w-3.5 h-3.5" />
                     <span>{currentArticle.author}</span>
                   </div>
                 )}
               </div>
 
               {/* Subtitle / summary */}
-              <p className="text-sm text-slate-300 mb-8 italic">
+              <p className="text-sm text-giri-muted mb-8 italic">
                 {currentArticle.description}
               </p>
 
               {/* Rendered Body */}
-              <div className="prose prose-invert max-w-none">
+              <div className="max-w-none">
                 {renderContent(currentArticle.content)}
               </div>
 
               {/* Bottom Pagination Links */}
-              <div className="mt-12 pt-8 border-t border-giri-border/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="mt-12 pt-8 border-t border-giri-border flex flex-col sm:flex-row items-center justify-between gap-4">
                 {prevArticle ? (
                   <button
                     onClick={() => selectArticle(prevArticle.id, prevArticle.slug)}
-                    className="flex items-center gap-2 text-xs font-semibold text-giri-muted hover:text-white transition-colors"
+                    className="flex items-center gap-2 text-xs font-semibold text-giri-muted hover:text-giri-text transition-colors"
                   >
-                    <ArrowLeft className="w-4 h-4 text-cyan-400" />
+                    <ArrowLeft className="w-4 h-4 text-giri-blue dark:text-cyan-400" />
                     <span>Previous: {prevArticle.title}</span>
                   </button>
                 ) : <div />}
@@ -314,7 +314,7 @@ export const DocsPage: React.FC = () => {
                 {nextArticle ? (
                   <button
                     onClick={() => selectArticle(nextArticle.id, nextArticle.slug)}
-                    className="flex items-center gap-2 text-xs font-semibold text-cyan-400 hover:text-white transition-colors ml-auto"
+                    className="flex items-center gap-2 text-xs font-semibold text-giri-blue dark:text-cyan-400 hover:text-giri-text transition-colors ml-auto"
                   >
                     <span>Next: {nextArticle.title}</span>
                     <ArrowRight className="w-4 h-4" />

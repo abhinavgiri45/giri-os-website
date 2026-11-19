@@ -55,7 +55,7 @@ const SHOWCASE_TABS: ShowcaseTab[] = [
     icon: <Sparkles className="w-4 h-4" />,
     title: 'Giri Genesis Plymouth Boot Theme',
     badge: 'Verified OS Asset',
-    description: 'Genuine system boot splash asset featuring the illuminated four-pane emblem during live Linux kernel handoff.',
+    description: 'Genuine system boot splash asset featuring the illuminated orbital emblem during live Linux kernel handoff.',
     imageSrc: '/images/plymouth/logo.png'
   },
   {
@@ -76,7 +76,7 @@ export const DesktopShowcase: React.FC = () => {
   return (
     <section className="relative my-20">
       <div className="flex flex-col items-center text-center mb-10">
-        <span className="text-xs font-semibold tracking-widest text-cyan-400 uppercase mb-2">
+        <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase mb-2">
           Interface Showcase
         </span>
         <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-giri-text">
@@ -87,7 +87,7 @@ export const DesktopShowcase: React.FC = () => {
         </p>
 
         {/* Tab Selector Cluster */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mt-8 p-1.5 rounded-2xl bg-giri-surface/80 border border-giri-border backdrop-blur-xl">
+        <div className="flex flex-wrap items-center justify-center gap-2 mt-8 p-1.5 rounded-2xl bg-giri-surface border border-giri-border backdrop-blur-xl shadow-sm">
           {SHOWCASE_TABS.map((tab) => {
             const isActive = tab.id === activeTab;
             return (
@@ -96,8 +96,8 @@ export const DesktopShowcase: React.FC = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-medium transition-all ${
                   isActive
-                    ? 'bg-giri-blue/20 text-cyan-300 border border-cyan-500/40 shadow-sm'
-                    : 'text-giri-muted hover:text-white hover:bg-white/5'
+                    ? 'bg-giri-blue/15 text-giri-blue dark:text-cyan-300 border border-giri-blue/30 shadow-sm'
+                    : 'text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/5'
                 }`}
               >
                 {tab.icon}
@@ -109,9 +109,9 @@ export const DesktopShowcase: React.FC = () => {
       </div>
 
       {/* Main Showcase Stage */}
-      <div className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden border border-giri-border bg-[#050811] shadow-2xl">
+      <div className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden border border-giri-border bg-giri-surface shadow-2xl">
         {/* Synthetic OS Titlebar */}
-        <div className="flex items-center justify-between px-5 py-3 bg-giri-surface2/70 border-b border-giri-border/80 backdrop-blur-md">
+        <div className="flex items-center justify-between px-5 py-3 bg-giri-surface2 border-b border-giri-border backdrop-blur-md">
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-red-500/80" />
             <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
@@ -125,7 +125,7 @@ export const DesktopShowcase: React.FC = () => {
         </div>
 
         {/* Viewport Frame */}
-        <div className="relative aspect-[16/9] w-full bg-black/40 flex items-center justify-center overflow-hidden group">
+        <div className="relative aspect-[16/9] w-full bg-black/5 dark:bg-black/40 flex items-center justify-center overflow-hidden group">
           <img
             src={current.imageSrc}
             alt={`Giri OS Interactive Preview — ${current.title}`}
@@ -142,10 +142,10 @@ export const DesktopShowcase: React.FC = () => {
           {activeTab === 'desktop' && (
             <div className="absolute inset-0 pointer-events-none flex flex-col justify-between p-4">
               {/* Top Panel Simulation */}
-              <div className="w-full flex items-center justify-between px-4 py-1.5 rounded-lg bg-giri-surface/80 border border-giri-border/60 backdrop-blur-md text-xs text-giri-text shadow-md">
+              <div className="w-full flex items-center justify-between px-4 py-1.5 rounded-lg bg-giri-surface/90 border border-giri-border backdrop-blur-md text-xs text-giri-text shadow-md">
                 <div className="flex items-center gap-3">
                   <div className="flex gap-1.5">
-                    <span className="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono text-[10px] font-bold">1</span>
+                    <span className="px-2 py-0.5 rounded bg-giri-blue/20 text-giri-blue dark:text-cyan-300 font-mono text-[10px] font-bold">1</span>
                     <span className="px-2 py-0.5 rounded text-giri-muted font-mono text-[10px]">2</span>
                     <span className="px-2 py-0.5 rounded text-giri-muted font-mono text-[10px]">3</span>
                   </div>
@@ -159,11 +159,11 @@ export const DesktopShowcase: React.FC = () => {
               </div>
 
               {/* Bottom Simulated Dock */}
-              <div className="self-center flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-giri-surface/85 border border-giri-border/80 backdrop-blur-xl shadow-2xl">
+              <div className="self-center flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-giri-surface/90 border border-giri-border backdrop-blur-xl shadow-2xl">
                 {['LayoutGrid', 'FolderTree', 'Terminal', 'Search', 'Sliders'].map((_, idx) => (
                   <div
                     key={idx}
-                    className="w-10 h-10 rounded-xl bg-giri-surface2/80 border border-giri-border flex items-center justify-center p-2 text-cyan-400 relative"
+                    className="w-10 h-10 rounded-xl bg-giri-surface2 border border-giri-border flex items-center justify-center p-2 text-giri-blue dark:text-cyan-400 relative"
                   >
                     <div className="w-4 h-4 rounded bg-gradient-to-tr from-cyan-400 to-blue-600" />
                     {idx < 3 && (
@@ -176,8 +176,8 @@ export const DesktopShowcase: React.FC = () => {
           )}
 
           {/* Subtitle Card Overlay */}
-          <div className="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:max-w-md p-4 rounded-xl bg-giri-surface/90 border border-giri-border/80 backdrop-blur-xl shadow-2xl">
-            <h4 className="text-sm font-bold text-white">{current.title}</h4>
+          <div className="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:max-w-md p-4 rounded-xl bg-giri-surface/95 border border-giri-border backdrop-blur-xl shadow-2xl">
+            <h4 className="text-sm font-bold text-giri-text">{current.title}</h4>
             <p className="mt-1 text-xs text-giri-muted leading-relaxed">
               {current.description}
             </p>

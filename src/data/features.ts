@@ -76,13 +76,13 @@ export const GIRI_FEATURES: FeatureItem[] = [
     id: 'giri-plymouth',
     name: 'Giri Plymouth Boot Engine',
     tagline: 'Cinematic splash animation from BIOS to Desktop',
-    description: 'Custom animated boot splash utilizing Giri OS’s four-pane geometric window formation with smooth pulsing progress indicators and clean kernel handoff.',
+    description: 'Custom animated boot splash utilizing Giri OS’s orbital geometric emblem with smooth pulsing progress indicators and clean kernel handoff.',
     status: 'Available',
     category: 'System Architecture',
     icon: 'Sparkles',
     highlights: [
       'Flicker-free kernel DRM/KMS graphics handoff',
-      'Four-pane electric blue & violet illuminated emblem',
+      'Orbital electric blue & violet illuminated emblem',
       'Custom progress bar with subtle glow',
       'Full resolution auto-detection on UEFI systems'
     ]

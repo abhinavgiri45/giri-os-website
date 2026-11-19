@@ -3,6 +3,10 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { FeaturesPage } from './pages/FeaturesPage';
+import { ApplicationEcosystemPage } from './pages/ApplicationEcosystemPage';
+import { GiriBridgePage } from './pages/products/GiriBridgePage';
+import { GiriMobilePage } from './pages/products/GiriMobilePage';
+import { GiriStorePage } from './pages/products/GiriStorePage';
 import { EditionsPage } from './pages/EditionsPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { DownloadsPage } from './pages/DownloadsPage';
@@ -35,6 +39,34 @@ export const App: React.FC = () => {
     updatePageSeo(currentPath);
   }, [currentPath]);
 
+  // Spatial navigation support for Smart TVs and Keyboard ergonomics
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Allow user to navigate focus with TV remote D-Pad or Arrow keys when focus is active
+      if (['ArrowDown', 'ArrowUp'].includes(e.key)) {
+        const focusableElements = Array.from(
+          document.querySelectorAll<HTMLElement>(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          )
+        ).filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
+
+        const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+        if (currentIndex !== -1) {
+          if (e.key === 'ArrowDown' && currentIndex < focusableElements.length - 1) {
+            focusableElements[currentIndex + 1].focus();
+            e.preventDefault();
+          } else if (e.key === 'ArrowUp' && currentIndex > 0) {
+            focusableElements[currentIndex - 1].focus();
+            e.preventDefault();
+          }
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const navigate = (path: string) => {
     if (path.startsWith('http')) {
       window.open(path, '_blank', 'noopener,noreferrer');
@@ -57,6 +89,14 @@ export const App: React.FC = () => {
         return <HomePage navigate={navigate} />;
       case '/features':
         return <FeaturesPage />;
+      case '/features/application-ecosystem':
+        return <ApplicationEcosystemPage navigate={navigate} />;
+      case '/products/giri-bridge':
+        return <GiriBridgePage navigate={navigate} />;
+      case '/products/giri-mobile':
+        return <GiriMobilePage navigate={navigate} />;
+      case '/products/giri-store':
+        return <GiriStorePage navigate={navigate} />;
       case '/editions':
         return <EditionsPage navigate={navigate} />;
       case '/gallery':
@@ -83,18 +123,18 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-giri-navy text-giri-text bg-isometric-grid overflow-x-hidden flex flex-col justify-between selection:bg-cyan-500/30 selection:text-white">
+    <div className="relative min-h-screen bg-giri-navy text-giri-text bg-isometric-grid overflow-x-hidden flex flex-col justify-between selection:bg-giri-blue/20 selection:text-giri-blue">
       {/* Accessibility Skip to Main Content Link */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-500 focus:text-black focus:font-bold focus:rounded-lg focus:shadow-xl focus:outline-none"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-giri-blue focus:text-white focus:font-bold focus:rounded-lg focus:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-400"
       >
         Skip to main content
       </a>
 
       {/* ThreeUI Ambient Radial Gradients */}
-      <div className="fixed top-0 left-1/4 w-[600px] h-[600px] bg-giri-blue/10 rounded-full blur-[140px] pointer-events-none -z-10" />
-      <div className="fixed bottom-1/4 right-1/4 w-[500px] h-[500px] bg-giri-violet/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="fixed top-0 left-1/4 w-[600px] h-[600px] bg-giri-blue/5 dark:bg-giri-blue/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="fixed bottom-1/4 right-1/4 w-[500px] h-[500px] bg-giri-violet/5 dark:bg-giri-violet/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       {/* Global Navigation */}
       <Navbar currentPath={currentPath} navigate={navigate} />

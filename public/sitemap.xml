@@ -25,6 +25,38 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- 2B. Application Ecosystem Deep Dive -->
+  <url>
+    <loc>https://girios.org/features/application-ecosystem</loc>
+    <lastmod>2026-11-19T21:40:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 2C. Product: Giri Bridge -->
+  <url>
+    <loc>https://girios.org/products/giri-bridge</loc>
+    <lastmod>2026-11-19T21:50:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 2D. Product: Giri Mobile -->
+  <url>
+    <loc>https://girios.org/products/giri-mobile</loc>
+    <lastmod>2026-11-19T21:50:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 2E. Product: Giri Store -->
+  <url>
+    <loc>https://girios.org/products/giri-store</loc>
+    <lastmod>2026-11-19T21:50:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- 3. Downloads & Cryptographic Verification -->
   <url>
     <loc>https://girios.org/downloads</loc>
