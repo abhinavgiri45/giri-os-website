@@ -74,14 +74,14 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
             className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-giri-blue/60 rounded-xl p-1"
             aria-label="Giri OS Home — Return to overview"
           >
-            <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center p-0.5 group-hover:scale-105 transition-transform duration-200">
+            <div className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center p-0.5 group-hover:scale-105 transition-transform duration-200">
               <img
-                src="/logo/giri-os-icon.svg"
-                alt="Giri OS Official Emblem — Orbital 'G' Geometric Formation"
-                width={32}
-                height={32}
+                src="/logo/giri-os-icon.png"
+                alt="Giri OS Official Emblem"
+                width={36}
+                height={36}
                 decoding="async"
-                className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(0,102,255,0.4)]"
+                className="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(37,99,235,0.25)]"
               />
             </div>
             <div className="flex flex-col text-left">

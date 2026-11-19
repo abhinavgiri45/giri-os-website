@@ -27,7 +27,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
             About Giri OS
           </h1>
           <p className="mt-4 text-base text-giri-muted leading-relaxed">
-            Founded by Abhinav Giri on the conviction that a modern operating system should be quiet, capable, and respectful of the person sitting in front of the display.
+            Built on the conviction that a modern operating system should be quiet, capable, and respectful of the person sitting in front of the display.
           </p>
         </div>
 

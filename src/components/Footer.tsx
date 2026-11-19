@@ -18,15 +18,15 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
           {/* Brand Info & Tagline Column */}
           <div className="lg:col-span-2 flex flex-col items-start gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl overflow-hidden p-0.5 bg-giri-surface2 border border-giri-border flex items-center justify-center shadow-sm">
+              <div className="w-10 h-10 rounded-xl overflow-hidden p-0.5 bg-giri-surface2 border border-giri-border flex items-center justify-center shadow-sm">
                 <img
-                  src="/logo/giri-os-icon.svg"
-                  alt="Giri OS Official Emblem — Orbital 'G' Geometric Formation"
-                  width={36}
-                  height={36}
+                  src="/logo/giri-os-icon.png"
+                  alt="Giri OS Official Emblem"
+                  width={40}
+                  height={40}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(0,102,255,0.35)]"
+                  className="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(37,99,235,0.25)]"
                 />
               </div>
               <div className="flex flex-col">

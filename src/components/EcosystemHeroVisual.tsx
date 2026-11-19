@@ -126,9 +126,9 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
             {/* Spinning decorative ring */}
             <div className="absolute inset-0 rounded-full border border-dashed border-giri-blue/30 dark:border-cyan-400/30 animate-[spin_30s_linear_infinite]" />
             <img 
-              src="/logo/giri-os-icon.svg" 
-              alt="Giri OS Orbital Emblem" 
-              className="w-12 h-12 sm:w-14 sm:h-14 object-contain filter drop-shadow-md"
+              src="/logo/giri-os-icon.png" 
+              alt="Giri OS Official Emblem" 
+              className="w-14 h-14 sm:w-16 sm:h-16 object-contain filter drop-shadow-[0_2px_10px_rgba(37,99,235,0.3)]"
               decoding="async"
             />
           </div>

@@ -1,0 +1,21 @@
+{
+  "name": "Giri OS",
+  "short_name": "Giri OS",
+  "description": "Official website of Giri OS — an independent Linux-based operating system. ONE SYSTEM. INFINITE POSSIBILITIES.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2563EB",
+  "icons": [
+    {
+      "src": "/icons/giri-os-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/giri-os-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
