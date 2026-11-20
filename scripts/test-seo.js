@@ -37,7 +37,7 @@ assert(fs.existsSync(robotsPath), 'public/robots.txt exists');
 const robotsContent = fs.readFileSync(robotsPath, 'utf-8');
 assert(robotsContent.includes('User-agent: *'), 'robots.txt declares wildcard user-agent');
 assert(robotsContent.includes('Allow: /'), 'robots.txt allows root path');
-assert(robotsContent.includes('Sitemap: https://girios.org/sitemap.xml'), 'robots.txt references official sitemap URL');
+assert(robotsContent.includes('Sitemap: https://giri-os.pages.dev/sitemap.xml'), 'robots.txt references official sitemap URL');
 assert(robotsContent.includes('Googlebot'), 'robots.txt contains specific directives for Googlebot');
 assert(robotsContent.includes('Bingbot'), 'robots.txt contains specific directives for Bingbot');
 
@@ -51,22 +51,22 @@ assert(sitemapContent.includes('http://www.sitemaps.org/schemas/sitemap/0.9'), '
 assert(sitemapContent.includes('http://www.google.com/schemas/sitemap-image/1.1'), 'sitemap.xml declares image sitemap schema 1.1');
 
 const canonicalRoutes = [
-  'https://girios.org/',
-  'https://girios.org/features',
-  'https://girios.org/features/application-ecosystem',
-  'https://girios.org/products/giri-bridge',
-  'https://girios.org/products/giri-mobile',
-  'https://girios.org/products/giri-store',
-  'https://girios.org/editions',
-  'https://girios.org/gallery',
-  'https://girios.org/downloads',
-  'https://girios.org/docs',
-  'https://girios.org/developers',
-  'https://girios.org/roadmap',
-  'https://girios.org/changelog',
-  'https://girios.org/status',
-  'https://girios.org/security',
-  'https://girios.org/about'
+  'https://giri-os.pages.dev/',
+  'https://giri-os.pages.dev/features',
+  'https://giri-os.pages.dev/features/application-ecosystem',
+  'https://giri-os.pages.dev/products/giri-bridge',
+  'https://giri-os.pages.dev/products/giri-mobile',
+  'https://giri-os.pages.dev/products/giri-store',
+  'https://giri-os.pages.dev/editions',
+  'https://giri-os.pages.dev/gallery',
+  'https://giri-os.pages.dev/downloads',
+  'https://giri-os.pages.dev/docs',
+  'https://giri-os.pages.dev/developers',
+  'https://giri-os.pages.dev/roadmap',
+  'https://giri-os.pages.dev/changelog',
+  'https://giri-os.pages.dev/status',
+  'https://giri-os.pages.dev/security',
+  'https://giri-os.pages.dev/about'
 ];
 
 canonicalRoutes.forEach((route) => {

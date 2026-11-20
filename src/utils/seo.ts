@@ -15,7 +15,7 @@ export interface PageSeoData {
   structuredData: object;
 }
 
-export const SITE_ORIGIN = 'https://girios.org';
+export const SITE_ORIGIN = 'https://giri-os.pages.dev';
 export const SITE_NAME = 'Giri OS';
 export const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/logo/giri-os-logo.svg`;
 export const GITHUB_REPO_URL = 'https://github.com/abhinavgiri45/giri-os';
@@ -23,17 +23,26 @@ export const GITHUB_REPO_URL = 'https://github.com/abhinavgiri45/giri-os';
 /**
  * Global Schema.org definitions
  */
+export const PERSON_SCHEMA = {
+  '@type': 'Person',
+  '@id': `${SITE_ORIGIN}/#founder`,
+  name: 'Abhinav Giri',
+  jobTitle: 'Founder & Lead Architect'
+};
+
 export const ORGANIZATION_SCHEMA = {
   '@type': 'Organization',
   '@id': `${SITE_ORIGIN}/#organization`,
-  name: 'Giri OS Project',
+  name: 'Giri OS',
   url: SITE_ORIGIN,
   logo: `${SITE_ORIGIN}/logo/giri-os-logo.svg`,
   sameAs: [
     GITHUB_REPO_URL,
     'https://github.com/abhinavgiri45/giri-os-website'
-  ]
+  ],
+  founder: { '@id': `${SITE_ORIGIN}/#founder` }
 };
+
 
 export const WEBSITE_SCHEMA = {
   '@type': 'WebSite',
@@ -68,7 +77,7 @@ export const SOFTWARE_APPLICATION_SCHEMA = {
  */
 export const ROUTE_SEO: Record<string, PageSeoData> = {
   '/': {
-    title: 'Giri OS — Official Website',
+    title: 'Giri OS — An Independent Linux Operating System',
     description: 'Official website of Giri OS — an independent Linux-based operating system. ONE SYSTEM. INFINITE POSSIBILITIES.',
     keywords: 'Giri OS, Giri Operating System, Giri OS Linux, Giri OS official website, Giri Space, Debian Linux, lightweight OS, open-source operating system',
     canonical: `${SITE_ORIGIN}/`,
@@ -78,6 +87,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         WEBSITE_SCHEMA,
         SOFTWARE_APPLICATION_SCHEMA,
         {
@@ -103,6 +113,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         SOFTWARE_APPLICATION_SCHEMA,
         {
           '@type': 'BreadcrumbList',
@@ -137,6 +148,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         SOFTWARE_APPLICATION_SCHEMA,
         {
           '@type': 'BreadcrumbList',
@@ -171,6 +183,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         SOFTWARE_APPLICATION_SCHEMA,
         {
           '@type': 'BreadcrumbList',
@@ -205,6 +218,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
@@ -234,6 +248,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         SOFTWARE_APPLICATION_SCHEMA,
         {
           '@type': 'BreadcrumbList',
@@ -267,6 +282,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
@@ -296,6 +312,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
@@ -325,6 +342,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         SOFTWARE_APPLICATION_SCHEMA,
         {
           '@type': 'BreadcrumbList',
@@ -376,6 +394,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
@@ -406,6 +425,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
@@ -435,6 +455,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
@@ -464,6 +485,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
@@ -493,6 +515,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
@@ -522,6 +545,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
@@ -551,6 +575,7 @@ export const ROUTE_SEO: Record<string, PageSeoData> = {
       '@context': 'https://schema.org',
       '@graph': [
         ORGANIZATION_SCHEMA,
+        PERSON_SCHEMA,
         {
           '@type': 'BreadcrumbList',
           itemListElement: [

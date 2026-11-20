@@ -33,4 +33,4 @@ User-agent: Baiduspider
 Crawl-delay: 1
 
 # XML Sitemaps
-Sitemap: https://girios.org/sitemap.xml
+Sitemap: https://giri-os.pages.dev/sitemap.xml

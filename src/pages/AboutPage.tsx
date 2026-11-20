@@ -21,7 +21,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-giri-blue/10 border border-giri-blue/25 text-giri-blue dark:text-cyan-400 text-xs font-semibold tracking-wider uppercase mb-3">
             <span>Project Origins & Ethos</span>
             <span className="w-1.5 h-1.5 rounded-full bg-giri-blue dark:bg-cyan-400" />
-            <span className="font-bold">Founded by Abhinav Giri</span>
+            <span className="font-bold">Giri OS is led by its Founder &amp; Lead Architect, Abhinav Giri.</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-2">
             About Giri OS

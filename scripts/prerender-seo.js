@@ -20,7 +20,7 @@ const ROUTE_SNAPSHOTS = [
     path: '/features',
     title: 'Giri OS Features & Desktop Subsystems | Official Architecture Guide',
     description: 'Explore the modular architecture and desktop components of Giri OS: Giri Space shell, Giri Dock, Openbox window manager, live session, and zero telemetry.',
-    canonical: 'https://girios.org/features',
+    canonical: 'https://giri-os.pages.dev/features',
     h1: 'Giri OS Features & Desktop Subsystems',
     summary: 'Every layer of Giri OS is designed to be modular, fast, and transparent. Explore Giri Space, Openbox window manager, Picom compositor, Calamares installer, and our zero-telemetry architecture.',
     structuredData: {
@@ -29,14 +29,14 @@ const ROUTE_SNAPSHOTS = [
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girios.org/' },
-            { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://girios.org/features' }
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://giri-os.pages.dev/' },
+            { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://giri-os.pages.dev/features' }
           ]
         },
         {
           '@type': 'WebPage',
           name: 'Giri OS Features & Desktop Subsystems',
-          url: 'https://girios.org/features'
+          url: 'https://giri-os.pages.dev/features'
         }
       ]
     }
@@ -45,7 +45,7 @@ const ROUTE_SNAPSHOTS = [
     path: '/features/application-ecosystem',
     title: 'Giri OS — One OS. Three Worlds. | Application Ecosystem',
     description: 'Discover the three original application products of Giri OS: Giri Bridge, Giri Mobile, and Giri Store, unified in one powerful desktop experience.',
-    canonical: 'https://girios.org/features/application-ecosystem',
+    canonical: 'https://giri-os.pages.dev/features/application-ecosystem',
     h1: 'ONE OS. THREE WORLDS — Giri OS Unified Application Ecosystem',
     summary: 'Giri Bridge. Giri Mobile. Giri Store. Three powerful application platforms unified into one seamless desktop experience. Explore Wine compatibility, containerized mobile runtimes, smart input mapping, and universal package discovery.',
     structuredData: {
@@ -54,9 +54,9 @@ const ROUTE_SNAPSHOTS = [
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girios.org/' },
-            { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://girios.org/features' },
-            { '@type': 'ListItem', position: 3, name: 'Application Ecosystem', item: 'https://girios.org/features/application-ecosystem' }
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://giri-os.pages.dev/' },
+            { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://giri-os.pages.dev/features' },
+            { '@type': 'ListItem', position: 3, name: 'Application Ecosystem', item: 'https://giri-os.pages.dev/features/application-ecosystem' }
           ]
         },
         {
@@ -64,7 +64,7 @@ const ROUTE_SNAPSHOTS = [
           name: 'ONE OS. THREE WORLDS — Giri OS Unified Application Ecosystem',
           headline: 'Giri OS Three-Product Ecosystem Architecture',
           description: 'Comprehensive technical documentation detailing how Giri OS brings together Giri Bridge, Giri Mobile, and Giri Store with prefix isolation, containerization, and smart input mapping.',
-          url: 'https://girios.org/features/application-ecosystem'
+          url: 'https://giri-os.pages.dev/features/application-ecosystem'
         }
       ]
     }
@@ -73,7 +73,7 @@ const ROUTE_SNAPSHOTS = [
     path: '/products/giri-bridge',
     title: 'Giri Bridge — Application Compatibility Platform | Giri OS',
     description: 'Giri Bridge is the application compatibility platform of Giri OS, bringing supported desktop applications into one integrated computing experience via Wine and DXVK.',
-    canonical: 'https://girios.org/products/giri-bridge',
+    canonical: 'https://giri-os.pages.dev/products/giri-bridge',
     h1: 'Giri Bridge — Desktop Application Compatibility Platform',
     summary: 'Bring supported desktop applications into your Giri OS experience with isolated Wine prefixes, Direct3D-to-Vulkan translation, and automatic desktop launcher generation.',
     structuredData: {
@@ -82,16 +82,16 @@ const ROUTE_SNAPSHOTS = [
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girios.org/' },
-            { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://girios.org/#products' },
-            { '@type': 'ListItem', position: 3, name: 'Giri Bridge', item: 'https://girios.org/products/giri-bridge' }
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://giri-os.pages.dev/' },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://giri-os.pages.dev/#products' },
+            { '@type': 'ListItem', position: 3, name: 'Giri Bridge', item: 'https://giri-os.pages.dev/products/giri-bridge' }
           ]
         },
         {
           '@type': 'Product',
           name: 'Giri Bridge',
           description: 'Giri Bridge is the application compatibility platform of Giri OS, designed to bring supported desktop applications into one integrated computing experience.',
-          url: 'https://girios.org/products/giri-bridge'
+          url: 'https://giri-os.pages.dev/products/giri-bridge'
         }
       ]
     }
@@ -100,7 +100,7 @@ const ROUTE_SNAPSHOTS = [
     path: '/products/giri-mobile',
     title: 'Giri Mobile — Integrated Mobile Application Runtime | Giri OS',
     description: 'Giri Mobile brings supported mobile applications to the Giri OS desktop through an integrated application runtime with Giri Smart Input Mapping.',
-    canonical: 'https://girios.org/products/giri-mobile',
+    canonical: 'https://giri-os.pages.dev/products/giri-mobile',
     h1: 'Giri Mobile — Integrated Mobile Application Runtime',
     summary: 'Extend your desktop experience with supported mobile applications. Powered by containerized AOSP on the Linux host kernel, Giri Smart Input Mapping, and desktop window integration.',
     structuredData: {
@@ -109,16 +109,16 @@ const ROUTE_SNAPSHOTS = [
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girios.org/' },
-            { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://girios.org/#products' },
-            { '@type': 'ListItem', position: 3, name: 'Giri Mobile', item: 'https://girios.org/products/giri-mobile' }
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://giri-os.pages.dev/' },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://giri-os.pages.dev/#products' },
+            { '@type': 'ListItem', position: 3, name: 'Giri Mobile', item: 'https://giri-os.pages.dev/products/giri-mobile' }
           ]
         },
         {
           '@type': 'Product',
           name: 'Giri Mobile',
           description: 'Giri Mobile brings supported mobile applications to the Giri OS desktop through an integrated application runtime.',
-          url: 'https://girios.org/products/giri-mobile'
+          url: 'https://giri-os.pages.dev/products/giri-mobile'
         }
       ]
     }
@@ -127,7 +127,7 @@ const ROUTE_SNAPSHOTS = [
     path: '/products/giri-store',
     title: 'Giri Store — Unified Application Marketplace | Giri OS',
     description: 'Giri Store is the unified application marketplace of Giri OS, designed to help users discover, install and manage applications through one interface.',
-    canonical: 'https://girios.org/products/giri-store',
+    canonical: 'https://giri-os.pages.dev/products/giri-store',
     h1: 'Giri Store — Unified Application Marketplace',
     summary: 'Discover, install, and manage applications through one unified marketplace bridging Debian APT repositories and Flathub universal Flatpaks with zero telemetry.',
     structuredData: {
@@ -136,16 +136,16 @@ const ROUTE_SNAPSHOTS = [
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girios.org/' },
-            { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://girios.org/#products' },
-            { '@type': 'ListItem', position: 3, name: 'Giri Store', item: 'https://girios.org/products/giri-store' }
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://giri-os.pages.dev/' },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://giri-os.pages.dev/#products' },
+            { '@type': 'ListItem', position: 3, name: 'Giri Store', item: 'https://giri-os.pages.dev/products/giri-store' }
           ]
         },
         {
           '@type': 'Product',
           name: 'Giri Store',
           description: 'Giri Store is the unified application marketplace of Giri OS, designed to help users discover, install and manage applications through one interface.',
-          url: 'https://girios.org/products/giri-store'
+          url: 'https://giri-os.pages.dev/products/giri-store'
         }
       ]
     }
@@ -154,7 +154,7 @@ const ROUTE_SNAPSHOTS = [
     path: '/editions',
     title: 'Giri OS Editions & System Specifications | Standard, Dev & Cloud',
     description: 'Compare official Giri OS editions: Standard Desktop, Developer Workstation, and Cloud/Server. Check hardware specifications and resource requirements.',
-    canonical: 'https://girios.org/editions',
+    canonical: 'https://giri-os.pages.dev/editions',
     h1: 'Giri OS Operating System Editions',
     summary: 'Compare Giri OS Standard Edition, Developer Workstation, and Cloud Server editions with full hardware requirement matrices and package manifests.',
     structuredData: {
@@ -163,14 +163,14 @@ const ROUTE_SNAPSHOTS = [
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girios.org/' },
-            { '@type': 'ListItem', position: 2, name: 'Editions', item: 'https://girios.org/editions' }
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://giri-os.pages.dev/' },
+            { '@type': 'ListItem', position: 2, name: 'Editions', item: 'https://giri-os.pages.dev/editions' }
           ]
         },
         {
           '@type': 'WebPage',
           name: 'Giri OS Editions & System Specifications',
-          url: 'https://girios.org/editions'
+          url: 'https://giri-os.pages.dev/editions'
         }
       ]
     }
@@ -179,21 +179,21 @@ const ROUTE_SNAPSHOTS = [
     path: '/gallery',
     title: 'Giri OS Gallery, 4K Wallpapers & Desktop Visuals | Official',
     description: 'Browse official Giri OS screenshots, Plymouth boot splash animations, GRUB themes, and download 12 high-resolution 4K desktop wallpapers.',
-    canonical: 'https://girios.org/gallery',
+    canonical: 'https://giri-os.pages.dev/gallery',
     h1: 'Giri OS Visual Gallery & 4K Wallpapers',
     summary: 'High-resolution screenshots, boot splash themes, GRUB bootloader aesthetics, and 12 official 4K wallpapers available for download.',
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'ImageGallery',
       name: 'Giri OS Visual Gallery and 4K Wallpapers',
-      url: 'https://girios.org/gallery'
+      url: 'https://giri-os.pages.dev/gallery'
     }
   },
   {
     path: '/downloads',
     title: 'Download Giri OS ISO & Verification Checksums | Official Release',
     description: 'Official download portal for Giri OS 0.1 Genesis ISO images. Verify SHA-256 cryptographic checksums, system requirements, and VirtualBox test guides.',
-    canonical: 'https://girios.org/downloads',
+    canonical: 'https://giri-os.pages.dev/downloads',
     h1: 'Giri OS Official Downloads & Validation',
     summary: 'Acquire verified cryptographic release images of Giri OS Genesis 0.1. Published with SHA-256 digests and Oracle VirtualBox test instructions.',
     structuredData: {
@@ -204,7 +204,7 @@ const ROUTE_SNAPSHOTS = [
           name: 'Giri OS',
           operatingSystem: 'Linux',
           softwareVersion: '0.1 Genesis',
-          url: 'https://girios.org/downloads'
+          url: 'https://giri-os.pages.dev/downloads'
         },
         {
           '@type': 'FAQPage',
@@ -226,98 +226,98 @@ const ROUTE_SNAPSHOTS = [
     path: '/docs',
     title: 'Giri OS Documentation & Technical Guides | Knowledge Base',
     description: 'Official Giri OS documentation: installation walkthroughs, Calamares setup, VirtualBox configuration, package management, and Linux architecture.',
-    canonical: 'https://girios.org/docs',
+    canonical: 'https://giri-os.pages.dev/docs',
     h1: 'Giri OS Documentation & Architecture Knowledge Base',
     summary: 'Comprehensive engineering guides: What is Giri OS, system requirements, VirtualBox setup, Calamares installation, Openbox window management, Debian base, and Linux architecture.',
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Giri OS Official Documentation & Architecture Guide',
-      url: 'https://girios.org/docs'
+      url: 'https://giri-os.pages.dev/docs'
     }
   },
   {
     path: '/developers',
     title: 'Giri OS Developer Portal — ISO Build System & Contributing',
     description: 'Build Giri OS from source using Debian live-build, test inside QEMU/KVM benches, inspect repository architecture, and contribute to open source.',
-    canonical: 'https://girios.org/developers',
+    canonical: 'https://giri-os.pages.dev/developers',
     h1: 'Giri OS Developer Portal & Build Pipeline',
     summary: 'Complete technical instructions for building Giri OS from source code with Debian live-build, testing inside QEMU, and contributing via Git pull requests.',
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: 'Giri OS Developer Portal',
-      url: 'https://girios.org/developers'
+      url: 'https://giri-os.pages.dev/developers'
     }
   },
   {
     path: '/roadmap',
     title: 'Giri OS Development Roadmap & Milestones | Genesis to Orbit',
     description: 'Track the 10-milestone development roadmap of Giri OS. Review progress from Genesis 0.1 stabilization to native shell and ISO release.',
-    canonical: 'https://girios.org/roadmap',
+    canonical: 'https://giri-os.pages.dev/roadmap',
     h1: 'Giri OS Development Roadmap & Milestones',
     summary: 'Tracking 10 development milestones: from Core Live-Build Foundation and Genesis 0.1 stabilization to native compiled shell and Wayland migration.',
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: 'Giri OS Development Roadmap',
-      url: 'https://girios.org/roadmap'
+      url: 'https://giri-os.pages.dev/roadmap'
     }
   },
   {
     path: '/changelog',
     title: 'Giri OS Changelog & Release Notes | Genesis 0.1 Updates',
     description: 'Read detailed release notes and system changelogs for Giri OS 0.1 Genesis, including shell fixes, Calamares installer styling, and live-build scripts.',
-    canonical: 'https://girios.org/changelog',
+    canonical: 'https://giri-os.pages.dev/changelog',
     h1: 'Giri OS System Changelog & Release Notes',
     summary: 'Comprehensive version history and release notes for Giri OS Genesis 0.1, including live-build configuration, Plymouth boot engine, and installer styling.',
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: 'Giri OS Changelog',
-      url: 'https://girios.org/changelog'
+      url: 'https://giri-os.pages.dev/changelog'
     }
   },
   {
     path: '/status',
     title: 'Giri OS Live Development Status & Subsystem Health Telemetry',
     description: 'Real-time telemetry and component operational status for Giri OS: ISO build engine, Calamares installer, Giri Space shell, and documentation.',
-    canonical: 'https://girios.org/status',
+    canonical: 'https://giri-os.pages.dev/status',
     h1: 'Giri OS Live Development Status & Telemetry',
     summary: 'Live health and operational telemetry for all Giri OS subsystems: live-build pipeline, Calamares graphical installer, Openbox shell, and website.',
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: 'Giri OS Development Status',
-      url: 'https://girios.org/status'
+      url: 'https://giri-os.pages.dev/status'
     }
   },
   {
     path: '/security',
     title: 'Giri OS Security & Privacy Architecture | Zero Telemetry Guarantee',
     description: 'Learn about Giri OS security architecture: zero telemetry, strict Debian provenance, cryptographic package validation, and minimal attack surface.',
-    canonical: 'https://girios.org/security',
+    canonical: 'https://giri-os.pages.dev/security',
     h1: 'Giri OS Security & Privacy Architecture',
     summary: 'Our zero-telemetry guarantee, Debian package provenance, cryptographic signing, user agency, and attack-surface minimization practices.',
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: 'Giri OS Security & Privacy',
-      url: 'https://girios.org/security'
+      url: 'https://giri-os.pages.dev/security'
     }
   },
   {
     path: '/about',
     title: 'About Giri OS — Independent Linux Operating System Mission & Ethos',
     description: 'Discover the origin story, philosophy, and architectural vision of Giri OS. Built by Abhinav Giri as a free, open-source, human-centric desktop.',
-    canonical: 'https://girios.org/about',
+    canonical: 'https://giri-os.pages.dev/about',
     h1: 'About Giri OS: Project Origins & Ethos',
     summary: 'Founded on the conviction that a modern desktop operating system should be quiet, capable, and respectful. An independent Linux project by Abhinav Giri.',
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
       name: 'About Giri OS',
-      url: 'https://girios.org/about'
+      url: 'https://giri-os.pages.dev/about'
     }
   }
 ];
