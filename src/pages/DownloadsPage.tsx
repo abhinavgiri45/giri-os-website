@@ -20,7 +20,7 @@ export const DownloadsPage: React.FC<DownloadsPageProps> = ({ navigate }) => {
   const [copied, setCopied] = useState(false);
 
   const copyVerifyCmd = () => {
-    navigator.clipboard.writeText('sha256sum -c giri-os-0.1-genesis-amd64.iso.sha256');
+    navigator.clipboard.writeText('echo "aaebbc5d8c6671a340503f223e5b099f67ca0fdc06906a4a0fcc00d584058d45 *giri-os-0.1-genesis-installable-amd64.iso" | sha256sum --check');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -147,7 +147,7 @@ export const DownloadsPage: React.FC<DownloadsPageProps> = ({ navigate }) => {
               Always verify the cryptographic signature of your downloaded ISO before flashing to USB:
             </p>
             <div className="p-3 rounded-lg bg-black/5 dark:bg-black/60 font-mono text-xs text-giri-blue dark:text-cyan-300 break-all select-all flex items-center justify-between border border-giri-border">
-              <code>sha256sum -c giri-os-0.1-genesis-amd64.iso.sha256</code>
+              <code>echo "aaebbc5d8c6671a340503f223e5b099f67ca0fdc06906a4a0fcc00d584058d45 *giri-os-0.1-genesis-installable-amd64.iso" | sha256sum --check</code>
             </div>
             <p className="text-[11px] text-giri-muted mt-2">
               *{d.sha256Placeholder}

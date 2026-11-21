@@ -115,6 +115,26 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
       {/* 5.2 Desktop Showcase Section */}
       <DesktopShowcase />
 
+      {/* 5.2a Meet the Giri Desktop Section */}
+      <section className="py-24 bg-giri-surface/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text">Meet the Giri Desktop</h2>
+          <p className="mt-6 text-base sm:text-lg text-giri-muted max-w-2xl mx-auto">
+            A new desktop experience built around the vision of Giri OS. From its streamlined interface and floating Dock to its integrated applications and system controls, Giri OS brings together the essentials of a desktop in one cohesive environment.
+          </p>
+          <p className="mt-2 text-sm text-giri-muted">One system. Infinite possibilities.</p>
+          <div className="mt-8 flex justify-center">
+            <img
+              src="/images/giri-desktop.jpg"
+              alt="Giri OS desktop — development build"
+              className="rounded-lg shadow-lg max-w-full w-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+          <p className="mt-2 text-xs text-giri-muted">Giri OS desktop — development build</p>
+        </div>
+      </section>
+
       {/* 5.3 Editorial Features Section — ThreeUI Asymmetric Pacing */}
       <section className="py-24 border-t border-giri-border relative bg-giri-surface/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
