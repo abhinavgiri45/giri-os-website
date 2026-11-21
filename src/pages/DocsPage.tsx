@@ -195,7 +195,7 @@ export const DocsPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left Navigation Sidebar */}
           <aside className="lg:col-span-4 xl:col-span-3">
-            <div className="sticky top-24 glass-panel p-5 rounded-2xl border border-giri-border space-y-6">
+            <div className="sticky top-24 glass-panel p-5 rounded-md border border-giri-border space-y-6">
               {/* Search Bar */}
               <div className="relative">
                 <Search className="w-4 h-4 text-giri-muted absolute left-3 top-1/2 -translate-y-1/2" />
@@ -204,7 +204,7 @@ export const DocsPage: React.FC = () => {
                   placeholder="Search 16 guides & articles..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-9 pr-8 py-2 rounded-xl bg-giri-surface text-xs text-giri-text placeholder-giri-muted border border-giri-border focus:outline-none focus:ring-2 focus:ring-giri-blue/50"
+                  className="w-full pl-9 pr-8 py-2 rounded-md bg-giri-surface text-xs text-giri-text placeholder-giri-muted border border-giri-border focus:outline-none focus:ring-2 focus:ring-giri-blue/50"
                 />
                 {searchQuery && (
                   <button
@@ -230,7 +230,7 @@ export const DocsPage: React.FC = () => {
 
                     return (
                       <div key={cat} className="space-y-2">
-                        <div className="text-[11px] font-bold uppercase tracking-wider text-giri-muted px-2 flex items-center gap-1.5">
+                        <div className="text-xs font-bold  tracking-wider text-giri-muted px-2 flex items-center gap-1.5">
                           {cat === 'Getting Started' && <BookOpen className="w-3.5 h-3.5 text-giri-blue dark:text-cyan-400 shrink-0" />}
                           {cat === 'Installation & Setup' && <Wrench className="w-3.5 h-3.5 text-giri-blue shrink-0" />}
                           {cat === 'Using Giri OS' && <Layers className="w-3.5 h-3.5 text-giri-violet shrink-0" />}
@@ -245,7 +245,7 @@ export const DocsPage: React.FC = () => {
                               <button
                                 key={article.id}
                                 onClick={() => selectArticle(article.id, article.slug)}
-                                className={`w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition-colors ${
+                                className={`w-full text-left px-3 py-2 rounded-md text-xs font-medium transition-colors ${
                                   isSelected
                                     ? 'bg-giri-blue/15 text-giri-blue dark:text-cyan-300 border border-giri-blue/30 shadow-sm'
                                     : 'text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/5'

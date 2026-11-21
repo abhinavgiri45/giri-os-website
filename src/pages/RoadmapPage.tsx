@@ -17,7 +17,7 @@ export const RoadmapPage: React.FC<RoadmapPageProps> = ({ navigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase">
+          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 ">
             Trajectory & Milestones
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -78,21 +78,21 @@ export const RoadmapPage: React.FC<RoadmapPageProps> = ({ navigate }) => {
                 </p>
 
                 {m.verificationEvidence && (
-                  <div className="mb-6 p-3.5 rounded-xl bg-giri-blue/5 border border-giri-blue/20 text-xs text-giri-blue dark:text-cyan-300 font-mono">
+                  <div className="mb-6 p-3.5 rounded-md bg-giri-blue/5 border border-giri-blue/20 text-xs text-giri-blue dark:text-cyan-300 font-mono">
                     <strong>Verification Evidence:</strong> {m.verificationEvidence}
                   </div>
                 )}
 
                 {/* Deliverables Checklist */}
                 <div>
-                  <h3 className="text-xs font-semibold uppercase tracking-wider text-giri-muted mb-3">
+                  <h3 className="text-xs font-semibold  tracking-wider text-giri-muted mb-3">
                     Key Deliverables
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {m.deliverables.map((d, dIdx) => (
                       <div
                         key={dIdx}
-                        className={`flex items-center gap-2 text-xs p-2.5 rounded-xl border ${
+                        className={`flex items-center gap-2 text-xs p-2.5 rounded-md border ${
                           d.completed
                             ? 'bg-emerald-500/5 border-emerald-500/20 text-emerald-600 dark:text-emerald-300'
                             : 'bg-giri-surface border-giri-border text-giri-muted'

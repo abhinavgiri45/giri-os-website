@@ -35,7 +35,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }
       onClick={onClose}
     >
       <div
-        className="relative max-w-4xl w-full max-h-[90vh] overflow-hidden rounded-2xl bg-giri-surface border border-giri-border shadow-2xl flex flex-col"
+        className="relative max-w-4xl w-full max-h-[90vh] overflow-hidden rounded-md bg-giri-surface border border-giri-border shadow-2xl flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between px-6 py-4 border-b border-giri-border">
@@ -43,7 +43,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }
           <button
             onClick={onClose}
             aria-label="Close modal"
-            className="p-1 rounded-lg text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+            className="p-1 rounded-md text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>

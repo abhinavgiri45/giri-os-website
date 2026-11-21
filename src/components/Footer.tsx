@@ -18,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
           {/* Brand Info & Tagline Column */}
           <div className="lg:col-span-2 flex flex-col items-start gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl overflow-hidden p-0.5 bg-giri-surface2 border border-giri-border flex items-center justify-center shadow-sm">
+              <div className="w-10 h-10 rounded-md overflow-hidden p-0.5 bg-giri-surface2 border border-giri-border flex items-center justify-center shadow-sm">
                 <img
                   src="/logo/giri-os-icon.png"
                   alt="Giri OS Official Emblem"
@@ -33,13 +33,13 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
                 <span className="font-extrabold text-lg tracking-wider text-giri-text">
                   GIRI <span className="text-giri-violet">OS</span>
                 </span>
-                <span className="text-[10px] uppercase tracking-widest text-giri-muted font-semibold">
+                <span className="text-xs  tracking-widest text-giri-muted font-semibold">
                   Genesis 0.1
                 </span>
               </div>
             </div>
 
-            <p className="text-xs font-bold tracking-widest text-giri-blue dark:text-cyan-400 uppercase mt-1">
+            <p className="text-xs font-bold tracking-widest text-giri-blue dark:text-cyan-400  mt-1">
               ONE SYSTEM. INFINITE POSSIBILITIES.
             </p>
 
@@ -75,7 +75,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
           {/* Categorized Link Sections */}
           {FOOTER_SECTIONS.map((section) => (
             <div key={section.title} className="flex flex-col gap-3">
-              <h3 className="text-xs font-bold tracking-wider uppercase text-giri-text/90">
+              <h3 className="text-xs font-bold tracking-wider  text-giri-text/90">
                 {section.title}
               </h3>
               <ul className="flex flex-col gap-2">

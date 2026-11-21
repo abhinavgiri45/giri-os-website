@@ -132,7 +132,7 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
               decoding="async"
             />
           </div>
-          <span className="mt-2 text-xs font-bold tracking-widest uppercase text-giri-text font-mono bg-white/80 dark:bg-slate-900/80 px-2.5 py-0.5 rounded-full border border-giri-border backdrop-blur-md">
+          <span className="mt-2 text-xs font-bold tracking-widest  text-giri-text font-mono bg-white/80 dark:bg-slate-900/80 px-2.5 py-0.5 rounded-full border border-giri-border backdrop-blur-md">
             Giri OS Core
           </span>
         </div>
@@ -144,7 +144,7 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
         >
           <button
             onClick={() => handleSelect('windows')}
-            className={`group flex flex-col items-center p-3 sm:p-4 rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+            className={`group flex flex-col items-center p-3 sm:p-4 rounded-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
               selectedId === 'windows'
                 ? 'bg-white dark:bg-slate-900 border-2 border-blue-500 shadow-xl shadow-blue-500/10 scale-105'
                 : 'bg-white/80 dark:bg-slate-900/80 border border-giri-border hover:border-blue-400/60 shadow-md'
@@ -152,14 +152,14 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
             aria-pressed={selectedId === 'windows'}
             aria-label="Select Giri Bridge Product"
           >
-            <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-colors ${
+            <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-md flex items-center justify-center transition-colors ${
               selectedId === 'windows' ? 'bg-blue-600 text-white' : 'bg-blue-500/10 text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white'
             }`}>
               <Monitor className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
             <div className="mt-2 text-center">
               <span className="block text-xs sm:text-sm font-bold text-giri-text">Giri Bridge</span>
-              <span className="block text-[10px] font-mono text-giri-muted">Compatibility Platform</span>
+              <span className="block text-xs font-mono text-giri-muted">Compatibility Platform</span>
             </div>
             <div className="flex gap-1 mt-1.5">
               <span className="text-[9px] font-mono font-semibold px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">EXE</span>
@@ -175,7 +175,7 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
         >
           <button
             onClick={() => handleSelect('android')}
-            className={`group flex flex-col items-center p-3 sm:p-4 rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
+            className={`group flex flex-col items-center p-3 sm:p-4 rounded-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
               selectedId === 'android'
                 ? 'bg-white dark:bg-slate-900 border-2 border-emerald-500 shadow-xl shadow-emerald-500/10 scale-105'
                 : 'bg-white/80 dark:bg-slate-900/80 border border-giri-border hover:border-emerald-400/60 shadow-md'
@@ -183,14 +183,14 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
             aria-pressed={selectedId === 'android'}
             aria-label="Select Giri Mobile Product"
           >
-            <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-colors ${
+            <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-md flex items-center justify-center transition-colors ${
               selectedId === 'android' ? 'bg-emerald-600 text-white' : 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white'
             }`}>
               <Smartphone className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
             <div className="mt-2 text-center">
               <span className="block text-xs sm:text-sm font-bold text-giri-text">Giri Mobile</span>
-              <span className="block text-[10px] font-mono text-giri-muted">Mobile Runtime</span>
+              <span className="block text-xs font-mono text-giri-muted">Mobile Runtime</span>
             </div>
             <div className="flex gap-1 mt-1.5">
               <span className="text-[9px] font-mono font-semibold px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">APK</span>
@@ -205,7 +205,7 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
         >
           <button
             onClick={() => handleSelect('linux')}
-            className={`group flex flex-col items-center p-3 sm:p-4 rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-violet-500 ${
+            className={`group flex flex-col items-center p-3 sm:p-4 rounded-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-violet-500 ${
               selectedId === 'linux'
                 ? 'bg-white dark:bg-slate-900 border-2 border-violet-500 shadow-xl shadow-violet-500/10 scale-105'
                 : 'bg-white/80 dark:bg-slate-900/80 border border-giri-border hover:border-violet-400/60 shadow-md'
@@ -213,14 +213,14 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
             aria-pressed={selectedId === 'linux'}
             aria-label="Select Giri Store Product"
           >
-            <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-colors ${
+            <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-md flex items-center justify-center transition-colors ${
               selectedId === 'linux' ? 'bg-violet-600 text-white' : 'bg-violet-500/10 text-violet-600 dark:text-violet-400 group-hover:bg-violet-600 group-hover:text-white'
             }`}>
               <Package className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
             <div className="mt-2 text-center">
               <span className="block text-xs sm:text-sm font-bold text-giri-text">Giri Store</span>
-              <span className="block text-[10px] font-mono text-giri-muted">Unified Marketplace</span>
+              <span className="block text-xs font-mono text-giri-muted">Unified Marketplace</span>
             </div>
             <div className="flex gap-1 mt-1.5">
               <span className="text-[9px] font-mono font-semibold px-1.5 py-0.5 rounded bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">DEB</span>
@@ -231,11 +231,11 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
       </div>
 
       {/* Dynamic Detail Card for Selected Product */}
-      <div className="w-full mt-6 bg-white/90 dark:bg-slate-900/90 border border-giri-border rounded-2xl p-6 sm:p-8 backdrop-blur-xl shadow-lg transition-all duration-300">
+      <div className="w-full mt-6 bg-white/90 dark:bg-slate-900/90 border border-giri-border rounded-md p-6 sm:p-8 backdrop-blur-xl shadow-lg transition-all duration-300">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-giri-border">
           <div className="flex items-center gap-4">
             <div 
-              className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold"
+              className="w-12 h-12 rounded-md flex items-center justify-center text-white font-bold"
               style={{ backgroundColor: activeEcosystem.accentColor }}
             >
               {selectedId === 'windows' && <Monitor className="w-6 h-6" />}
@@ -245,7 +245,7 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
             <div>
               <div className="flex items-center gap-2">
                 <h3 className="text-xl font-bold text-giri-text">{activeEcosystem.name}</h3>
-                <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-giri-surface border border-giri-border text-giri-muted">
+                <span className="badge-primary">
                   {activeEcosystem.subtitle}
                 </span>
               </div>
@@ -269,7 +269,7 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
             {navigate && (
               <button
                 onClick={() => navigate(activeEcosystem.productPath)}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-giri-blue text-white text-xs font-bold hover:bg-blue-600 transition-colors shadow-sm"
+                className="btn-primary"
               >
                 <span>Product Page</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -281,10 +281,10 @@ export const EcosystemHeroVisual: React.FC<EcosystemHeroVisualProps> = ({
         {/* Engine and Architecture Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
           {activeEcosystem.architectureHighlights.map((arch, idx) => (
-            <div key={idx} className="p-4 rounded-xl bg-giri-surface/50 border border-giri-border/70">
+            <div key={idx} className="p-4 rounded-md bg-giri-surface/50 border border-giri-border/70">
               <div className="flex items-center gap-2 mb-2">
                 <Layers className="w-4 h-4 text-giri-blue dark:text-cyan-400" />
-                <h4 className="text-xs font-bold text-giri-text">{arch.title}</h4>
+                <h3 className="text-xs font-bold text-giri-text">{arch.title}</h3>
               </div>
               <p className="text-xs text-giri-muted leading-relaxed">{arch.description}</p>
             </div>

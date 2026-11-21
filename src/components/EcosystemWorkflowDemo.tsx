@@ -87,7 +87,7 @@ export const EcosystemWorkflowDemo: React.FC = () => {
         </div>
 
         {/* Disclaimer Tag */}
-        <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-300 text-xs max-w-xs">
+        <div className="flex items-center gap-2 px-3 py-2 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-300 text-xs max-w-xs">
           <Info className="w-4 h-4 flex-shrink-0" />
           <span>
             <strong>Illustrative Pipeline:</strong> Interactive interface demonstration of Giri OS target subsystem execution.
@@ -97,10 +97,10 @@ export const EcosystemWorkflowDemo: React.FC = () => {
 
       {/* Product Tabs */}
       <div className="flex flex-wrap items-center justify-between gap-3 my-6">
-        <div className="flex rounded-xl bg-giri-surface p-1 border border-giri-border">
+        <div className="flex rounded-md bg-giri-surface p-1 border border-giri-border">
           <button
             onClick={() => handleTabChange('giri-bridge')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+            className={`flex items-center gap-2 px-4 py-2 rounded-md text-xs font-semibold transition-all ${
               activeProductId === 'giri-bridge'
                 ? 'bg-blue-600 text-white shadow-md'
                 : 'text-giri-muted hover:text-giri-text'
@@ -111,7 +111,7 @@ export const EcosystemWorkflowDemo: React.FC = () => {
           </button>
           <button
             onClick={() => handleTabChange('giri-mobile')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+            className={`flex items-center gap-2 px-4 py-2 rounded-md text-xs font-semibold transition-all ${
               activeProductId === 'giri-mobile'
                 ? 'bg-emerald-600 text-white shadow-md'
                 : 'text-giri-muted hover:text-giri-text'
@@ -122,7 +122,7 @@ export const EcosystemWorkflowDemo: React.FC = () => {
           </button>
           <button
             onClick={() => handleTabChange('giri-store')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+            className={`flex items-center gap-2 px-4 py-2 rounded-md text-xs font-semibold transition-all ${
               activeProductId === 'giri-store'
                 ? 'bg-violet-600 text-white shadow-md'
                 : 'text-giri-muted hover:text-giri-text'
@@ -138,7 +138,7 @@ export const EcosystemWorkflowDemo: React.FC = () => {
           <button
             onClick={handleRunSimulation}
             disabled={isRunning || simulatedStep === activeWorkflow.steps.length}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+            className={`flex items-center gap-1.5 px-4 py-2 rounded-md text-xs font-bold transition-all ${
               isRunning || simulatedStep === activeWorkflow.steps.length
                 ? 'bg-giri-surface text-giri-muted cursor-not-allowed border border-giri-border'
                 : 'bg-giri-blue text-white hover:bg-blue-600 shadow-md'
@@ -151,7 +151,7 @@ export const EcosystemWorkflowDemo: React.FC = () => {
           {simulatedStep > 0 && (
             <button
               onClick={handleReset}
-              className="p-2 rounded-xl border border-giri-border hover:bg-giri-surface text-giri-muted transition-colors"
+              className="p-2 rounded-md border border-giri-border hover:bg-giri-surface text-giri-muted transition-colors"
               title="Reset Simulation"
               aria-label="Reset Simulation"
             >
@@ -180,7 +180,7 @@ export const EcosystemWorkflowDemo: React.FC = () => {
           return (
             <div
               key={step.stepNumber}
-              className={`p-4 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${
+              className={`p-4 rounded-md border transition-all duration-300 flex flex-col justify-between ${
                 isCurrent
                   ? 'bg-white dark:bg-slate-900 border-giri-blue ring-2 ring-giri-blue/20 shadow-lg scale-[1.02]'
                   : isCompleted
@@ -199,25 +199,25 @@ export const EcosystemWorkflowDemo: React.FC = () => {
                   }`}>
                     STEP 0{step.stepNumber}
                   </span>
-                  <div className="w-6 h-6 rounded-lg bg-giri-surface border border-giri-border flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-md bg-giri-surface border border-giri-border flex items-center justify-center">
                     {renderIcon(step.iconType, isCurrent, isCompleted)}
                   </div>
                 </div>
 
-                <div className="text-[11px] font-mono font-semibold text-giri-blue dark:text-cyan-400 mb-1">
+                <div className="text-xs font-mono font-semibold text-giri-blue dark:text-cyan-400 mb-1">
                   {step.phase}
                 </div>
-                <h4 className="text-xs font-bold text-giri-text mb-1">
+                <h3 className="text-xs font-bold text-giri-text mb-1">
                   {step.title}
-                </h4>
-                <p className="text-[11px] text-giri-muted leading-relaxed">
+                </h3>
+                <p className="text-xs text-giri-muted leading-relaxed">
                   {step.description}
                 </p>
               </div>
 
               {/* Subsystem CLI Action */}
               <div className="mt-3 pt-2.5 border-t border-giri-border/60">
-                <code className="block text-[10px] font-mono text-giri-text bg-giri-surface p-1.5 rounded overflow-x-auto border border-giri-border/50">
+                <code className="block text-xs font-mono text-giri-text bg-giri-surface p-1.5 rounded overflow-x-auto border border-giri-border/50">
                   {step.subsystemAction}
                 </code>
               </div>
@@ -228,8 +228,8 @@ export const EcosystemWorkflowDemo: React.FC = () => {
 
       {/* Terminal Output Snapshot */}
       {simulatedStep > 0 && (
-        <div className="mt-6 p-4 rounded-xl bg-slate-950 text-slate-200 border border-slate-800 font-mono text-xs">
-          <div className="flex items-center gap-2 mb-2 pb-2 border-b border-slate-800 text-slate-400 text-[11px]">
+        <div className="mt-6 p-4 rounded-md bg-slate-950 text-slate-200 border border-slate-800 font-mono text-xs">
+          <div className="flex items-center gap-2 mb-2 pb-2 border-b border-slate-800 text-slate-400 text-xs">
             <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
             <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />

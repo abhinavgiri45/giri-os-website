@@ -30,7 +30,7 @@ export const DownloadsPage: React.FC<DownloadsPageProps> = ({ navigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase">
+          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 ">
             Release Validation
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -44,7 +44,7 @@ export const DownloadsPage: React.FC<DownloadsPageProps> = ({ navigate }) => {
         {/* Primary Development Notice Banner as mandated */}
         <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-amber-500/10 border border-amber-500/30 backdrop-blur-xl relative overflow-hidden shadow-sm">
           <div className="flex items-start gap-4">
-            <div className="p-3 rounded-2xl bg-amber-500/20 text-amber-600 dark:text-amber-400 shrink-0">
+            <div className="p-3 rounded-md bg-amber-500/20 text-amber-600 dark:text-amber-400 shrink-0">
               <AlertTriangle className="w-6 h-6" />
             </div>
             <div>
@@ -90,7 +90,7 @@ export const DownloadsPage: React.FC<DownloadsPageProps> = ({ navigate }) => {
         <div className="glass-panel p-8 sm:p-10 rounded-3xl border border-giri-border mb-16">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-giri-border">
             <div>
-              <span className="text-xs font-bold font-mono text-giri-blue dark:text-cyan-400 uppercase tracking-wider">
+              <span className="text-xs font-bold font-mono text-giri-blue dark:text-cyan-400  tracking-wider">
                 Release Profile Preview
               </span>
               <h3 className="text-2xl font-bold text-giri-text mt-1">
@@ -107,32 +107,32 @@ export const DownloadsPage: React.FC<DownloadsPageProps> = ({ navigate }) => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
-            <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
+            <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
               <span className="text-xs text-giri-muted">Target Release Phase</span>
               <div className="text-sm font-bold text-giri-text mt-1">{d.releaseDate}</div>
             </div>
-            <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
+            <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
               <span className="text-xs text-giri-muted">Estimated ISO Size</span>
               <div className="text-sm font-bold font-mono text-giri-blue dark:text-cyan-400 mt-1">{d.estimatedSize}</div>
             </div>
-            <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
+            <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
               <span className="text-xs text-giri-muted">Installer Engine</span>
               <div className="text-sm font-bold text-giri-text mt-1">Calamares OEM Engine</div>
             </div>
-            <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
+            <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
               <span className="text-xs text-giri-muted">Kernel Base</span>
               <div className="text-sm font-bold font-mono text-giri-text mt-1">Linux 6.1 LTS</div>
             </div>
           </div>
 
           {/* SHA256 Verification Protocol */}
-          <div className="p-5 rounded-2xl bg-giri-surface2 border border-giri-border">
+          <div className="p-5 rounded-md bg-giri-surface2 border border-giri-border">
             <div className="flex items-center justify-between gap-2 mb-2">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
-                <h4 className="text-xs font-bold uppercase tracking-wider text-giri-text">
+                <h3 className="text-xs font-bold  tracking-wider text-giri-text">
                   Cryptographic Checksum Verification (SHA-256)
-                </h4>
+                </h3>
               </div>
               <button
                 onClick={copyVerifyCmd}
@@ -146,10 +146,10 @@ export const DownloadsPage: React.FC<DownloadsPageProps> = ({ navigate }) => {
             <p className="text-xs text-giri-muted mb-3">
               Always verify the cryptographic signature of your downloaded ISO before flashing to USB:
             </p>
-            <div className="p-3 rounded-lg bg-black/5 dark:bg-black/60 font-mono text-xs text-giri-blue dark:text-cyan-300 break-all select-all flex items-center justify-between border border-giri-border">
+            <div className="p-3 rounded-md bg-black/5 dark:bg-black/60 font-mono text-xs text-giri-blue dark:text-cyan-300 break-all select-all flex items-center justify-between border border-giri-border">
               <code>echo "aaebbc5d8c6671a340503f223e5b099f67ca0fdc06906a4a0fcc00d584058d45 *giri-os-0.1-genesis-installable-amd64.iso" | sha256sum --check</code>
             </div>
-            <p className="text-[11px] text-giri-muted mt-2">
+            <p className="text-xs text-giri-muted mt-2">
               *{d.sha256Placeholder}
             </p>
           </div>
@@ -163,8 +163,8 @@ export const DownloadsPage: React.FC<DownloadsPageProps> = ({ navigate }) => {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="glass-card p-6 rounded-2xl border border-giri-border">
-              <span className="text-xs font-bold text-amber-500 dark:text-amber-400 uppercase tracking-wider">
+            <div className="glass-card p-6 rounded-md border border-giri-border">
+              <span className="text-xs font-bold text-amber-500 dark:text-amber-400  tracking-wider">
                 Minimum Requirements (Entry Level)
               </span>
               <ul className="mt-4 space-y-2.5 text-xs text-giri-muted">
@@ -187,8 +187,8 @@ export const DownloadsPage: React.FC<DownloadsPageProps> = ({ navigate }) => {
               </ul>
             </div>
 
-            <div className="glass-card p-6 rounded-2xl border border-giri-border">
-              <span className="text-xs font-bold text-emerald-500 dark:text-emerald-400 uppercase tracking-wider">
+            <div className="glass-card p-6 rounded-md border border-giri-border">
+              <span className="text-xs font-bold text-emerald-500 dark:text-emerald-400  tracking-wider">
                 Recommended Requirements (Fluid Multitasking)
               </span>
               <ul className="mt-4 space-y-2.5 text-xs text-giri-muted">
@@ -222,12 +222,12 @@ export const DownloadsPage: React.FC<DownloadsPageProps> = ({ navigate }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {d.installationSteps.map((step) => (
-              <div key={step.step} className="glass-card p-6 rounded-2xl flex flex-col justify-between">
+              <div key={step.step} className="glass-card p-6 rounded-md flex flex-col justify-between">
                 <div>
-                  <div className="w-8 h-8 rounded-xl bg-giri-blue/10 text-giri-blue dark:text-cyan-400 border border-giri-blue/25 flex items-center justify-center font-bold text-xs mb-4">
+                  <div className="w-8 h-8 rounded-md bg-giri-blue/10 text-giri-blue dark:text-cyan-400 border border-giri-blue/25 flex items-center justify-center font-bold text-xs mb-4">
                     0{step.step}
                   </div>
-                  <h4 className="text-sm font-bold text-giri-text mb-2">{step.title}</h4>
+                  <h3 className="text-sm font-bold text-giri-text mb-2">{step.title}</h3>
                   <p className="text-xs text-giri-muted leading-relaxed">{step.description}</p>
                 </div>
               </div>

@@ -118,7 +118,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
           {profile.formats.map((fmt) => (
             <span 
               key={fmt.format}
-              className={`text-xs font-mono font-bold px-3 py-1.5 rounded-lg border ${fmt.color}`}
+              className={`text-xs font-mono font-bold px-3 py-1.5 rounded-md border ${fmt.color}`}
             >
               .{fmt.format.toLowerCase()} &bull; {fmt.label}
             </span>
@@ -130,7 +130,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6">
-            <span className="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase font-mono">
+            <span className="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400  font-mono">
               Container Runtime Architecture
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2 mb-4">
@@ -141,22 +141,22 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
             </p>
 
             <div className="space-y-4">
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                <h4 className="text-sm font-bold text-giri-text mb-1">Direct Kernel IPC (Binder & Ashmem)</h4>
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                <h3 className="text-sm font-bold text-giri-text mb-1">Direct Kernel IPC (Binder & Ashmem)</h3>
                 <p className="text-xs text-giri-muted leading-relaxed">
                   Inter-process communication between mobile services and the desktop compositor flows directly through kernel drivers, providing instant responsiveness and low memory utilization.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                <h4 className="text-sm font-bold text-giri-text mb-1">Mesa DRI3 Hardware GPU Acceleration</h4>
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                <h3 className="text-sm font-bold text-giri-text mb-1">Mesa DRI3 Hardware GPU Acceleration</h3>
                 <p className="text-xs text-giri-muted leading-relaxed">
                   OpenGL ES and Vulkan commands are rendered directly by your physical GPU via Mesa drivers, delivering fluid 60+ FPS visuals in gaming and media applications.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                <h4 className="text-sm font-bold text-giri-text mb-1">Desktop Window Management</h4>
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                <h3 className="text-sm font-bold text-giri-text mb-1">Desktop Window Management</h3>
                 <p className="text-xs text-giri-muted leading-relaxed">
                   Mobile applications render inside standard, resizable X11/Wayland desktop windows. Minimize, maximize, tile, or snap mobile windows with standard desktop hotkeys.
                 </p>
@@ -167,41 +167,41 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
           {/* Right: Architecture Diagram Mockup */}
           <div className="lg:col-span-6 rounded-3xl bg-slate-950 border border-slate-800 p-6 sm:p-8 shadow-2xl text-slate-300">
             <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
-              <span className="text-xs font-mono font-bold text-emerald-400 uppercase">Giri Mobile Execution Stack</span>
-              <span className="text-[10px] font-mono text-slate-400">Zero-VM Architecture</span>
+              <span className="text-xs font-mono font-bold text-emerald-400 ">Giri Mobile Execution Stack</span>
+              <span className="text-xs font-mono text-slate-400">Zero-VM Architecture</span>
             </div>
 
             <div className="space-y-3 font-mono text-xs">
-              <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
+              <div className="p-3.5 rounded-md bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
                 <div className="font-bold flex items-center justify-between">
                   <span>Application Layer</span>
-                  <span className="text-[10px] bg-emerald-500/20 px-2 py-0.5 rounded">Mobile Apps (.APK)</span>
+                  <span className="text-xs bg-emerald-500/20 px-2 py-0.5 rounded">Mobile Apps (.APK)</span>
                 </div>
-                <p className="text-[11px] text-slate-400 mt-1">Productivity apps, mobile games, messaging clients</p>
+                <p className="text-xs text-slate-400 mt-1">Productivity apps, mobile games, messaging clients</p>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200">
+              <div className="p-3.5 rounded-md bg-slate-900 border border-slate-800 text-slate-200">
                 <div className="font-bold flex items-center justify-between">
                   <span>Giri Mobile Container Runtime</span>
-                  <span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded">AOSP / Waydroid</span>
+                  <span className="text-xs bg-slate-800 px-2 py-0.5 rounded">AOSP / Waydroid</span>
                 </div>
-                <p className="text-[11px] text-slate-400 mt-1">System services, package manager daemon, window bridge</p>
+                <p className="text-xs text-slate-400 mt-1">System services, package manager daemon, window bridge</p>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300">
+              <div className="p-3.5 rounded-md bg-blue-500/10 border border-blue-500/30 text-blue-300">
                 <div className="font-bold flex items-center justify-between">
                   <span>Giri Smart Input & Display Daemon</span>
-                  <span className="text-[10px] bg-blue-500/20 px-2 py-0.5 rounded">keymap-daemon</span>
+                  <span className="text-xs bg-blue-500/20 px-2 py-0.5 rounded">keymap-daemon</span>
                 </div>
-                <p className="text-[11px] text-slate-400 mt-1">WASD virtual joystick, mouse-to-touch, gamepad mapper</p>
+                <p className="text-xs text-slate-400 mt-1">WASD virtual joystick, mouse-to-touch, gamepad mapper</p>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-300">
+              <div className="p-3.5 rounded-md bg-purple-500/10 border border-purple-500/30 text-purple-300">
                 <div className="font-bold flex items-center justify-between">
                   <span>Linux 6.1 LTS Kernel</span>
-                  <span className="text-[10px] bg-purple-500/20 px-2 py-0.5 rounded">binder / ashmem / DRI3</span>
+                  <span className="text-xs bg-purple-500/20 px-2 py-0.5 rounded">binder / ashmem / DRI3</span>
                 </div>
-                <p className="text-[11px] text-slate-400 mt-1">Shared host kernel resources with zero hypervisor penalty</p>
+                <p className="text-xs text-slate-400 mt-1">Shared host kernel resources with zero hypervisor penalty</p>
               </div>
             </div>
           </div>
@@ -226,7 +226,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
             </div>
 
             {/* Honest Disclosure Tag */}
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-300 text-xs max-w-xs">
+            <div className="flex items-center gap-2 px-3 py-2 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-300 text-xs max-w-xs">
               <Info className="w-4 h-4 flex-shrink-0" />
               <span>
                 <strong>Demonstration Only:</strong> Illustrative interface simulation of the Giri Mobile installation pipeline.
@@ -239,7 +239,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
             <button
               onClick={handleRunSimulation}
               disabled={isRunning || simulatedStep === workflow.steps.length}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-md text-xs font-bold transition-all ${
                 isRunning || simulatedStep === workflow.steps.length
                   ? 'bg-giri-surface text-giri-muted cursor-not-allowed border border-giri-border'
                   : 'bg-emerald-600 text-white hover:bg-emerald-700 shadow-md'
@@ -252,7 +252,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
             {simulatedStep > 0 && (
               <button
                 onClick={handleReset}
-                className="p-2.5 rounded-xl border border-giri-border hover:bg-giri-surface text-giri-muted transition-colors"
+                className="p-2.5 rounded-md border border-giri-border hover:bg-giri-surface text-giri-muted transition-colors"
                 title="Reset Simulation"
                 aria-label="Reset Simulation"
               >
@@ -280,7 +280,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
               return (
                 <div
                   key={step.stepNumber}
-                  className={`p-4 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${
+                  className={`p-4 rounded-md border transition-all duration-300 flex flex-col justify-between ${
                     isCurrent
                       ? 'bg-white dark:bg-slate-900 border-emerald-500 ring-2 ring-emerald-500/20 shadow-lg scale-[1.02]'
                       : isCompleted
@@ -299,24 +299,24 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
                       }`}>
                         STEP 0{step.stepNumber}
                       </span>
-                      <div className="w-6 h-6 rounded-lg bg-giri-surface border border-giri-border flex items-center justify-center">
+                      <div className="w-6 h-6 rounded-md bg-giri-surface border border-giri-border flex items-center justify-center">
                         {renderIcon(step.iconType, isCurrent, isCompleted)}
                       </div>
                     </div>
 
-                    <div className="text-[11px] font-mono font-semibold text-emerald-600 dark:text-emerald-400 mb-1">
+                    <div className="text-xs font-mono font-semibold text-emerald-600 dark:text-emerald-400 mb-1">
                       {step.phase}
                     </div>
-                    <h4 className="text-xs font-bold text-giri-text mb-1">
+                    <h3 className="text-xs font-bold text-giri-text mb-1">
                       {step.title}
-                    </h4>
-                    <p className="text-[11px] text-giri-muted leading-relaxed">
+                    </h3>
+                    <p className="text-xs text-giri-muted leading-relaxed">
                       {step.description}
                     </p>
                   </div>
 
                   <div className="mt-3 pt-2.5 border-t border-giri-border/60">
-                    <code className="block text-[10px] font-mono text-giri-text bg-giri-surface p-1.5 rounded overflow-x-auto border border-giri-border/50">
+                    <code className="block text-xs font-mono text-giri-text bg-giri-surface p-1.5 rounded overflow-x-auto border border-giri-border/50">
                       {step.subsystemAction}
                     </code>
                   </div>
@@ -331,7 +331,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
       <section className="py-20 border-t border-giri-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase font-mono">
+            <span className="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400  font-mono">
               Giri Smart Input Mapping
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -347,22 +347,22 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
 
           {/* Input Mapping Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <div className="p-6 rounded-2xl bg-giri-surface border border-giri-border">
-              <h4 className="text-sm font-bold text-giri-text mb-2">Keyboard & WASD Mapping</h4>
+            <div className="p-6 rounded-md bg-giri-surface border border-giri-border">
+              <h3 className="text-sm font-bold text-giri-text mb-2">Keyboard & WASD Mapping</h3>
               <p className="text-xs text-giri-muted leading-relaxed">
                 Map physical directional keys (WASD) to virtual analog sticks, with customizable action keys for jumps, sprints, and item triggers.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-giri-surface border border-giri-border">
-              <h4 className="text-sm font-bold text-giri-text mb-2">Mouse Gesture Translation</h4>
+            <div className="p-6 rounded-md bg-giri-surface border border-giri-border">
+              <h3 className="text-sm font-bold text-giri-text mb-2">Mouse Gesture Translation</h3>
               <p className="text-xs text-giri-muted leading-relaxed">
                 Transform click-and-drag mouse movements into smooth touch swipes, with scroll-wheel pinch zoom and right-click back button navigation.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-giri-surface border border-giri-border">
-              <h4 className="text-sm font-bold text-giri-text mb-2">Per-Application Profiles</h4>
+            <div className="p-6 rounded-md bg-giri-surface border border-giri-border">
+              <h3 className="text-sm font-bold text-giri-text mb-2">Per-Application Profiles</h3>
               <p className="text-xs text-giri-muted leading-relaxed">
                 Control profiles are automatically saved and matched per package name, switching layouts seamlessly when focusing different windows.
               </p>
@@ -375,7 +375,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
       <section className="py-20 border-t border-giri-border bg-giri-surface/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase font-mono">
+            <span className="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400  font-mono">
               Product Capabilities
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -388,7 +388,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {profile.capabilities.map((cap) => (
-              <div key={cap.id} className="glass-card p-6 rounded-2xl flex flex-col justify-between">
+              <div key={cap.id} className="glass-card p-6 rounded-md flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-mono text-giri-muted font-medium">Giri Mobile</span>
@@ -408,7 +408,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* System Requirements */}
-            <div className="lg:col-span-6 glass-card p-8 rounded-2xl">
+            <div className="lg:col-span-6 glass-card p-8 rounded-md">
               <div className="flex items-center gap-2 mb-4 pb-2 border-b border-giri-border">
                 <HardDrive className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                 <h3 className="text-lg font-bold text-giri-text">Hardware Requirements</h3>
@@ -416,14 +416,14 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
 
               <div className="space-y-4 text-xs">
                 <div>
-                  <span className="block text-giri-muted font-semibold uppercase font-mono text-[10px]">Minimum Hardware</span>
+                  <span className="block text-giri-muted font-semibold  font-mono text-xs">Minimum Hardware</span>
                   <p className="text-giri-text mt-1">{profile.systemRequirements.minimum}</p>
                 </div>
                 <div>
-                  <span className="block text-giri-muted font-semibold uppercase font-mono text-[10px]">Recommended Hardware</span>
+                  <span className="block text-giri-muted font-semibold  font-mono text-xs">Recommended Hardware</span>
                   <p className="text-giri-text mt-1 font-semibold text-emerald-600 dark:text-emerald-400">{profile.systemRequirements.recommended}</p>
                 </div>
-                <div className="p-3 rounded-xl bg-giri-surface border border-giri-border text-giri-muted text-[11px] leading-relaxed">
+                <div className="badge-primary">
                   <span className="font-bold text-giri-text block mb-1">Virtualization Prerequisites:</span>
                   {profile.systemRequirements.notes}
                 </div>
@@ -431,7 +431,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
             </div>
 
             {/* Known Limitations */}
-            <div className="lg:col-span-6 glass-card p-8 rounded-2xl">
+            <div className="lg:col-span-6 glass-card p-8 rounded-md">
               <div className="flex items-center gap-2 mb-4 pb-2 border-b border-giri-border">
                 <AlertTriangle className="w-5 h-5 text-amber-500" />
                 <h3 className="text-lg font-bold text-giri-text">Compatibility Limitations</h3>
@@ -439,7 +439,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
 
               <ul className="space-y-3 text-xs text-giri-muted">
                 {profile.knownLimitations.map((lim, idx) => (
-                  <li key={idx} className="flex items-start gap-2 p-2.5 rounded-xl bg-giri-surface border border-giri-border">
+                  <li key={idx} className="flex items-start gap-2 p-2.5 rounded-md bg-giri-surface border border-giri-border">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 flex-shrink-0" />
                     <span className="leading-relaxed">{lim}</span>
                   </li>
@@ -454,7 +454,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
       <section className="py-20 border-t border-giri-border bg-giri-surface/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase font-mono">
+            <span className="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400  font-mono">
               Product Questions
             </span>
             <h2 className="text-3xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -468,7 +468,7 @@ export const GiriMobilePage: React.FC<GiriMobilePageProps> = ({ navigate }) => {
               return (
                 <div
                   key={index}
-                  className="rounded-2xl border border-giri-border bg-white dark:bg-slate-900 overflow-hidden shadow-sm"
+                  className="rounded-md border border-giri-border bg-white dark:bg-slate-900 overflow-hidden shadow-sm"
                 >
                   <button
                     onClick={() => setOpenFaqIndex(isOpen ? null : index)}

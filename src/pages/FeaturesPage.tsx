@@ -55,7 +55,7 @@ export const FeaturesPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase">
+          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 ">
             Feature Catalog
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -67,7 +67,7 @@ export const FeaturesPage: React.FC = () => {
         </div>
 
         {/* Filter Controls */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-2xl bg-giri-surface border border-giri-border mb-10 shadow-sm">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-md bg-giri-surface border border-giri-border mb-10 shadow-sm">
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-xs text-giri-muted flex items-center gap-1 mr-1">
               <Filter className="w-3.5 h-3.5" />
@@ -126,11 +126,11 @@ export const FeaturesPage: React.FC = () => {
             {filteredFeatures.map((feat) => (
               <div
                 key={feat.id}
-                className="glass-card p-6 rounded-2xl flex flex-col justify-between"
+                className="glass-card p-6 rounded-md flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-giri-surface2 border border-giri-border flex items-center justify-center text-giri-blue dark:text-cyan-400">
+                    <div className="w-10 h-10 rounded-md bg-giri-surface2 border border-giri-border flex items-center justify-center text-giri-blue dark:text-cyan-400">
                       {getIcon(feat.icon)}
                     </div>
                     <StatusBadge status={feat.status as FeatureStatus} />
@@ -142,9 +142,9 @@ export const FeaturesPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-[11px] uppercase tracking-wider font-semibold text-giri-muted mb-2">
+                  <h3 className="text-xs  tracking-wider font-semibold text-giri-muted mb-2">
                     Technical Highlights
-                  </h4>
+                  </h3>
                   <ul className="space-y-1.5 text-xs text-giri-muted pt-2 border-t border-giri-border">
                     {feat.highlights.map((h, i) => (
                       <li key={i} className="flex items-start gap-2">

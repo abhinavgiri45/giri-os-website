@@ -18,10 +18,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Elegant Founder Attribution */}
         <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-giri-blue/10 border border-giri-blue/25 text-giri-blue dark:text-cyan-400 text-xs font-semibold tracking-wider uppercase mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-giri-blue/10 border border-giri-blue/25 text-giri-blue dark:text-cyan-400 text-xs font-semibold tracking-wider  mb-3">
             <span>Project Origins & Ethos</span>
             <span className="w-1.5 h-1.5 rounded-full bg-giri-blue dark:bg-cyan-400" />
-            <span className="font-bold">Giri OS is led by its Founder &amp; Lead Architect, Abhinav Giri.</span>
+            <span className="font-bold">Giri OS is led by Abhinav Giri, its Founder &amp; Lead Architect.</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-2">
             About Giri OS
@@ -34,7 +34,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
         {/* The Why Section */}
         <section className="glass-panel p-8 sm:p-12 rounded-3xl border border-giri-border mb-16">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-xl bg-giri-blue/10 text-giri-blue dark:text-cyan-400 border border-giri-blue/20 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-md bg-giri-blue/10 text-giri-blue dark:text-cyan-400 border border-giri-blue/20 flex items-center justify-center">
               <Compass className="w-5 h-5" />
             </div>
             <h2 className="text-2xl font-bold text-giri-text">Why Giri OS Exists</h2>
@@ -61,24 +61,24 @@ export const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass-card p-6 rounded-2xl border border-giri-border">
-              <div className="text-giri-blue dark:text-cyan-400 font-mono text-xs font-bold uppercase mb-2">Principle 01</div>
+            <div className="glass-card p-6 rounded-md border border-giri-border">
+              <div className="text-giri-blue dark:text-cyan-400 font-mono text-xs font-bold  mb-2">Principle 01</div>
               <h3 className="text-lg font-bold text-giri-text mb-2">Simplicity Over Bloat</h3>
               <p className="text-xs text-giri-muted leading-relaxed">
                 If a feature can be implemented with an efficient, modular shell script or standard POSIX utility, we reject heavy background frameworks.
               </p>
             </div>
 
-            <div className="glass-card p-6 rounded-2xl border border-giri-border">
-              <div className="text-giri-blue font-mono text-xs font-bold uppercase mb-2">Principle 02</div>
+            <div className="glass-card p-6 rounded-md border border-giri-border">
+              <div className="text-giri-blue font-mono text-xs font-bold  mb-2">Principle 02</div>
               <h3 className="text-lg font-bold text-giri-text mb-2">Honest Engineering</h3>
               <p className="text-xs text-giri-muted leading-relaxed">
                 We state our exact status clearly. Unfinished components are marked as &ldquo;In Development&rdquo; or &ldquo;Design Preview&rdquo;. We do not inflate feature claims or publish unverified binaries.
               </p>
             </div>
 
-            <div className="glass-card p-6 rounded-2xl border border-giri-border">
-              <div className="text-giri-violet font-mono text-xs font-bold uppercase mb-2">Principle 03</div>
+            <div className="glass-card p-6 rounded-md border border-giri-border">
+              <div className="text-giri-violet font-mono text-xs font-bold  mb-2">Principle 03</div>
               <h3 className="text-lg font-bold text-giri-text mb-2">Independent Identity</h3>
               <p className="text-xs text-giri-muted leading-relaxed">
                 Giri OS maintains its own distinct visual design language, vector emblem, color tokens, and desktop philosophy, free from derivative branding.
@@ -90,7 +90,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
         {/* Open Source Licensing & Dual Alignment Section */}
         <section className="glass-panel p-8 sm:p-12 rounded-3xl border border-giri-border">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-xl bg-giri-violet/10 text-giri-violet border border-giri-violet/20 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-md bg-giri-violet/10 text-giri-violet border border-giri-violet/20 flex items-center justify-center">
               <Code className="w-5 h-5" />
             </div>
             <h2 className="text-2xl font-bold text-giri-text" id="license">Open Source Licensing & Codebase</h2>

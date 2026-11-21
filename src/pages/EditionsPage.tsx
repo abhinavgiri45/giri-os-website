@@ -12,7 +12,7 @@ export const EditionsPage: React.FC<EditionsPageProps> = ({ navigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-14">
-          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase">
+          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 ">
             Distribution Lineup
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -58,13 +58,13 @@ export const EditionsPage: React.FC<EditionsPageProps> = ({ navigate }) => {
               {/* Description & Target Audience */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8 text-sm">
                 <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-giri-muted mb-2">
+                  <h3 className="text-xs font-semibold tracking-wider  text-giri-muted mb-2">
                     Overview
                   </h3>
                   <p className="text-giri-muted leading-relaxed">{ed.description}</p>
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-giri-muted mb-2">
+                  <h3 className="text-xs font-semibold tracking-wider  text-giri-muted mb-2">
                     Target Audience
                   </h3>
                   <p className="text-giri-muted leading-relaxed">{ed.targetAudience}</p>
@@ -72,16 +72,16 @@ export const EditionsPage: React.FC<EditionsPageProps> = ({ navigate }) => {
               </div>
 
               {/* Hardware Requirements Matrix */}
-              <div className="rounded-2xl bg-giri-surface border border-giri-border p-6 mb-8">
-                <h3 className="text-xs font-bold tracking-wider uppercase text-giri-text mb-4 flex items-center gap-2">
+              <div className="rounded-md bg-giri-surface border border-giri-border p-6 mb-8">
+                <h3 className="text-xs font-bold tracking-wider  text-giri-text mb-4 flex items-center gap-2">
                   <Cpu className="w-4 h-4 text-giri-blue dark:text-cyan-400" />
                   <span>Hardware Requirements</span>
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Minimum */}
-                  <div className="p-4 rounded-xl bg-giri-surface2 border border-giri-border">
-                    <span className="text-xs font-bold text-amber-500 dark:text-amber-400 uppercase tracking-wider">
+                  <div className="p-4 rounded-md bg-giri-surface2 border border-giri-border">
+                    <span className="text-xs font-bold text-amber-500 dark:text-amber-400  tracking-wider">
                       Minimum (Entry Level)
                     </span>
                     <ul className="mt-3 space-y-2 text-xs text-giri-muted">
@@ -105,8 +105,8 @@ export const EditionsPage: React.FC<EditionsPageProps> = ({ navigate }) => {
                   </div>
 
                   {/* Recommended */}
-                  <div className="p-4 rounded-xl bg-giri-surface2 border border-giri-border">
-                    <span className="text-xs font-bold text-emerald-500 dark:text-emerald-400 uppercase tracking-wider">
+                  <div className="p-4 rounded-md bg-giri-surface2 border border-giri-border">
+                    <span className="text-xs font-bold text-emerald-500 dark:text-emerald-400  tracking-wider">
                       Recommended (Optimal Experience)
                     </span>
                     <ul className="mt-3 space-y-2 text-xs text-giri-muted">
@@ -133,14 +133,14 @@ export const EditionsPage: React.FC<EditionsPageProps> = ({ navigate }) => {
 
               {/* Software Bundled */}
               <div>
-                <h3 className="text-xs font-semibold tracking-wider uppercase text-giri-muted mb-3">
+                <h3 className="text-xs font-semibold tracking-wider  text-giri-muted mb-3">
                   Included Subsystems & Components
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {ed.includedSoftware.map((item, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center gap-2 text-xs text-giri-text p-2.5 rounded-xl bg-giri-surface border border-giri-border"
+                      className="flex items-center gap-2 text-xs text-giri-text p-2.5 rounded-md bg-giri-surface border border-giri-border"
                     >
                       <CheckCircle2 className="w-3.5 h-3.5 text-giri-blue dark:text-cyan-400 shrink-0" />
                       <span>{item}</span>

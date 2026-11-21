@@ -9,11 +9,11 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ navigate }) => {
   return (
     <div className="pt-32 pb-24 flex items-center justify-center min-h-[75vh]">
       <div className="max-w-xl mx-auto px-4 text-center">
-        <div className="w-16 h-16 rounded-2xl bg-giri-blue/10 text-giri-blue dark:text-cyan-400 border border-giri-blue/25 flex items-center justify-center mx-auto mb-6 shadow-sm dark:shadow-glow">
+        <div className="w-16 h-16 rounded-md bg-giri-blue/10 text-giri-blue dark:text-cyan-400 border border-giri-blue/25 flex items-center justify-center mx-auto mb-6 shadow-sm dark:shadow-glow">
           <Compass className="w-8 h-8 animate-spin" style={{ animationDuration: '12s' }} />
         </div>
 
-        <span className="text-xs font-mono font-bold text-giri-blue dark:text-cyan-400 uppercase tracking-widest">
+        <span className="text-xs font-mono font-bold text-giri-blue dark:text-cyan-400  tracking-widest">
           Error 404 &bull; Locus Not Found
         </span>
 

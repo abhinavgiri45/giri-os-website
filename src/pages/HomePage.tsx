@@ -127,7 +127,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
             <img
               src="/images/giri-desktop.jpg"
               alt="Giri OS desktop — development build"
-              className="rounded-lg shadow-lg max-w-full w-auto object-cover"
+              className="rounded-md shadow-lg max-w-full w-auto object-cover"
               loading="lazy"
             />
           </div>
@@ -139,7 +139,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
       <section className="py-24 border-t border-giri-border relative bg-giri-surface/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-16">
-            <span className="text-xs font-semibold tracking-widest text-giri-blue uppercase">
+            <span className="text-xs font-semibold tracking-widest text-giri-blue ">
               System Architecture
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-3">
@@ -156,10 +156,10 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
             <div className="lg:col-span-7 glass-card p-8 sm:p-10 rounded-3xl flex flex-col justify-between border-l-4 border-l-giri-blue">
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-giri-blue/10 border border-giri-blue/20 text-giri-blue flex items-center justify-center shadow-sm">
+                  <div className="w-12 h-12 rounded-md bg-giri-blue/10 border border-giri-blue/20 text-giri-blue flex items-center justify-center shadow-sm">
                     <Gauge className="w-6 h-6" />
                   </div>
-                  <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-giri-blue/10 text-giri-blue font-bold border border-giri-blue/20">
+                  <span className="text-xs font-mono px-3 py-1 rounded-full bg-giri-blue/10 text-giri-blue font-bold border border-giri-blue/20">
                     &lt;350 MB RAM
                   </span>
                 </div>
@@ -195,7 +195,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
             {/* Feature 2: Zero Telemetry Block */}
             <div className="lg:col-span-5 glass-card p-8 rounded-3xl flex flex-col justify-between border-l-4 border-l-emerald-500">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shadow-sm mb-6">
+                <div className="w-12 h-12 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shadow-sm mb-6">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-giri-text mb-2">
@@ -204,7 +204,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
                 <p className="text-xs sm:text-sm text-giri-muted leading-relaxed mb-4">
                   No tracking scripts, no background analytics beacons, and no mandatory cloud account logins. What runs on your machine stays on your machine.
                 </p>
-                <div className="p-3.5 rounded-xl bg-slate-900/90 text-emerald-400 font-mono text-[11px] space-y-1">
+                <div className="p-3.5 rounded-md bg-slate-900/90 text-emerald-400 font-mono text-xs space-y-1">
                   <div>$ journalctl -u giri-telemetry</div>
                   <div className="text-slate-400">Unit giri-telemetry.service could not be found.</div>
                 </div>
@@ -214,7 +214,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
             {/* Feature 3: Debian 12 Stability */}
             <div className="lg:col-span-5 glass-card p-8 rounded-3xl flex flex-col justify-between border-l-4 border-l-purple-500">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center shadow-sm mb-6">
+                <div className="w-12 h-12 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center shadow-sm mb-6">
                   <Cpu className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-giri-text mb-2">
@@ -230,10 +230,10 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
             <div className="lg:col-span-7 glass-card p-8 rounded-3xl flex flex-col justify-between border-l-4 border-l-cyan-500">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shadow-sm">
+                  <div className="w-12 h-12 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shadow-sm">
                     <Monitor className="w-6 h-6" />
                   </div>
-                  <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold border border-cyan-500/20">
+                  <span className="text-xs font-mono px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold border border-cyan-500/20">
                     4K / HiDPI Ready
                   </span>
                 </div>
@@ -254,7 +254,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="text-xs font-semibold tracking-widest text-giri-blue uppercase">
+            <span className="text-xs font-semibold tracking-widest text-giri-blue ">
               Unified Platform
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-3">
@@ -268,7 +268,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
             <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
               <button
                 onClick={() => setActiveEcosystemTab('bridge')}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-md text-xs sm:text-sm font-bold transition-all duration-200 ${
                   activeEcosystemTab === 'bridge'
                     ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25 scale-[1.03]'
                     : 'bg-giri-surface border border-giri-border text-giri-muted hover:text-giri-text'
@@ -280,7 +280,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
 
               <button
                 onClick={() => setActiveEcosystemTab('mobile')}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-md text-xs sm:text-sm font-bold transition-all duration-200 ${
                   activeEcosystemTab === 'mobile'
                     ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/25 scale-[1.03]'
                     : 'bg-giri-surface border border-giri-border text-giri-muted hover:text-giri-text'
@@ -292,7 +292,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
 
               <button
                 onClick={() => setActiveEcosystemTab('store')}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-md text-xs sm:text-sm font-bold transition-all duration-200 ${
                   activeEcosystemTab === 'store'
                     ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/25 scale-[1.03]'
                     : 'bg-giri-surface border border-giri-border text-giri-muted hover:text-giri-text'
@@ -324,12 +324,12 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
             }`}>
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-600 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-600 flex items-center justify-center">
                     <Monitor className="w-6 h-6" />
                   </div>
                   <div className="flex gap-1.5">
-                    <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 border border-blue-500/20">EXE</span>
-                    <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 border border-blue-500/20">MSI</span>
+                    <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 border border-blue-500/20">EXE</span>
+                    <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 border border-blue-500/20">MSI</span>
                   </div>
                 </div>
 
@@ -339,7 +339,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
                 </p>
 
                 <div className="space-y-2.5 pt-4 border-t border-giri-border">
-                  <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-giri-muted block mb-1">
+                  <span className="text-xs font-mono font-semibold  tracking-wider text-giri-muted block mb-1">
                     Subsystem Architecture:
                   </span>
                   <div className="flex items-center justify-between text-xs py-1">
@@ -364,7 +364,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
               <div className="mt-8 pt-4 border-t border-giri-border">
                 <button
                   onClick={() => navigate('/products/giri-bridge')}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition-colors shadow-md shadow-blue-600/20"
+                  className="btn-primary"
                 >
                   <span>Explore Giri Bridge</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -380,11 +380,11 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
             }`}>
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 flex items-center justify-center">
                     <Smartphone className="w-6 h-6" />
                   </div>
                   <div className="flex gap-1.5">
-                    <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">APK</span>
+                    <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">APK</span>
                   </div>
                 </div>
 
@@ -394,7 +394,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
                 </p>
 
                 <div className="space-y-2.5 pt-4 border-t border-giri-border">
-                  <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-giri-muted block mb-1">
+                  <span className="text-xs font-mono font-semibold  tracking-wider text-giri-muted block mb-1">
                     Subsystem Architecture:
                   </span>
                   <div className="flex items-center justify-between text-xs py-1">
@@ -419,7 +419,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
               <div className="mt-8 pt-4 border-t border-giri-border">
                 <button
                   onClick={() => navigate('/products/giri-mobile')}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-colors shadow-md shadow-emerald-600/20"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-colors shadow-md shadow-emerald-600/20"
                 >
                   <span>Explore Giri Mobile</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -435,12 +435,12 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
             }`}>
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-600 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-600 flex items-center justify-center">
                     <Package className="w-6 h-6" />
                   </div>
                   <div className="flex gap-1.5">
-                    <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-600 border border-purple-500/20">DEB</span>
-                    <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-600 border border-purple-500/20">Flatpak</span>
+                    <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-600 border border-purple-500/20">DEB</span>
+                    <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-600 border border-purple-500/20">Flatpak</span>
                   </div>
                 </div>
 
@@ -450,7 +450,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
                 </p>
 
                 <div className="space-y-2.5 pt-4 border-t border-giri-border">
-                  <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-giri-muted block mb-1">
+                  <span className="text-xs font-mono font-semibold  tracking-wider text-giri-muted block mb-1">
                     Subsystem Architecture:
                   </span>
                   <div className="flex items-center justify-between text-xs py-1">
@@ -475,7 +475,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
               <div className="mt-8 pt-4 border-t border-giri-border">
                 <button
                   onClick={() => navigate('/products/giri-store')}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition-colors shadow-md shadow-purple-600/20"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-md bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition-colors shadow-md shadow-purple-600/20"
                 >
                   <span>Explore Giri Store</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -490,7 +490,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
       <section className="py-20 border-t border-giri-border relative bg-giri-surface/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center mb-16">
-            <span className="text-xs font-semibold tracking-widest text-giri-blue uppercase">
+            <span className="text-xs font-semibold tracking-widest text-giri-blue ">
               Distribution Profiles
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -506,7 +506,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
               <div key={ed.id} className="glass-card p-8 rounded-3xl flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold text-giri-blue uppercase tracking-wider">{ed.badge}</span>
+                    <span className="text-xs font-bold text-giri-blue  tracking-wider">{ed.badge}</span>
                     <span className="text-xs font-mono text-giri-muted">{ed.version}</span>
                   </div>
                   <h3 className="text-xl font-bold text-giri-text mb-2">{ed.name}</h3>
@@ -546,7 +546,7 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
       {/* 5.6 Closing CTA */}
       <section className="py-24 border-t border-giri-border relative text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-semibold tracking-widest text-giri-blue uppercase">
+          <span className="text-xs font-semibold tracking-widest text-giri-blue ">
             Get Started
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-3">

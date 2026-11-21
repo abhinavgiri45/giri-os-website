@@ -127,7 +127,7 @@ export const App: React.FC = () => {
       {/* Accessibility Skip to Main Content Link */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-giri-blue focus:text-white focus:font-bold focus:rounded-lg focus:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-400"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-giri-blue focus:text-white focus:font-bold focus:rounded-md focus:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-400"
       >
         Skip to main content
       </a>

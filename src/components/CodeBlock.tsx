@@ -17,7 +17,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = 'bash', t
   };
 
   return (
-    <div className="relative my-4 rounded-xl overflow-hidden border border-giri-border bg-[#080C16] text-slate-200 shadow-xl font-mono text-sm">
+    <div className="relative my-4 rounded-md overflow-hidden border border-giri-border bg-[#080C16] text-slate-200 shadow-xl font-mono text-sm">
       <div className="flex items-center justify-between px-4 py-2 bg-giri-surface2/60 border-b border-giri-border">
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5">
@@ -28,7 +28,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = 'bash', t
           {title && <span className="ml-2 text-xs text-giri-muted font-sans font-medium">{title}</span>}
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-[11px] uppercase tracking-wider text-giri-muted/70">{language}</span>
+          <span className="text-xs  tracking-wider text-giri-muted/70">{language}</span>
           <button
             onClick={handleCopy}
             aria-label="Copy code to clipboard"

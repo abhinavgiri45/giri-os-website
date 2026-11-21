@@ -71,10 +71,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
           {/* Brand Logo & Wordmark */}
           <button
             onClick={() => handleNavClick('/')}
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-giri-blue/60 rounded-xl p-1"
+            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-giri-blue/60 rounded-md p-1"
             aria-label="Giri OS Home — Return to overview"
           >
-            <div className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center p-0.5 group-hover:scale-105 transition-transform duration-200">
+            <div className="w-9 h-9 rounded-md overflow-hidden flex items-center justify-center p-0.5 group-hover:scale-105 transition-transform duration-200">
               <img
                 src="/logo/giri-os-icon.png"
                 alt="Giri OS Official Emblem"
@@ -88,7 +88,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
               <span className="font-extrabold text-base tracking-wider text-giri-text group-hover:text-giri-blue transition-colors">
                 GIRI <span className="text-giri-violet">OS</span>
               </span>
-              <span className="text-[9px] uppercase tracking-widest text-giri-muted -mt-1 font-semibold hidden sm:inline-block">
+              <span className="text-[9px]  tracking-widest text-giri-muted -mt-1 font-semibold hidden sm:inline-block">
                 Genesis 0.1
               </span>
             </div>
@@ -137,7 +137,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
               {moreDropdownOpen && (
                 <div
                   role="menu"
-                  className="absolute right-0 mt-2 w-48 rounded-2xl bg-giri-surface border border-giri-border p-2 shadow-2xl backdrop-blur-2xl animate-fade-in z-50 flex flex-col gap-1"
+                  className="absolute right-0 mt-2 w-48 rounded-md bg-giri-surface border border-giri-border p-2 shadow-2xl backdrop-blur-2xl animate-fade-in z-50 flex flex-col gap-1"
                 >
                   {secondaryNav.map((item) => {
                     const isActive = currentPath === item.href;
@@ -147,7 +147,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
                         role="menuitem"
                         onClick={() => handleNavClick(item.href)}
                         aria-current={isActive ? 'page' : undefined}
-                        className={`text-left px-3 py-2 rounded-xl text-xs font-medium transition-colors ${
+                        className={`text-left px-3 py-2 rounded-md text-xs font-medium transition-colors ${
                           isActive
                             ? 'bg-giri-blue/15 text-giri-blue dark:text-cyan-300 border border-giri-blue/30'
                             : 'text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/5'
@@ -198,7 +198,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={mobileMenuOpen}
-              className="p-2 rounded-lg text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/10 lg:hidden focus:outline-none focus:ring-2 focus:ring-giri-blue/50"
+              className="p-2 rounded-md text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/10 lg:hidden focus:outline-none focus:ring-2 focus:ring-giri-blue/50"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -222,7 +222,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
                   aria-current={isActive ? 'page' : undefined}
-                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
+                  className={`flex items-center justify-between px-4 py-2.5 rounded-md text-sm font-semibold transition-colors ${
                     isActive
                       ? 'bg-giri-blue/15 text-giri-blue dark:text-cyan-300 border border-giri-blue/30'
                       : 'text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/5'
@@ -240,7 +240,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, navigate }) => {
               href="https://github.com/abhinavgiri45/giri-os"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs text-giri-muted hover:text-giri-text px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5"
+              className="flex items-center gap-2 text-xs text-giri-muted hover:text-giri-text px-3 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
             >
               <GithubIcon className="w-4 h-4" />
               <span>GitHub (abhinavgiri45/giri-os)</span>

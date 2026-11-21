@@ -48,7 +48,7 @@ export const GalleryPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase">
+          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 ">
             Visual Media
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -60,12 +60,12 @@ export const GalleryPage: React.FC = () => {
         </div>
 
         {/* Category Pills */}
-        <div className="flex flex-wrap items-center gap-2 mb-10 p-2 rounded-2xl bg-giri-surface border border-giri-border w-fit shadow-sm">
+        <div className="flex flex-wrap items-center gap-2 mb-10 p-2 rounded-md bg-giri-surface border border-giri-border w-fit shadow-sm">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-1.5 rounded-xl text-xs font-semibold transition-colors ${
+              className={`px-4 py-1.5 rounded-md text-xs font-semibold transition-colors ${
                 selectedCategory === cat
                   ? 'bg-giri-blue/15 text-giri-blue dark:text-cyan-300 border border-giri-blue/30 shadow-sm'
                   : 'text-giri-muted hover:text-giri-text hover:bg-black/5 dark:hover:bg-white/5'
@@ -96,7 +96,7 @@ export const GalleryPage: React.FC = () => {
             {filteredItems.map((item) => (
               <div
                 key={item.id}
-                className="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group cursor-pointer border border-giri-border"
+                className="glass-card rounded-md overflow-hidden flex flex-col justify-between group cursor-pointer border border-giri-border"
                 onClick={() => setActiveItem(item)}
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-black/5 dark:bg-black/40 flex items-center justify-center">
@@ -128,7 +128,7 @@ export const GalleryPage: React.FC = () => {
                   <p className="text-xs text-giri-muted mt-1 line-clamp-2 leading-relaxed">
                     {item.description}
                   </p>
-                  <div className="mt-3 pt-3 border-t border-giri-border flex items-center justify-between text-[11px] text-giri-muted">
+                  <div className="mt-3 pt-3 border-t border-giri-border flex items-center justify-between text-xs text-giri-muted">
                     <span className="font-mono">{item.category}</span>
                     <span className="text-giri-blue dark:text-cyan-400 font-semibold">Click to inspect</span>
                   </div>
@@ -147,7 +147,7 @@ export const GalleryPage: React.FC = () => {
           title={activeItem.title}
         >
           <div className="space-y-4">
-            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden bg-black/5 dark:bg-black/80 flex items-center justify-center border border-giri-border">
+            <div className="relative w-full aspect-[16/9] rounded-md overflow-hidden bg-black/5 dark:bg-black/80 flex items-center justify-center border border-giri-border">
               <img
                 src={activeItem.imageSrc}
                 alt={`Giri OS Lightbox View — ${activeItem.title}`}
@@ -201,7 +201,7 @@ export const GalleryPage: React.FC = () => {
             </div>
 
             {activeItem.label === 'Design Preview' && (
-              <div className="p-3 rounded-lg bg-giri-violet/10 border border-giri-violet/20 text-xs text-giri-violet flex items-center gap-2">
+              <div className="p-3 rounded-md bg-giri-violet/10 border border-giri-violet/20 text-xs text-giri-violet flex items-center gap-2">
                 <Info className="w-4 h-4 shrink-0" />
                 <span>
                   This item is a design preview illustrating the planned UI layout. It will be replaced with verified live screenshots once desktop shell stabilization concludes.

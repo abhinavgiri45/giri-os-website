@@ -29,5 +29,23 @@
     "three": "^0.170.0",
     "typescript": "^5.6.3",
     "vite": "^5.4.11"
-  }
+  },
+  "description": "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE) [![Framework: React + Vite](https://img.shields.io/badge/Framework-React%20%2B%20Vite-61dafb.svg)](https://vitejs.dev/) [![Styling: Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind%20CSS-38bdf8.svg)](https://tailwindcss.com/) [![3D Engine: Three.js](https://img.shields.io/badge/3D%20Engine-Three.js-black.svg)](https://threejs.org/) [![Hosting: Cloudflare Pages](https://img.shields.io/badge/Deployment-Cloudflare%20Pages-f38020.svg)](https://pages.cloudflare.com/)",
+  "main": "postcss.config.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinavgiri45/giri-os-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhinavgiri45/giri-os-website/issues"
+  },
+  "homepage": "https://github.com/abhinavgiri45/giri-os-website#readme"
 }

@@ -18,7 +18,7 @@ export const ChangelogPage: React.FC<ChangelogPageProps> = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase">
+          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 ">
             Release Evolution
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -43,7 +43,7 @@ export const ChangelogPage: React.FC<ChangelogPageProps> = () => {
                       v{rel.version} {rel.codename}
                     </span>
                     {rel.isLatest && (
-                      <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                      <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
                         Latest Development Milestone
                       </span>
                     )}
@@ -67,7 +67,7 @@ export const ChangelogPage: React.FC<ChangelogPageProps> = () => {
               <div className="space-y-8">
                 {/* New Features */}
                 <div>
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-giri-blue dark:text-cyan-400 flex items-center gap-2 mb-3">
+                  <h3 className="text-xs font-bold  tracking-wider text-giri-blue dark:text-cyan-400 flex items-center gap-2 mb-3">
                     <Sparkles className="w-4 h-4" />
                     <span>New Features</span>
                   </h3>
@@ -83,7 +83,7 @@ export const ChangelogPage: React.FC<ChangelogPageProps> = () => {
 
                 {/* Improvements */}
                 <div>
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-giri-blue flex items-center gap-2 mb-3">
+                  <h3 className="text-xs font-bold  tracking-wider text-giri-blue flex items-center gap-2 mb-3">
                     <Wrench className="w-4 h-4" />
                     <span>Enhancements & Refinements</span>
                   </h3>
@@ -99,7 +99,7 @@ export const ChangelogPage: React.FC<ChangelogPageProps> = () => {
 
                 {/* Fixes */}
                 <div>
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-2 mb-3">
+                  <h3 className="text-xs font-bold  tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-2 mb-3">
                     <CheckCircle className="w-4 h-4" />
                     <span>Resolved Issues</span>
                   </h3>
@@ -114,8 +114,8 @@ export const ChangelogPage: React.FC<ChangelogPageProps> = () => {
                 </div>
 
                 {/* Known Issues */}
-                <div className="p-5 rounded-2xl bg-amber-500/5 border border-amber-500/20">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 flex items-center gap-2 mb-3">
+                <div className="p-5 rounded-md bg-amber-500/5 border border-amber-500/20">
+                  <h3 className="text-xs font-bold  tracking-wider text-amber-600 dark:text-amber-400 flex items-center gap-2 mb-3">
                     <AlertCircle className="w-4 h-4" />
                     <span>Documented Known Issues</span>
                   </h3>

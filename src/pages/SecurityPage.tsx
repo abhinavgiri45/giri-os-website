@@ -15,7 +15,7 @@ export const SecurityPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase">
+          <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 ">
             System Integrity
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -29,7 +29,7 @@ export const SecurityPage: React.FC = () => {
         {/* Security Principles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="glass-card p-8 rounded-3xl border border-giri-border">
-            <div className="w-12 h-12 rounded-xl bg-giri-blue/10 border border-giri-blue/20 text-giri-blue dark:text-cyan-400 flex items-center justify-center mb-6">
+            <div className="w-12 h-12 rounded-md bg-giri-blue/10 border border-giri-blue/20 text-giri-blue dark:text-cyan-400 flex items-center justify-center mb-6">
               <EyeOff className="w-6 h-6" />
             </div>
             <h2 className="text-lg font-bold text-giri-text mb-2">Zero Telemetry Promise</h2>
@@ -39,7 +39,7 @@ export const SecurityPage: React.FC = () => {
           </div>
 
           <div className="glass-card p-8 rounded-3xl border border-giri-border">
-            <div className="w-12 h-12 rounded-xl bg-giri-blue/10 border border-giri-blue/20 text-giri-blue flex items-center justify-center mb-6">
+            <div className="w-12 h-12 rounded-md bg-giri-blue/10 border border-giri-blue/20 text-giri-blue flex items-center justify-center mb-6">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <h2 className="text-lg font-bold text-giri-text mb-2">Debian Cryptographic Provenance</h2>
@@ -49,7 +49,7 @@ export const SecurityPage: React.FC = () => {
           </div>
 
           <div className="glass-card p-8 rounded-3xl border border-giri-border">
-            <div className="w-12 h-12 rounded-xl bg-giri-violet/10 border border-giri-violet/20 text-giri-violet flex items-center justify-center mb-6">
+            <div className="w-12 h-12 rounded-md bg-giri-violet/10 border border-giri-violet/20 text-giri-violet flex items-center justify-center mb-6">
               <Lock className="w-6 h-6" />
             </div>
             <h2 className="text-lg font-bold text-giri-text mb-2">Least-Privilege Execution</h2>
@@ -71,11 +71,11 @@ export const SecurityPage: React.FC = () => {
               Giri OS pulls security patches directly from Debian Security archives (`bookworm-security`). Kernel CVE remediations and critical package vulnerability patches are inherited immediately without waiting for intermediary distribution repackaging.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-giri-muted">
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
                 <span className="font-bold text-giri-blue dark:text-cyan-400">Standard Debian Repositories</span>
                 <p className="text-giri-muted mt-1">Verified via Debian GPG release keyring; audited by Debian Security Team.</p>
               </div>
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
                 <span className="font-bold text-giri-violet">Sandboxed Flatpak Ecosystem</span>
                 <p className="text-giri-muted mt-1">Desktop applications run isolated via bubblewrap sandboxing with strict Portal permissions.</p>
               </div>
@@ -116,7 +116,7 @@ export const SecurityPage: React.FC = () => {
             If you identify a security vulnerability in Giri Space, Calamares branding hooks, or live-build configurations, please report it responsibly before public disclosure.
           </p>
 
-          <div className="p-4 rounded-2xl bg-black/5 dark:bg-black/60 font-mono text-xs text-giri-blue dark:text-cyan-300 flex items-center justify-between flex-wrap gap-3 border border-giri-border">
+          <div className="p-4 rounded-md bg-black/5 dark:bg-black/60 font-mono text-xs text-giri-blue dark:text-cyan-300 flex items-center justify-between flex-wrap gap-3 border border-giri-border">
             <span>Email: security@girios.org &bull; Or open a private GitHub Advisory on abhinavgiri45/giri-os</span>
             <a
               href="https://github.com/abhinavgiri45/giri-os/security/advisories"

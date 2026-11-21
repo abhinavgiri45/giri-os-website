@@ -66,7 +66,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
       <section className="py-20 border-t border-giri-border bg-giri-surface/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase font-mono">
+            <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400  font-mono">
               01 &bull; Architectural Philosophy
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -78,9 +78,9 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass-card p-8 rounded-2xl flex flex-col justify-between">
+            <div className="glass-card p-8 rounded-md flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-6">
                   <Monitor className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-giri-text mb-2">Giri Bridge</h3>
@@ -90,13 +90,13 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
               </div>
               <div className="space-y-3 pt-4 border-t border-giri-border">
                 <div className="flex gap-1.5">
-                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">.EXE</span>
-                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">.MSI</span>
+                  <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">.EXE</span>
+                  <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">.MSI</span>
                 </div>
                 {navigate && (
                   <button
                     onClick={() => navigate('/products/giri-bridge')}
-                    className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-bold transition-colors"
+                    className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-md bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-bold transition-colors"
                   >
                     <span>Product Page</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -105,9 +105,9 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
               </div>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl flex flex-col justify-between">
+            <div className="glass-card p-8 rounded-md flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6">
                   <Smartphone className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-giri-text mb-2">Giri Mobile</h3>
@@ -117,12 +117,12 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
               </div>
               <div className="space-y-3 pt-4 border-t border-giri-border">
                 <div className="flex gap-1.5">
-                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">.APK</span>
+                  <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">.APK</span>
                 </div>
                 {navigate && (
                   <button
                     onClick={() => navigate('/products/giri-mobile')}
-                    className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold transition-colors"
+                    className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-md bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold transition-colors"
                   >
                     <span>Product Page</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -131,9 +131,9 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
               </div>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl flex flex-col justify-between">
+            <div className="glass-card p-8 rounded-md flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 text-violet-600 dark:text-violet-400 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-md bg-violet-500/10 border border-violet-500/20 text-violet-600 dark:text-violet-400 flex items-center justify-center mb-6">
                   <Package className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-giri-text mb-2">Giri Store</h3>
@@ -143,13 +143,13 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
               </div>
               <div className="space-y-3 pt-4 border-t border-giri-border">
                 <div className="flex gap-1.5">
-                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">.DEB</span>
-                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">Flatpak</span>
+                  <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">.DEB</span>
+                  <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">Flatpak</span>
                 </div>
                 {navigate && (
                   <button
                     onClick={() => navigate('/products/giri-store')}
-                    className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-violet-500/10 hover:bg-violet-500/20 text-violet-600 dark:text-violet-400 text-xs font-bold transition-colors"
+                    className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-md bg-violet-500/10 hover:bg-violet-500/20 text-violet-600 dark:text-violet-400 text-xs font-bold transition-colors"
                   >
                     <span>Product Page</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -166,7 +166,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
-              <span className="text-xs font-semibold tracking-widest text-blue-600 dark:text-blue-400 uppercase font-mono">
+              <span className="text-xs font-semibold tracking-widest text-blue-600 dark:text-blue-400  font-mono">
                 02 &bull; Windows Compatibility
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2 mb-4">
@@ -177,22 +177,22 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
               </p>
 
               <div className="space-y-4">
-                <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                  <h4 className="text-sm font-bold text-giri-text mb-1">Prefix Isolation Guarantee</h4>
+                <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                  <h3 className="text-sm font-bold text-giri-text mb-1">Prefix Isolation Guarantee</h3>
                   <p className="text-xs text-giri-muted leading-relaxed">
                     Every installed program receives an isolated prefix directory located at <code className="font-mono text-blue-500">~/.local/share/giri-bridge/prefixes/&lt;app&gt;</code>. Registry modifications and DLL overrides remain encapsulated, eliminating system-wide instability.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                  <h4 className="text-sm font-bold text-giri-text mb-1">DXVK & VKD3D Vulkan Pipeline</h4>
+                <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                  <h3 className="text-sm font-bold text-giri-text mb-1">DXVK & VKD3D Vulkan Pipeline</h3>
                   <p className="text-xs text-giri-muted leading-relaxed">
                     Direct3D 9, 10, 11, and 12 draw calls are translated directly into low-overhead Vulkan pipeline state objects, allowing GPU-intensive applications and 3D packages to render at near-native framerates.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                  <h4 className="text-sm font-bold text-giri-text mb-1">Automatic Desktop Launcher Generation</h4>
+                <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                  <h3 className="text-sm font-bold text-giri-text mb-1">Automatic Desktop Launcher Generation</h3>
                   <p className="text-xs text-giri-muted leading-relaxed">
                     When an installer finishes, Giri Bridge extracts the program&apos;s embedded Windows ICO resource, converts it to high-resolution PNG, and registers a standard XDG <code className="font-mono text-blue-500">.desktop</code> shortcut in Giri Space.
                   </p>
@@ -201,7 +201,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
             </div>
 
             {/* Right: Capabilities Checklist */}
-            <div className="lg:col-span-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-giri-border p-6 sm:p-8 backdrop-blur-xl shadow-lg">
+            <div className="lg:col-span-6 rounded-md bg-white/80 dark:bg-slate-900/80 border border-giri-border p-6 sm:p-8 backdrop-blur-xl shadow-lg">
               <div className="flex items-center justify-between pb-4 border-b border-giri-border mb-6">
                 <h3 className="text-lg font-bold text-giri-text flex items-center gap-2">
                   <Monitor className="w-5 h-5 text-blue-600" />
@@ -212,10 +212,10 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
 
               <div className="space-y-3">
                 {ECOSYSTEMS.windows.capabilities.map((cap) => (
-                  <div key={cap.id} className="p-3.5 rounded-xl bg-giri-surface/60 border border-giri-border/80 flex items-start justify-between gap-3">
+                  <div key={cap.id} className="p-3.5 rounded-md bg-giri-surface/60 border border-giri-border/80 flex items-start justify-between gap-3">
                     <div>
                       <h5 className="text-xs font-bold text-giri-text">{cap.name}</h5>
-                      <p className="text-[11px] text-giri-muted mt-0.5">{cap.description}</p>
+                      <p className="text-xs text-giri-muted mt-0.5">{cap.description}</p>
                     </div>
                     <StatusBadge status={cap.status} />
                   </div>
@@ -231,7 +231,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left: Capabilities Checklist */}
-            <div className="lg:col-span-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-giri-border p-6 sm:p-8 backdrop-blur-xl shadow-lg order-2 lg:order-1">
+            <div className="lg:col-span-6 rounded-md bg-white/80 dark:bg-slate-900/80 border border-giri-border p-6 sm:p-8 backdrop-blur-xl shadow-lg order-2 lg:order-1">
               <div className="flex items-center justify-between pb-4 border-b border-giri-border mb-6">
                 <h3 className="text-lg font-bold text-giri-text flex items-center gap-2">
                   <Smartphone className="w-5 h-5 text-emerald-600" />
@@ -242,10 +242,10 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
 
               <div className="space-y-3">
                 {ECOSYSTEMS.android.capabilities.map((cap) => (
-                  <div key={cap.id} className="p-3.5 rounded-xl bg-giri-surface/60 border border-giri-border/80 flex items-start justify-between gap-3">
+                  <div key={cap.id} className="p-3.5 rounded-md bg-giri-surface/60 border border-giri-border/80 flex items-start justify-between gap-3">
                     <div>
                       <h5 className="text-xs font-bold text-giri-text">{cap.name}</h5>
-                      <p className="text-[11px] text-giri-muted mt-0.5">{cap.description}</p>
+                      <p className="text-xs text-giri-muted mt-0.5">{cap.description}</p>
                     </div>
                     <StatusBadge status={cap.status} />
                   </div>
@@ -255,7 +255,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
 
             {/* Right: Technical Explanation */}
             <div className="lg:col-span-6 order-1 lg:order-2">
-              <span className="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase font-mono">
+              <span className="text-xs font-semibold tracking-widest text-emerald-600 dark:text-emerald-400  font-mono">
                 03 &bull; Mobile Runtime Architecture
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2 mb-4">
@@ -266,22 +266,22 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
               </p>
 
               <div className="space-y-4">
-                <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                  <h4 className="text-sm font-bold text-giri-text mb-1">Direct Kernel IPC (Binder & Ashmem)</h4>
+                <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                  <h3 className="text-sm font-bold text-giri-text mb-1">Direct Kernel IPC (Binder & Ashmem)</h3>
                   <p className="text-xs text-giri-muted leading-relaxed">
                     Android services communicate with host graphics and audio daemons via Linux kernel IPC drivers (<code className="font-mono text-emerald-500">binder_linux</code> and <code className="font-mono text-emerald-500">ashmem_linux</code>) compiled into the Giri OS kernel.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                  <h4 className="text-sm font-bold text-giri-text mb-1">Mesa DRI3 Hardware GPU Acceleration</h4>
+                <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                  <h3 className="text-sm font-bold text-giri-text mb-1">Mesa DRI3 Hardware GPU Acceleration</h3>
                   <p className="text-xs text-giri-muted leading-relaxed">
                     Graphics rendering commands pass directly to the host GPU using Direct Rendering Infrastructure (DRI3), delivering silky smooth 60 FPS mobile gaming without CPU software rasterization.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                  <h4 className="text-sm font-bold text-giri-text mb-1">Desktop Windowing Integration</h4>
+                <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                  <h3 className="text-sm font-bold text-giri-text mb-1">Desktop Windowing Integration</h3>
                   <p className="text-xs text-giri-muted leading-relaxed">
                     Android activities are projected as normal desktop windows. They can be freely resized, snapped to screen edges, minimized to Giri Dock, and managed just like native Linux applications.
                   </p>
@@ -297,7 +297,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
-              <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400 uppercase font-mono">
+              <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400  font-mono">
                 04 &bull; Native Linux Ecosystem
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2 mb-4">
@@ -308,22 +308,22 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
               </p>
 
               <div className="space-y-4">
-                <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                  <h4 className="text-sm font-bold text-giri-text mb-1">Debian APT Repository Integration</h4>
+                <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                  <h3 className="text-sm font-bold text-giri-text mb-1">Debian APT Repository Integration</h3>
                   <p className="text-xs text-giri-muted leading-relaxed">
                     Direct access to over 60,000 pre-compiled native packages. Every binary is cryptographically verified against official Debian archive keys for ironclad integrity.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                  <h4 className="text-sm font-bold text-giri-text mb-1">Universal Flatpak Sandboxing</h4>
+                <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                  <h3 className="text-sm font-bold text-giri-text mb-1">Universal Flatpak Sandboxing</h3>
                   <p className="text-xs text-giri-muted leading-relaxed">
                     Run the newest versions of Discord, Steam, Blender, and LibreOffice in unprivileged bubblewrap containers with fine-grained portal permissions.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                  <h4 className="text-sm font-bold text-giri-text mb-1">Zero Commercial Telemetry or Ads</h4>
+                <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                  <h3 className="text-sm font-bold text-giri-text mb-1">Zero Commercial Telemetry or Ads</h3>
                   <p className="text-xs text-giri-muted leading-relaxed">
                     Giri Store contains zero sponsored banners, tracking beacons, or account lock-ins. It is completely open-source and respects user attention.
                   </p>
@@ -332,7 +332,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
             </div>
 
             {/* Right: Capabilities Checklist */}
-            <div className="lg:col-span-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-giri-border p-6 sm:p-8 backdrop-blur-xl shadow-lg">
+            <div className="lg:col-span-6 rounded-md bg-white/80 dark:bg-slate-900/80 border border-giri-border p-6 sm:p-8 backdrop-blur-xl shadow-lg">
               <div className="flex items-center justify-between pb-4 border-b border-giri-border mb-6">
                 <h3 className="text-lg font-bold text-giri-text flex items-center gap-2">
                   <Package className="w-5 h-5 text-violet-600" />
@@ -343,10 +343,10 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
 
               <div className="space-y-3">
                 {ECOSYSTEMS.linux.capabilities.map((cap) => (
-                  <div key={cap.id} className="p-3.5 rounded-xl bg-giri-surface/60 border border-giri-border/80 flex items-start justify-between gap-3">
+                  <div key={cap.id} className="p-3.5 rounded-md bg-giri-surface/60 border border-giri-border/80 flex items-start justify-between gap-3">
                     <div>
                       <h5 className="text-xs font-bold text-giri-text">{cap.name}</h5>
-                      <p className="text-[11px] text-giri-muted mt-0.5">{cap.description}</p>
+                      <p className="text-xs text-giri-muted mt-0.5">{cap.description}</p>
                     </div>
                     <StatusBadge status={cap.status} />
                   </div>
@@ -375,7 +375,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
       <section className="py-20 border-t border-giri-border bg-giri-surface/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase font-mono">
+            <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400  font-mono">
               05 &bull; Technical Specifications
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -386,10 +386,10 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
             </p>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-giri-border bg-white dark:bg-slate-900 shadow-xl">
+          <div className="overflow-x-auto rounded-md border border-giri-border bg-white dark:bg-slate-900 shadow-xl">
             <table className="w-full text-left text-xs border-collapse">
               <thead>
-                <tr className="bg-giri-surface border-b border-giri-border text-giri-text font-bold uppercase tracking-wider">
+                <tr className="bg-giri-surface border-b border-giri-border text-giri-text font-bold  tracking-wider">
                   <th className="py-4 px-5">Architectural Dimension</th>
                   <th className="py-4 px-5 text-blue-600 dark:text-blue-400">Giri Bridge</th>
                   <th className="py-4 px-5 text-emerald-600 dark:text-emerald-400">Giri Mobile</th>
@@ -401,7 +401,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
                   <tr key={row.id} className="hover:bg-giri-surface/40 transition-colors">
                     <td className="py-4 px-5 font-semibold text-giri-text">
                       <div>{row.name}</div>
-                      <div className="text-[10px] font-mono text-giri-muted font-normal mt-0.5">{row.description}</div>
+                      <div className="text-xs font-mono text-giri-muted font-normal mt-0.5">{row.description}</div>
                     </td>
                     <td className="py-4 px-5 text-giri-muted leading-relaxed">
                       {row.giriBridge}
@@ -424,7 +424,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
       <section className="py-20 border-t border-giri-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase font-mono">
+            <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400  font-mono">
               06 &bull; Hardware Specifications
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -437,7 +437,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {HARDWARE_PREREQUISITES.map((spec: HardwarePrerequisite, idx: number) => (
-              <div key={idx} className="glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+              <div key={idx} className="glass-card p-6 sm:p-8 rounded-md flex flex-col justify-between">
                 <div>
                   <h3 className="text-lg font-bold text-giri-text mb-4 pb-2 border-b border-giri-border">
                     {spec.ecosystem}
@@ -467,7 +467,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
                   </div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-giri-surface border border-giri-border text-[11px] text-giri-muted leading-relaxed">
+                <div className="badge-primary">
                   <span className="font-bold text-giri-text block mb-1">Architecture Note:</span>
                   {spec.notes}
                 </div>
@@ -481,7 +481,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
       <section className="py-20 border-t border-giri-border bg-giri-surface/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400 uppercase font-mono">
+            <span className="text-xs font-semibold tracking-widest text-giri-blue dark:text-cyan-400  font-mono">
               07 &bull; Common Questions
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -515,7 +515,7 @@ export const ApplicationEcosystemPage: React.FC<ApplicationEcosystemPageProps> =
               return (
                 <div
                   key={index}
-                  className="rounded-2xl border border-giri-border bg-white dark:bg-slate-900 overflow-hidden shadow-sm transition-all"
+                  className="rounded-md border border-giri-border bg-white dark:bg-slate-900 overflow-hidden shadow-sm transition-all"
                 >
                   <button
                     onClick={() => toggleFaq(index)}

@@ -133,6 +133,39 @@ body {
 }
 
 /* ThreeUI Inspired Buttons */
+
+/* ---------- Button styles ---------- */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5
+           text-sm font-medium text-white bg-blue-600 hover:bg-blue-700
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+           focus-visible:outline-blue-500 transition-colors duration-200
+           shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2
+           text-sm font-medium text-blue-600 bg-white border border-blue-600
+           hover:bg-blue-50 focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-offset-2 focus-visible:outline-blue-500
+           transition-colors duration-200 shadow-sm hover:shadow-md;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2
+           text-sm font-medium text-gray-600 bg-transparent border border-gray-300
+           hover:bg-gray-100 focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-offset-2 focus-visible:outline-gray-500
+           transition-colors duration-200;
+  }
+
+  .badge-primary {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium
+           bg-giri-surface border border-giri-border text-giri-muted;
+  }
+}
+
 .umbra-button {
   position: relative;
   display: inline-flex;

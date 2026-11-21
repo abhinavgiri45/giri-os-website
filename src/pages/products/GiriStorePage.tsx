@@ -117,7 +117,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
           {profile.formats.map((fmt) => (
             <span 
               key={fmt.format}
-              className={`text-xs font-mono font-bold px-3 py-1.5 rounded-lg border ${fmt.color}`}
+              className={`text-xs font-mono font-bold px-3 py-1.5 rounded-md border ${fmt.color}`}
             >
               .{fmt.format.toLowerCase()} &bull; {fmt.label}
             </span>
@@ -129,7 +129,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6">
-            <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400 uppercase font-mono">
+            <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400  font-mono">
               Transparent Multi-Source Packaging
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2 mb-4">
@@ -140,28 +140,28 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
             </p>
 
             <div className="space-y-4">
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="text-sm font-bold text-giri-text">Debian APT (Native DEB)</h4>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">60,000+ Packages</span>
+                  <h3 className="text-sm font-bold text-giri-text">Debian APT (Native DEB)</h3>
+                  <span className="text-xs font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">60,000+ Packages</span>
                 </div>
                 <p className="text-xs text-giri-muted leading-relaxed">
                   Cryptographically signed binaries compiled specifically for Debian 12 Bookworm. Rock-solid stability, zero runtime bloat, and unified system library sharing.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="text-sm font-bold text-giri-text">Flathub Flatpak (Sandboxed)</h4>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">Universal Runtimes</span>
+                  <h3 className="text-sm font-bold text-giri-text">Flathub Flatpak (Sandboxed)</h3>
+                  <span className="text-xs font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">Universal Runtimes</span>
                 </div>
                 <p className="text-xs text-giri-muted leading-relaxed">
                   Self-contained application runtimes isolated with Bubblewrap namespaces and XDG Desktop Portals. Receive upstream releases of creative and productivity apps safely.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                <h4 className="text-sm font-bold text-giri-text mb-1">Package-Source Transparency</h4>
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                <h3 className="text-sm font-bold text-giri-text mb-1">Package-Source Transparency</h3>
                 <p className="text-xs text-giri-muted leading-relaxed">
                   Giri Store never obscures where a binary originates. Inspect package maintainers, build hashes, permissions, and licenses before installing.
                 </p>
@@ -172,7 +172,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
           {/* Right: Interactive Store Mockup */}
           <div className="lg:col-span-6 rounded-3xl bg-slate-950 border border-slate-800 p-6 sm:p-8 shadow-2xl text-slate-300">
             {/* Search Input Bar Mockup */}
-            <div className="flex items-center gap-3 p-3 rounded-2xl bg-slate-900 border border-slate-800 mb-6">
+            <div className="flex items-center gap-3 p-3 rounded-md bg-slate-900 border border-slate-800 mb-6">
               <Search className="w-4 h-4 text-violet-400" />
               <input
                 type="text"
@@ -181,14 +181,14 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
                 placeholder="Search 60,000+ packages..."
                 className="bg-transparent text-xs text-white placeholder-slate-500 focus:outline-none flex-grow"
               />
-              <span className="text-[10px] font-mono bg-slate-800 px-2 py-0.5 rounded text-slate-400">Ctrl + K</span>
+              <span className="text-xs font-mono bg-slate-800 px-2 py-0.5 rounded text-slate-400">Ctrl + K</span>
             </div>
 
             {/* Source Filter Switcher */}
             <div className="flex gap-2 mb-4">
               <button
                 onClick={() => setSelectedSource('all')}
-                className={`px-3 py-1 rounded-lg text-[11px] font-mono transition-all ${
+                className={`px-3 py-1 rounded-md text-xs font-mono transition-all ${
                   selectedSource === 'all' ? 'bg-violet-600 text-white' : 'bg-slate-900 text-slate-400 hover:text-white'
                 }`}
               >
@@ -196,7 +196,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
               </button>
               <button
                 onClick={() => setSelectedSource('deb')}
-                className={`px-3 py-1 rounded-lg text-[11px] font-mono transition-all ${
+                className={`px-3 py-1 rounded-md text-xs font-mono transition-all ${
                   selectedSource === 'deb' ? 'bg-purple-600 text-white' : 'bg-slate-900 text-slate-400 hover:text-white'
                 }`}
               >
@@ -204,7 +204,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
               </button>
               <button
                 onClick={() => setSelectedSource('flatpak')}
-                className={`px-3 py-1 rounded-lg text-[11px] font-mono transition-all ${
+                className={`px-3 py-1 rounded-md text-xs font-mono transition-all ${
                   selectedSource === 'flatpak' ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-slate-400 hover:text-white'
                 }`}
               >
@@ -214,41 +214,41 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
 
             {/* Package Search Results Preview */}
             <div className="space-y-3">
-              <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+              <div className="p-4 rounded-md bg-slate-900/90 border border-slate-800 flex items-center justify-between">
                 <div>
                   <div className="flex items-center gap-2">
                     <h5 className="text-sm font-bold text-white">Blender</h5>
-                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Flatpak 4.2</span>
+                    <span className="text-xs font-mono px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Flatpak 4.2</span>
                   </div>
-                  <p className="text-[11px] text-slate-400 mt-1">3D creation suite: modeling, animation, rendering, and compositing</p>
+                  <p className="text-xs text-slate-400 mt-1">3D creation suite: modeling, animation, rendering, and compositing</p>
                 </div>
-                <button className="px-3 py-1.5 rounded-xl bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold transition-colors">
+                <button className="px-3 py-1.5 rounded-md bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold transition-colors">
                   Install
                 </button>
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+              <div className="p-4 rounded-md bg-slate-900/90 border border-slate-800 flex items-center justify-between">
                 <div>
                   <div className="flex items-center gap-2">
                     <h5 className="text-sm font-bold text-white">GIMP</h5>
-                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">Debian 12 &bull; DEB</span>
+                    <span className="text-xs font-mono px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">Debian 12 &bull; DEB</span>
                   </div>
-                  <p className="text-[11px] text-slate-400 mt-1">GNU Image Manipulation Program for photo retouching and graphic design</p>
+                  <p className="text-xs text-slate-400 mt-1">GNU Image Manipulation Program for photo retouching and graphic design</p>
                 </div>
-                <button className="px-3 py-1.5 rounded-xl bg-slate-800 text-emerald-400 border border-slate-700 text-xs font-bold">
+                <button className="px-3 py-1.5 rounded-md bg-slate-800 text-emerald-400 border border-slate-700 text-xs font-bold hover:scale-105 hover:shadow-lg">
                   Installed
                 </button>
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+              <div className="p-4 rounded-md bg-slate-900/90 border border-slate-800 flex items-center justify-between">
                 <div>
                   <div className="flex items-center gap-2">
                     <h5 className="text-sm font-bold text-white">VLC Media Player</h5>
-                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">Debian 12 &bull; DEB</span>
+                    <span className="text-xs font-mono px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">Debian 12 &bull; DEB</span>
                   </div>
-                  <p className="text-[11px] text-slate-400 mt-1">Universal multimedia player and streaming media server</p>
+                  <p className="text-xs text-slate-400 mt-1">Universal multimedia player and streaming media server</p>
                 </div>
-                <button className="px-3 py-1.5 rounded-xl bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold transition-colors">
+                <button className="px-3 py-1.5 rounded-md bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold transition-colors">
                   Install
                 </button>
               </div>
@@ -275,7 +275,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
             </div>
 
             {/* Honest Disclosure Tag */}
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-300 text-xs max-w-xs">
+            <div className="flex items-center gap-2 px-3 py-2 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-300 text-xs max-w-xs">
               <Info className="w-4 h-4 flex-shrink-0" />
               <span>
                 <strong>Demonstration Only:</strong> Illustrative interface simulation of the Giri Store package manager.
@@ -288,7 +288,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
             <button
               onClick={handleRunSimulation}
               disabled={isRunning || simulatedStep === workflow.steps.length}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-md text-xs font-bold transition-all ${
                 isRunning || simulatedStep === workflow.steps.length
                   ? 'bg-giri-surface text-giri-muted cursor-not-allowed border border-giri-border'
                   : 'bg-violet-600 text-white hover:bg-violet-700 shadow-md'
@@ -301,7 +301,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
             {simulatedStep > 0 && (
               <button
                 onClick={handleReset}
-                className="p-2.5 rounded-xl border border-giri-border hover:bg-giri-surface text-giri-muted transition-colors"
+                className="p-2.5 rounded-md border border-giri-border hover:bg-giri-surface text-giri-muted transition-colors"
                 title="Reset Simulation"
                 aria-label="Reset Simulation"
               >
@@ -329,7 +329,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
               return (
                 <div
                   key={step.stepNumber}
-                  className={`p-5 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${
+                  className={`p-5 rounded-md border transition-all duration-300 flex flex-col justify-between ${
                     isCurrent
                       ? 'bg-white dark:bg-slate-900 border-violet-500 ring-2 ring-violet-500/20 shadow-lg scale-[1.02]'
                       : isCompleted
@@ -348,24 +348,24 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
                       }`}>
                         STEP 0{step.stepNumber}
                       </span>
-                      <div className="w-6 h-6 rounded-lg bg-giri-surface border border-giri-border flex items-center justify-center">
+                      <div className="w-6 h-6 rounded-md bg-giri-surface border border-giri-border flex items-center justify-center">
                         {renderIcon(step.iconType, isCurrent, isCompleted)}
                       </div>
                     </div>
 
-                    <div className="text-[11px] font-mono font-semibold text-violet-600 dark:text-violet-400 mb-1">
+                    <div className="text-xs font-mono font-semibold text-violet-600 dark:text-violet-400 mb-1">
                       {step.phase}
                     </div>
-                    <h4 className="text-xs font-bold text-giri-text mb-1">
+                    <h3 className="text-xs font-bold text-giri-text mb-1">
                       {step.title}
-                    </h4>
-                    <p className="text-[11px] text-giri-muted leading-relaxed">
+                    </h3>
+                    <p className="text-xs text-giri-muted leading-relaxed">
                       {step.description}
                     </p>
                   </div>
 
                   <div className="mt-4 pt-3 border-t border-giri-border/60">
-                    <code className="block text-[10px] font-mono text-giri-text bg-giri-surface p-1.5 rounded overflow-x-auto border border-giri-border/50">
+                    <code className="block text-xs font-mono text-giri-text bg-giri-surface p-1.5 rounded overflow-x-auto border border-giri-border/50">
                       {step.subsystemAction}
                     </code>
                   </div>
@@ -380,7 +380,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
       <section className="py-20 border-t border-giri-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400 uppercase font-mono">
+            <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400  font-mono">
               Product Capabilities
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -393,7 +393,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {profile.capabilities.map((cap) => (
-              <div key={cap.id} className="glass-card p-6 rounded-2xl flex flex-col justify-between">
+              <div key={cap.id} className="glass-card p-6 rounded-md flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-mono text-giri-muted font-medium">Giri Store</span>
@@ -413,7 +413,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* System Requirements */}
-            <div className="lg:col-span-6 glass-card p-8 rounded-2xl">
+            <div className="lg:col-span-6 glass-card p-8 rounded-md">
               <div className="flex items-center gap-2 mb-4 pb-2 border-b border-giri-border">
                 <HardDrive className="w-5 h-5 text-violet-600 dark:text-violet-400" />
                 <h3 className="text-lg font-bold text-giri-text">System Requirements</h3>
@@ -421,14 +421,14 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
 
               <div className="space-y-4 text-xs">
                 <div>
-                  <span className="block text-giri-muted font-semibold uppercase font-mono text-[10px]">Minimum Hardware</span>
+                  <span className="block text-giri-muted font-semibold  font-mono text-xs">Minimum Hardware</span>
                   <p className="text-giri-text mt-1">{profile.systemRequirements.minimum}</p>
                 </div>
                 <div>
-                  <span className="block text-giri-muted font-semibold uppercase font-mono text-[10px]">Recommended Hardware</span>
+                  <span className="block text-giri-muted font-semibold  font-mono text-xs">Recommended Hardware</span>
                   <p className="text-giri-text mt-1 font-semibold text-violet-600 dark:text-violet-400">{profile.systemRequirements.recommended}</p>
                 </div>
-                <div className="p-3 rounded-xl bg-giri-surface border border-giri-border text-giri-muted text-[11px] leading-relaxed">
+                <div className="badge-primary">
                   <span className="font-bold text-giri-text block mb-1">Architecture Notes:</span>
                   {profile.systemRequirements.notes}
                 </div>
@@ -436,7 +436,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
             </div>
 
             {/* Known Limitations */}
-            <div className="lg:col-span-6 glass-card p-8 rounded-2xl">
+            <div className="lg:col-span-6 glass-card p-8 rounded-md">
               <div className="flex items-center gap-2 mb-4 pb-2 border-b border-giri-border">
                 <AlertTriangle className="w-5 h-5 text-amber-500" />
                 <h3 className="text-lg font-bold text-giri-text">Known Limitations</h3>
@@ -444,7 +444,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
 
               <ul className="space-y-3 text-xs text-giri-muted">
                 {profile.knownLimitations.map((lim, idx) => (
-                  <li key={idx} className="flex items-start gap-2 p-2.5 rounded-xl bg-giri-surface border border-giri-border">
+                  <li key={idx} className="flex items-start gap-2 p-2.5 rounded-md bg-giri-surface border border-giri-border">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 flex-shrink-0" />
                     <span className="leading-relaxed">{lim}</span>
                   </li>
@@ -459,7 +459,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
       <section className="py-20 border-t border-giri-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400 uppercase font-mono">
+            <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400  font-mono">
               Product Questions
             </span>
             <h2 className="text-3xl font-extrabold tracking-tight text-giri-text mt-2">
@@ -473,7 +473,7 @@ export const GiriStorePage: React.FC<GiriStorePageProps> = ({ navigate }) => {
               return (
                 <div
                   key={index}
-                  className="rounded-2xl border border-giri-border bg-white dark:bg-slate-900 overflow-hidden shadow-sm"
+                  className="rounded-md border border-giri-border bg-white dark:bg-slate-900 overflow-hidden shadow-sm"
                 >
                   <button
                     onClick={() => setOpenFaqIndex(isOpen ? null : index)}

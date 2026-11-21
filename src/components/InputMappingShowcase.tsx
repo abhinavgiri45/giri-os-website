@@ -55,7 +55,7 @@ export const InputMappingShowcase: React.FC = () => {
             <button
               key={mode.id}
               onClick={() => setActiveModeId(mode.id)}
-              className={`p-4 rounded-2xl border text-left transition-all ${
+              className={`p-4 rounded-md border text-left transition-all ${
                 isSelected
                   ? 'bg-emerald-500/10 dark:bg-emerald-950/20 border-emerald-500 ring-2 ring-emerald-500/20 shadow-md'
                   : 'bg-giri-surface/40 border-giri-border hover:border-emerald-500/40'
@@ -67,7 +67,7 @@ export const InputMappingShowcase: React.FC = () => {
                 {mode.id === 'gamepad-console' && <Gamepad2 className={`w-4 h-4 ${isSelected ? 'text-emerald-500' : 'text-giri-muted'}`} />}
                 <span className="text-xs font-bold text-giri-text">{mode.name}</span>
               </div>
-              <p className="text-[11px] text-giri-muted leading-relaxed line-clamp-2">
+              <p className="text-xs text-giri-muted leading-relaxed line-clamp-2">
                 {mode.tagline}
               </p>
             </button>
@@ -78,14 +78,14 @@ export const InputMappingShowcase: React.FC = () => {
       {/* Visual Workspace: Android Window with Touch Overlay */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
         {/* Left: Interactive Simulated Android Window */}
-        <div className="lg:col-span-7 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden shadow-2xl relative">
+        <div className="lg:col-span-7 rounded-md bg-slate-950 border border-slate-800 overflow-hidden shadow-2xl relative">
           {/* Simulated Android Window Titlebar */}
           <div className="px-4 py-2.5 bg-slate-900 border-b border-slate-800 flex items-center justify-between text-xs text-slate-400 select-none">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-              <span className="font-mono text-[11px] text-slate-300">Giri Mobile &bull; ShadowRun Odyssey</span>
+              <span className="font-mono text-xs text-slate-300">Giri Mobile &bull; ShadowRun Odyssey</span>
             </div>
-            <div className="flex items-center gap-2 text-[10px] font-mono">
+            <div className="flex items-center gap-2 text-xs font-mono">
               <span className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">60 FPS</span>
               <Maximize2 className="w-3 h-3 text-slate-400 hover:text-white cursor-pointer" />
             </div>
@@ -101,7 +101,7 @@ export const InputMappingShowcase: React.FC = () => {
               <div className="relative w-full h-full flex items-center justify-between select-none">
                 {/* On-screen Virtual D-Pad (Left Side) */}
                 <div className="flex flex-col items-center">
-                  <span className="text-[9px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Virtual Analog</span>
+                  <span className="text-[9px] font-mono  tracking-widest text-emerald-400 mb-2">Virtual Analog</span>
                   <div className="relative w-28 h-28 rounded-full border-2 border-dashed border-emerald-500/40 flex items-center justify-center bg-emerald-500/5">
                     {/* Directional Key Buttons */}
                     <button 
@@ -146,18 +146,18 @@ export const InputMappingShowcase: React.FC = () => {
                 {/* Center Crosshair / Character Focus */}
                 <div className="flex flex-col items-center justify-center text-slate-400 text-center">
                   <Crosshair className="w-8 h-8 text-cyan-400/60 animate-pulse mb-1" />
-                  <span className="text-[10px] font-mono text-slate-400">Aim: Mouse Free Look</span>
+                  <span className="text-xs font-mono text-slate-400">Aim: Mouse Free Look</span>
                 </div>
 
                 {/* On-screen Action Keys (Right Side) */}
                 <div className="flex flex-col items-center">
-                  <span className="text-[9px] font-mono uppercase tracking-widest text-emerald-400 mb-2">Mapped Actions</span>
+                  <span className="text-[9px] font-mono  tracking-widest text-emerald-400 mb-2">Mapped Actions</span>
                   <div className="grid grid-cols-2 gap-2 w-28">
                     {['Space', 'Shift', 'E', 'R'].map((key) => (
                       <button
                         key={key}
                         onClick={() => handleTestKeyPress(key)}
-                        className={`h-9 rounded-lg font-mono text-xs font-bold transition-all flex items-center justify-center ${
+                        className={`h-9 rounded-md font-mono text-xs font-bold transition-all flex items-center justify-center ${
                           activeTestKey === key
                             ? 'bg-cyan-500 text-white scale-110 shadow-lg'
                             : 'bg-slate-800/90 text-slate-200 border border-slate-700 hover:border-cyan-400'
@@ -182,9 +182,9 @@ export const InputMappingShowcase: React.FC = () => {
                   Desktop mouse pointer is translated to multi-point touch events with sub-pixel coordinate interpolation.
                 </p>
                 <div className="flex gap-2">
-                  <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-[10px] font-mono border border-slate-700">Left-Click = Single Tap</span>
-                  <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-[10px] font-mono border border-slate-700">Drag = Continuous Swipe</span>
-                  <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-[10px] font-mono border border-slate-700">Wheel = Pinch Zoom</span>
+                  <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-mono border border-slate-700">Left-Click = Single Tap</span>
+                  <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-mono border border-slate-700">Drag = Continuous Swipe</span>
+                  <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-mono border border-slate-700">Wheel = Pinch Zoom</span>
                 </div>
               </div>
             )}
@@ -200,9 +200,9 @@ export const InputMappingShowcase: React.FC = () => {
                   Passes standard USB/Bluetooth controller input straight into Android evdev joydev framework without emulation delay.
                 </p>
                 <div className="flex flex-wrap justify-center gap-2">
-                  <span className="px-2.5 py-1 rounded bg-slate-800 text-purple-300 text-[10px] font-mono border border-slate-700">Dual Analog Sticks</span>
-                  <span className="px-2.5 py-1 rounded bg-slate-800 text-purple-300 text-[10px] font-mono border border-slate-700">Analog Triggers</span>
-                  <span className="px-2.5 py-1 rounded bg-slate-800 text-purple-300 text-[10px] font-mono border border-slate-700">D-Pad & Bumpers</span>
+                  <span className="px-2.5 py-1 rounded bg-slate-800 text-purple-300 text-xs font-mono border border-slate-700">Dual Analog Sticks</span>
+                  <span className="px-2.5 py-1 rounded bg-slate-800 text-purple-300 text-xs font-mono border border-slate-700">Analog Triggers</span>
+                  <span className="px-2.5 py-1 rounded bg-slate-800 text-purple-300 text-xs font-mono border border-slate-700">D-Pad & Bumpers</span>
                 </div>
               </div>
             )}
@@ -213,11 +213,11 @@ export const InputMappingShowcase: React.FC = () => {
         <div className="lg:col-span-5 flex flex-col justify-between h-full">
           <div>
             <div className="flex items-center justify-between mb-3">
-              <h4 className="text-sm font-bold text-giri-text flex items-center gap-2">
+              <h3 className="text-sm font-bold text-giri-text flex items-center gap-2">
                 <Sliders className="w-4 h-4 text-emerald-500" />
                 <span>Active Profile Bindings</span>
-              </h4>
-              <span className="text-[10px] font-mono text-giri-muted">
+              </h3>
+              <span className="text-xs font-mono text-giri-muted">
                 {activeMode.controls.length} Mappings
               </span>
             </div>
@@ -231,14 +231,14 @@ export const InputMappingShowcase: React.FC = () => {
               {activeMode.controls.map((ctrl, index) => (
                 <div 
                   key={index}
-                  className="flex items-center justify-between p-2.5 rounded-xl bg-giri-surface border border-giri-border text-xs"
+                  className="flex items-center justify-between p-2.5 rounded-md bg-giri-surface border border-giri-border text-xs"
                 >
                   <div className="flex items-center gap-2">
                     <span className="px-2 py-0.5 rounded font-mono font-bold bg-white dark:bg-slate-800 border border-giri-border text-giri-text shadow-sm">
                       {ctrl.key}
                     </span>
                   </div>
-                  <span className="text-giri-muted text-[11px] text-right font-medium">
+                  <span className="text-giri-muted text-xs text-right font-medium">
                     {ctrl.action}
                   </span>
                 </div>

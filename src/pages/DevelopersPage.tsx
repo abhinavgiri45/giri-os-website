@@ -17,7 +17,7 @@ export const DevelopersPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Professional Minimal Founder Attribution */}
         <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-giri-blue/10 border border-giri-blue/25 text-giri-blue dark:text-cyan-400 text-xs font-semibold tracking-wider uppercase mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-giri-blue/10 border border-giri-blue/25 text-giri-blue dark:text-cyan-400 text-xs font-semibold tracking-wider  mb-3">
             <span>Systems Engineering</span>
             <span className="w-1.5 h-1.5 rounded-full bg-giri-blue dark:bg-cyan-400" />
             <span className="font-bold">Founder & Creator: Abhinav Giri</span>
@@ -32,7 +32,7 @@ export const DevelopersPage: React.FC = () => {
 
         {/* Repository Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          <div className="glass-card p-6 rounded-2xl border border-giri-border flex flex-col justify-between">
+          <div className="glass-card p-6 rounded-md border border-giri-border flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-4">
                 <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-giri-blue/10 text-giri-blue dark:text-cyan-400 border border-giri-blue/30">
@@ -56,7 +56,7 @@ export const DevelopersPage: React.FC = () => {
             </a>
           </div>
 
-          <div className="glass-card p-6 rounded-2xl border border-giri-border flex flex-col justify-between">
+          <div className="glass-card p-6 rounded-md border border-giri-border flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-4">
                 <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-giri-violet/10 text-giri-violet border border-giri-violet/30">
@@ -90,28 +90,28 @@ export const DevelopersPage: React.FC = () => {
 
           <div className="glass-panel p-8 rounded-3xl border border-giri-border">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                <div className="text-xs font-mono font-bold text-giri-blue dark:text-cyan-400 uppercase">Layer 1</div>
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                <div className="text-xs font-mono font-bold text-giri-blue dark:text-cyan-400 ">Layer 1</div>
                 <div className="text-sm font-bold text-giri-text mt-1">Debian 12 Base</div>
-                <p className="text-[11px] text-giri-muted mt-1">Linux 6.1 LTS Kernel, debootstrap rootfs, systemd</p>
+                <p className="text-xs text-giri-muted mt-1">Linux 6.1 LTS Kernel, debootstrap rootfs, systemd</p>
               </div>
 
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                <div className="text-xs font-mono font-bold text-giri-blue dark:text-cyan-400 uppercase">Layer 2</div>
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                <div className="text-xs font-mono font-bold text-giri-blue dark:text-cyan-400 ">Layer 2</div>
                 <div className="text-sm font-bold text-giri-text mt-1">Display & Boot Engine</div>
-                <p className="text-[11px] text-giri-muted mt-1">GRUB2 theme, Giri Genesis Plymouth splash, Xorg KMS</p>
+                <p className="text-xs text-giri-muted mt-1">GRUB2 theme, Giri Genesis Plymouth splash, Xorg KMS</p>
               </div>
 
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                <div className="text-xs font-mono font-bold text-giri-blue dark:text-cyan-400 uppercase">Layer 3</div>
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                <div className="text-xs font-mono font-bold text-giri-blue dark:text-cyan-400 ">Layer 3</div>
                 <div className="text-sm font-bold text-giri-text mt-1">Giri Space Shell</div>
-                <p className="text-[11px] text-giri-muted mt-1">Openbox WM, Picom composite shadows, Giri Dock, Panel applets</p>
+                <p className="text-xs text-giri-muted mt-1">Openbox WM, Picom composite shadows, Giri Dock, Panel applets</p>
               </div>
 
-              <div className="p-4 rounded-xl bg-giri-surface border border-giri-border">
-                <div className="text-xs font-mono font-bold text-giri-blue dark:text-cyan-400 uppercase">Layer 4</div>
+              <div className="p-4 rounded-md bg-giri-surface border border-giri-border">
+                <div className="text-xs font-mono font-bold text-giri-blue dark:text-cyan-400 ">Layer 4</div>
                 <div className="text-sm font-bold text-giri-text mt-1">Installer & Tooling</div>
-                <p className="text-[11px] text-giri-muted mt-1">Calamares OEM setup, live-build squashfs packager</p>
+                <p className="text-xs text-giri-muted mt-1">Calamares OEM setup, live-build squashfs packager</p>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@ export const DevelopersPage: React.FC = () => {
           {GIRI_DEV_RESOURCES.map((res) => (
             <div key={res.id} className="glass-panel p-8 rounded-3xl border border-giri-border">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-mono text-giri-blue dark:text-cyan-400 font-semibold uppercase tracking-wider">
+                <span className="text-xs font-mono text-giri-blue dark:text-cyan-400 font-semibold  tracking-wider">
                   {res.category}
                 </span>
               </div>
